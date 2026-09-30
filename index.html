@@ -515,7 +515,13 @@
         .process-flow-desc { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
 
         /* ── SERVICES ── */
-        .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .service-card.service-card--featured { grid-column: span 3; }
+        .service-card--featured .service-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 32px; }
+        .service-card--featured .service-icon svg { width: 40px; height: 40px; }
+        @media (max-width: 700px) { .service-card--featured .service-list { grid-template-columns: 1fr; } }
+        @media (max-width: 900px) { .services-grid { grid-template-columns: repeat(2, 1fr); } .service-card--featured { grid-column: span 2; grid-template-columns: 1fr; } }
+        @media (max-width: 600px) { .services-grid { grid-template-columns: 1fr; } .service-card--featured { grid-column: span 1; } }
         .service-card {
             background: var(--surface); padding: 48px 40px; border: 1px solid var(--border);
             border-radius: 4px; transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
@@ -825,6 +831,25 @@
         @media (max-width: 900px) { .home-services-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 600px) { .home-services-grid { grid-template-columns: 1fr; } }
 
+/* Page Header Glow — subtle parallax-driven depth behind each page's title */
+.container.section-pad { position: relative; }
+.page-header-glow {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    width: 520px;
+    height: 420px;
+    margin-left: -260px;
+    background: radial-gradient(circle, rgba(95, 163, 150, 0.09), rgba(95, 163, 150, 0) 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+.page-header-glow ~ * { position: relative; z-index: 1; }
+
+.plan-card--wide { grid-column: span 2; }
+.plan-card--wide .plan-items { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 24px; }
+@media (max-width: 700px) { .plan-card--wide .plan-items { grid-template-columns: 1fr; } }
+
 /* Featured Cases — Bento Grid */
 .bento-grid {
     display: grid;
@@ -1085,6 +1110,7 @@
 <!-- ── ABOUT ── -->
 <section id="page-about" class="page">
     <div class="container section-pad">
+        <div class="page-header-glow" aria-hidden="true"></div>
         <p class="section-eyebrow reveal">Identity / 關於 AXIOM</p>
         <h2 class="section-title reveal decode-text" data-original="商業品牌網頁建構師.">商業品牌<br>網頁建構師.</h2>
 
@@ -1187,12 +1213,13 @@
 <!-- ── SERVICES / MODULES ── -->
 <section id="page-services" class="page">
     <div class="container section-pad">
+        <div class="page-header-glow" aria-hidden="true"></div>
         <p class="section-eyebrow reveal">Service Modules</p>
         <h2 class="section-title reveal decode-text" data-original="服務模組與規格清單">服務模組<br>與規格清單</h2>
 
         <div class="services-grid" style="margin-top: 64px;">
             <!-- Module 1 -->
-            <div class="service-card reveal tilt-card">
+            <div class="service-card service-card--featured reveal tilt-card">
                 <div>
                     <div class="service-icon">
                         <svg width="40" height="40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10l-2 2V3l2 2m7 5v10l-2-2"></path></svg>
@@ -1412,6 +1439,7 @@
 <!-- ── WORKS ── -->
 <section id="page-works" class="page">
     <div class="container section-pad">
+        <div class="page-header-glow" aria-hidden="true"></div>
         <p class="section-eyebrow reveal">Portfolio / 作品集</p>
         <h2 class="section-title reveal decode-text" data-original="品牌網站設計案例.">品牌網站<br>設計案例.</h2>
 
@@ -1714,6 +1742,7 @@
 <!-- ── CASE STUDY: iMassage ── -->
 <section id="page-case-imassage" class="page">
     <div class="container section-pad">
+        <div class="page-header-glow" aria-hidden="true"></div>
         <p class="section-eyebrow reveal">Case Study / 真實交案 01</p>
         <h2 class="section-title reveal decode-text" data-original="iMassage 按摩工作室網站遷移實錄.">iMassage 按摩工作室<br>網站遷移實錄.</h2>
 
@@ -1835,6 +1864,7 @@
 <!-- ── ARTICLES / 文章 ── -->
 <section id="page-articles" class="page">
     <div class="container section-pad">
+        <div class="page-header-glow" aria-hidden="true"></div>
         <p class="section-eyebrow reveal">Articles / 真實案例與經營筆記</p>
         <h2 class="section-title reveal decode-text" data-original="文章.">文章.</h2>
         <p class="reveal" style="max-width:640px; margin-top:24px; font-size:16px; color:var(--text-dim); line-height:1.9;">
@@ -1876,6 +1906,7 @@
 <!-- ── ARTICLE: iMassage ── -->
 <section id="page-article-imassage" class="page">
     <div class="container section-pad">
+        <div class="page-header-glow" aria-hidden="true"></div>
         <p class="section-eyebrow reveal">Article / 真實案例</p>
         <h2 class="section-title reveal decode-text" data-original="iMassage 官網遷移實錄.">iMassage 官網遷移實錄.</h2>
         <div class="article-meta reveal" style="margin-top:20px;">
@@ -1922,6 +1953,7 @@
 <!-- ── ARTICLE: 小方光影設計 ── -->
 <section id="page-article-xiaofang" class="page">
     <div class="container section-pad">
+        <div class="page-header-glow" aria-hidden="true"></div>
         <p class="section-eyebrow reveal">Article / 真實案例</p>
         <h2 class="section-title reveal decode-text" data-original="小方光影設計網站案例.">小方光影設計<br>網站案例.</h2>
         <div class="article-meta reveal" style="margin-top:20px;">
@@ -1983,6 +2015,7 @@
 <!-- ── PRICING & FAQ ── -->
 <section id="page-pricing" class="page">
     <div class="container section-pad">
+        <div class="page-header-glow" aria-hidden="true"></div>
         <p class="section-eyebrow reveal">Pricing / 服務定價</p>
         <h2 class="section-title reveal decode-text" data-original="透明方案找到適合你的.">透明方案<br>找到適合你的.</h2>
 
@@ -2178,7 +2211,7 @@
                     <div class="plan-footer">買斷：一次性專案服務，完成後交付成果無需月費</div>
                 </div>
 
-                <div class="plan-card reveal tilt-card">
+                <div class="plan-card plan-card--wide reveal tilt-card">
                     <div class="plan-eyebrow">Buyout / 買斷方案 E</div>
                     <div class="plan-name">市場情報與競品分析報告</div>
                     <div class="plan-subtitle">$15,000–50,000</div>
@@ -2303,6 +2336,7 @@
 <!-- ── CONTACT / INTERACTIVE FORM ── -->
 <section id="page-contact" class="page">
     <div class="container section-pad">
+        <div class="page-header-glow" aria-hidden="true"></div>
         <p class="section-eyebrow reveal">Contact / 聯絡我們</p>
         <h2 class="section-title reveal decode-text" data-original="啟動你的專案評估.">啟動你的<br>專案評估.</h2>
 
@@ -2902,20 +2936,36 @@
 
 <script>
 (function(){
-    var hero = document.querySelector('#page-home .hero');
-    if(!hero) return;
-    var frame = hero.querySelector('.hero-logo-frame');
-    var ring2 = hero.querySelector('.hero-logo-ring-2');
-    if(!frame && !ring2) return;
     if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var hero = document.querySelector('#page-home .hero');
+    var frame = hero ? hero.querySelector('.hero-logo-frame') : null;
+    var ring2 = hero ? hero.querySelector('.hero-logo-ring-2') : null;
+
+    var glows = Array.prototype.slice.call(document.querySelectorAll('.page-header-glow'));
+
+    if(!frame && !ring2 && !glows.length) return;
+
     var ticking = false;
     function update(){
         var y = window.scrollY || window.pageYOffset;
-        var heroH = hero.offsetHeight;
-        if(y < heroH){
-            if(frame) frame.style.transform = 'translateZ(0) translateY(' + (y * 0.12).toFixed(2) + 'px)';
-            if(ring2) ring2.style.transform = 'translateY(' + (y * 0.22).toFixed(2) + 'px)';
+
+        if(hero){
+            var heroH = hero.offsetHeight;
+            if(y < heroH){
+                if(frame) frame.style.transform = 'translateZ(0) translateY(' + (y * 0.12).toFixed(2) + 'px)';
+                if(ring2) ring2.style.transform = 'translateY(' + (y * 0.22).toFixed(2) + 'px)';
+            }
         }
+
+        for(var i = 0; i < glows.length; i++){
+            var g = glows[i];
+            if(g.offsetParent === null) continue; // hidden (inactive) page — skip
+            if(y < 640){
+                g.style.transform = 'translateY(' + (y * 0.18).toFixed(2) + 'px)';
+            }
+        }
+
         ticking = false;
     }
     window.addEventListener('scroll', function(){
