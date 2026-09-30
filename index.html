@@ -183,7 +183,7 @@
             background-attachment: fixed;
             color: var(--text);
             overflow-x: hidden;
-            font-family: 'Noto Sans TC', 'Plus Jakarta Sans', sans-serif;
+            font-family: 'Noto Sans TC', 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif;
             font-weight: 300;
             line-height: 1.65;
             -webkit-font-smoothing: antialiased;
@@ -287,8 +287,8 @@
         .work-item:nth-child(n+6) { transition-delay: .3s; }
 
         /* ── Typography ── */
-        .font-display { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; letter-spacing: 0.04em; }
-        .font-ui { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; }
+        .font-display { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 800; letter-spacing: 0.04em; }
+        .font-ui { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; }
         .font-mono { font-family: 'Space Mono', monospace; }
 
         /* ── Noise grain overlay ── */
@@ -315,12 +315,12 @@
         }
         .nav-logo:hover .nav-logo-img { border-color: var(--accent); box-shadow: 0 0 20px var(--accent-glow); }
         .nav-logo img { width: 100%; height: 100%; object-fit: cover; }
-        .nav-logo-name { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 17px; font-weight: 700; letter-spacing: 0.25em; color: var(--text-bright); }
-        .nav-logo-sub { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-weight: 600; font-size: 12px; color: rgba(95, 163, 150, 0.85); margin-top: 2px; letter-spacing: 0.15em; }
+        .nav-logo-name { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-size: 17px; font-weight: 700; letter-spacing: 0.25em; color: var(--text-bright); }
+        .nav-logo-sub { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-weight: 600; font-size: 12px; color: rgba(95, 163, 150, 0.85); margin-top: 2px; letter-spacing: 0.15em; }
 
         .nav-links { display: flex; align-items: center; gap: 40px; list-style: none; }
         .nav-links button {
-            background: none; border: none; cursor: pointer; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;
+            background: none; border: none; cursor: pointer; font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600;
             font-size: 14px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase;
             color: var(--text-dim); transition: color 0.2s; padding: 8px 0; position: relative;
         }
@@ -334,7 +334,7 @@
         .nav-links button.active { color: var(--accent); }
 
         .nav-cta {
-            font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 13px; font-weight: 700;
+            font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-size: 13px; font-weight: 700;
             letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent);
             background: rgba(95, 163, 150, 0.05); border: 1px solid rgba(95, 163, 150, 0.35);
             padding: 10px 22px; cursor: pointer; border-radius: 2px; transition: all 0.3s ease;
@@ -344,7 +344,7 @@
         /* Mobile Nav */
         .hamburger {
             display: none; background: none; border: 1px solid var(--border-active);
-            padding: 8px 14px; cursor: pointer; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-weight: 700;
+            padding: 8px 14px; cursor: pointer; font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-weight: 700;
             font-size: 13px; color: var(--accent); letter-spacing: 0.15em; border-radius: 2px;
         }
         #mobile-menu {
@@ -354,7 +354,7 @@
         }
         #mobile-menu.open { transform: translateX(0); }
         .mobile-close { position: absolute; top: 24px; right: 32px; background: none; border: none; cursor: pointer; font-size: 28px; color: var(--accent); }
-        .mobile-nav-btn { background: none; border: none; cursor: pointer; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 42px; letter-spacing: 0.08em; color: var(--text-dim); transition: color 0.2s; }
+        .mobile-nav-btn { background: none; border: none; cursor: pointer; font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 800; font-size: 42px; letter-spacing: 0.08em; color: var(--text-dim); transition: color 0.2s; }
         .mobile-nav-btn:hover { color: var(--accent); }
 
         /* ── Page system ──
@@ -373,11 +373,11 @@
         .section-pad { padding: 110px 0; }
 
         .section-eyebrow {
-            font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-weight: 700; font-size: 13px; letter-spacing: 0.4em;
+            font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-weight: 700; font-size: 13px; letter-spacing: 0.4em;
             text-transform: uppercase; color: var(--accent); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;
         }
         .section-eyebrow::before { content: ''; width: 12px; height: 1px; background: var(--accent); }
-        .section-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(54px, 7.5vw, 92px); line-height: 0.95; letter-spacing: 0.03em; color: var(--text-bright); }
+        .section-title { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 800; font-size: clamp(54px, 7.5vw, 92px); line-height: 0.95; letter-spacing: 0.03em; color: var(--text-bright); }
 
         /* ── Magnetic & Hardware Accelerated Physics ── */
         .magnetic {
@@ -422,7 +422,7 @@
         .hero-logo-frame::after  { bottom: 6px; right: 6px; border-width: 0 2px 2px 0; }
 
         .hero-badge {
-            font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-weight: 700; font-size: 12px; letter-spacing: 0.3em;
+            font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-weight: 700; font-size: 12px; letter-spacing: 0.3em;
             text-transform: uppercase; color: var(--accent); border: 1px solid rgba(95, 163, 150, 0.3);
             background: rgba(95, 163, 150, 0.05); padding: 6px 18px; margin-bottom: 28px;
             display: inline-flex; align-items: center; gap: 8px; border-radius: 30px; z-index: 2;
@@ -430,7 +430,7 @@
         .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px var(--accent); animation: pulse 2s infinite; }
 
         .hero-h1 {
-            font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(72px, 12vw, 150px);
+            font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 800; font-size: clamp(72px, 12vw, 150px);
             line-height: 0.9; letter-spacing: 0.03em; color: var(--text-bright); margin-bottom: 12px;
             text-shadow: 0 0 30px rgba(0, 0, 0, 0.8); z-index: 2;
         }
@@ -444,7 +444,7 @@
 
         .hero-btns { display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; z-index: 2; }
         .btn-primary {
-            font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 14px; font-weight: 700;
+            font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-size: 14px; font-weight: 700;
             letter-spacing: 0.3em; text-transform: uppercase; background: var(--accent); color: var(--black);
             border: none; padding: 16px 42px; cursor: pointer; border-radius: 2px; transition: all 0.3s ease;
             box-shadow: 0 0 20px var(--accent-glow);
@@ -452,7 +452,7 @@
         .btn-primary:hover { box-shadow: 0 0 40px var(--accent-glow); }
 
         .btn-secondary {
-            font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 14px; font-weight: 600;
+            font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-size: 14px; font-weight: 600;
             letter-spacing: 0.3em; text-transform: uppercase; background: rgba(255, 255, 255, 0.02); color: var(--text);
             border: 1px solid var(--border); padding: 16px 42px; cursor: pointer; border-radius: 2px; transition: all 0.3s ease;
         }
@@ -468,11 +468,11 @@
         }
         .stat-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--accent); opacity: 0.5; }
         .stat-number {
-            font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 56px; color: var(--text-bright);
+            font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 800; font-size: 56px; color: var(--text-bright);
             line-height: 1; margin-bottom: 6px; display: flex; justify-content: center; align-items: baseline; gap: 4px;
         }
         .stat-number .unit { font-size: 24px; color: var(--accent); font-family: 'Space Mono', monospace; }
-        .stat-label { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-weight: 600; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); }
+        .stat-label { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-weight: 600; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); }
 
         /* Infinite Marquee Section */
         .marquee-wrap {
@@ -481,7 +481,7 @@
         }
         .marquee-content { display: flex; gap: 40px; white-space: nowrap; animation: marquee 25s linear infinite; }
         @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .marquee-item { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-weight: 600; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); display: flex; align-items: center; gap: 16px; }
+        .marquee-item { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-weight: 600; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); display: flex; align-items: center; gap: 16px; }
         .marquee-item span { color: var(--accent); }
 
         /* ── ABOUT ── */
@@ -495,21 +495,21 @@
 
         .tech-stack-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 28px; }
         .tech-item { background: var(--surface); border: 1px solid var(--border); padding: 16px 18px; border-radius: 4px; }
-        .tech-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-weight: 700; font-size: 12px; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 4px; }
+        .tech-title { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-weight: 700; font-size: 12px; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 4px; }
         .tech-desc { font-size: 13px; color: var(--text-bright); font-weight: 500; }
 
         .about-features { background: var(--surface); border: 1px solid var(--border); padding: 44px; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
-        .about-features h4 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 14px; font-weight: 700; letter-spacing: 0.4em; text-transform: uppercase; color: var(--accent); margin-bottom: 32px; }
+        .about-features h4 { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-size: 14px; font-weight: 700; letter-spacing: 0.4em; text-transform: uppercase; color: var(--accent); margin-bottom: 32px; }
         .feature-item { padding: 20px 0; border-bottom: 1px solid var(--border); }
         .feature-item:last-child { border-bottom: none; padding-bottom: 0; }
-        .feature-item h5 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 16px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-bright); margin-bottom: 8px; }
+        .feature-item h5 { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-size: 16px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-bright); margin-bottom: 8px; }
         .feature-item p { font-size: 14px; color: var(--text-dim); line-height: 1.7; }
 
         /* Process Flow Section */
         .process-flow { margin-top: 80px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
         .process-flow-card { background: var(--surface); border: 1px solid var(--border); padding: 28px 20px; border-radius: 4px; position: relative; }
-        .process-flow-num { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 32px; color: var(--accent); opacity: 0.6; line-height: 1; margin-bottom: 12px; }
-        .process-flow-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 15px; font-weight: 700; color: var(--text-bright); margin-bottom: 8px; }
+        .process-flow-num { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 800; font-size: 32px; color: var(--accent); opacity: 0.6; line-height: 1; margin-bottom: 12px; }
+        .process-flow-title { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-size: 15px; font-weight: 700; color: var(--text-bright); margin-bottom: 8px; }
         .process-flow-desc { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
 
         /* ── SERVICES ── */
@@ -527,10 +527,10 @@
         .service-card:hover::before { transform: scaleX(1); }
 
         .service-icon { color: var(--accent); margin-bottom: 28px; }
-        .service-module-tag { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-weight: 600; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); border: 1px solid var(--border); padding: 4px 10px; display: inline-block; margin-bottom: 20px; border-radius: 2px; }
-        .service-name { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 38px; letter-spacing: 0.04em; color: var(--text-bright); margin-bottom: 16px; line-height: 1.05; }
+        .service-module-tag { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-weight: 600; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); border: 1px solid var(--border); padding: 4px 10px; display: inline-block; margin-bottom: 20px; border-radius: 2px; }
+        .service-name { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 800; font-size: 38px; letter-spacing: 0.04em; color: var(--text-bright); margin-bottom: 16px; line-height: 1.05; }
         .service-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
-        .service-tag { font-size: 13px; color: var(--accent); background: rgba(95, 163, 150, 0.06); border: 1px solid rgba(95, 163, 150, 0.2); padding: 3px 10px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; letter-spacing: 0.05em; border-radius: 2px; }
+        .service-tag { font-size: 13px; color: var(--accent); background: rgba(95, 163, 150, 0.06); border: 1px solid rgba(95, 163, 150, 0.2); padding: 3px 10px; font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; letter-spacing: 0.05em; border-radius: 2px; }
         .service-desc { font-size: 15px; color: var(--text-dim); line-height: 1.8; margin-bottom: 28px; }
         .service-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; border-top: 1px solid var(--border); padding-top: 20px; }
         .service-list li { font-size: 14px; color: var(--text); display: flex; align-items: center; gap: 10px; }
@@ -540,21 +540,21 @@
         .matrix-table-wrap { margin-top: 80px; overflow-x: auto; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 32px; }
         .matrix-table { width: 100%; border-collapse: collapse; text-align: left; }
         .matrix-table th, .matrix-table td { padding: 18px 20px; border-bottom: 1px solid var(--border); font-size: 14px; }
-        .matrix-table th { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-weight: 700; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); background: var(--black); }
+        .matrix-table th { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-weight: 700; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); background: var(--black); }
         .matrix-table tr:hover { background: rgba(255,255,255,0.01); }
 
         .cta-banner { background: var(--surface); border: 1px solid var(--border); padding: 64px 40px; text-align: center; margin-top: 60px; border-radius: 4px; position: relative; overflow: hidden; }
         .cta-banner::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(95, 163, 150, 0.05) 0%, transparent 70%); pointer-events: none; }
-        .cta-banner p { color: var(--text-dim); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-weight: 700; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 16px; }
+        .cta-banner p { color: var(--text-dim); font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-weight: 700; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 16px; }
         .cta-banner h3 { font-size: clamp(20px, 2.5vw, 26px); font-weight: 300; color: var(--text); max-width: 640px; margin: 0 auto 36px; line-height: 1.8; }
         .cta-banner h3 span { color: var(--accent); font-weight: 500; }
-        .btn-ghost { background: none; border: none; cursor: pointer; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 14px; font-weight: 700; letter-spacing: 0.35em; text-transform: uppercase; color: var(--accent); border-bottom: 2px solid rgba(95, 163, 150, 0.4); padding-bottom: 6px; transition: all 0.25s; }
+        .btn-ghost { background: none; border: none; cursor: pointer; font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-size: 14px; font-weight: 700; letter-spacing: 0.35em; text-transform: uppercase; color: var(--accent); border-bottom: 2px solid rgba(95, 163, 150, 0.4); padding-bottom: 6px; transition: all 0.25s; }
         .btn-ghost:hover { border-color: var(--accent); text-shadow: 0 0 12px var(--accent-glow); }
 
         /* ── WORKS / PORTFOLIO WITH FILTER ── */
         .works-filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 40px; margin-bottom: 32px; }
         .works-filter-btn {
-            background: var(--surface); border: 1px solid var(--border); color: var(--text-dim); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;
+            background: var(--surface); border: 1px solid var(--border); color: var(--text-dim); font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600;
             font-size: 13px; font-weight: 600; letter-spacing: 0.15em; padding: 8px 18px; border-radius: 2px; cursor: pointer; transition: all 0.25s;
         }
         .works-filter-btn:hover, .works-filter-btn.active { color: var(--accent); border-color: rgba(95, 163, 150, 0.4); background: rgba(95, 163, 150, 0.06); box-shadow: 0 0 12px var(--accent-glow); }
@@ -591,16 +591,16 @@
         .work-cover::before { top: 6px; left: 6px; border-width: 1.5px 0 0 1.5px; }
         .work-cover::after  { bottom: 6px; right: 6px; border-width: 0 1.5px 1.5px 0; }
 
-        .work-num { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 36px; color: rgba(255, 255, 255, 0.85); line-height: 1; letter-spacing: 0.04em; position: relative; z-index: 1; }
+        .work-num { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 800; font-size: 36px; color: rgba(255, 255, 255, 0.85); line-height: 1; letter-spacing: 0.04em; position: relative; z-index: 1; }
         .work-info { min-width: 0; }
-        .work-eyebrow { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-weight: 700; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
-        .work-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 32px; letter-spacing: 0.04em; color: var(--text-bright); margin-bottom: 8px; line-height: 1; }
+        .work-eyebrow { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-weight: 700; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+        .work-title { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 800; font-size: 32px; letter-spacing: 0.04em; color: var(--text-bright); margin-bottom: 8px; line-height: 1; }
         .work-desc { font-size: 15px; color: var(--text-dim); line-height: 1.7; margin-bottom: 16px; }
         .work-tags { display: flex; gap: 8px; flex-wrap: wrap; }
-        .work-tag { font-size: 12px; color: var(--text-dim); background: rgba(255,255,255,0.03); border: 1px solid var(--border); padding: 3px 10px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; letter-spacing: 0.05em; border-radius: 2px; }
+        .work-tag { font-size: 12px; color: var(--text-dim); background: rgba(255,255,255,0.03); border: 1px solid var(--border); padding: 3px 10px; font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; letter-spacing: 0.05em; border-radius: 2px; }
 
         .work-link {
-            font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 13px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent);
+            font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-size: 13px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent);
             background: rgba(95, 163, 150, 0.05); border: 1px solid rgba(95, 163, 150, 0.3); padding: 12px 24px; cursor: pointer; text-decoration: none; transition: all 0.25s;
             white-space: nowrap; flex-shrink: 0; border-radius: 2px;
         }
@@ -608,11 +608,11 @@
 
         /* ── FAQ ACCORDION ── */
         .faq-section { margin-top: 80px; }
-        .faq-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 44px; color: var(--text-bright); margin-bottom: 24px; letter-spacing: 0.03em; }
+        .faq-title { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 800; font-size: 44px; color: var(--text-bright); margin-bottom: 24px; letter-spacing: 0.03em; }
         .faq-list { display: flex; flex-direction: column; gap: 12px; }
         .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; transition: border-color 0.3s; }
         .faq-item:hover { border-color: rgba(95, 163, 150, 0.3); }
-        .faq-question { padding: 22px 28px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 16px; font-weight: 700; color: var(--text-bright); }
+        .faq-question { padding: 22px 28px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-size: 16px; font-weight: 700; color: var(--text-bright); }
         .faq-icon { font-size: 20px; color: var(--accent); transition: transform 0.3s ease; }
         .faq-answer { max-height: 0; overflow: hidden; padding: 0 28px; font-size: 14px; color: var(--text-dim); line-height: 1.8; transition: max-height 0.35s ease, padding 0.35s ease; }
         .faq-item.open .faq-answer { max-height: 200px; padding: 0 28px 22px 28px; }
@@ -621,10 +621,10 @@
         /* ── INTERACTIVE FORM ── */
         .contact-grid { display: grid; grid-template-columns: 1.8fr 1.2fr; gap: 48px; }
         .form-box { background: var(--surface); border: 1px solid var(--border); padding: 48px; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
-        .form-box h4 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 14px; font-weight: 700; letter-spacing: 0.4em; text-transform: uppercase; color: var(--accent); margin-bottom: 32px; }
+        .form-box h4 { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-size: 14px; font-weight: 700; letter-spacing: 0.4em; text-transform: uppercase; color: var(--accent); margin-bottom: 32px; }
 
         .form-group { margin-bottom: 28px; }
-        .form-label { display: block; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-weight: 700; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-bright); margin-bottom: 10px; }
+        .form-label { display: block; font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-weight: 700; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-bright); margin-bottom: 10px; }
         .form-label span { color: var(--accent); }
 
         .form-chips { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -642,7 +642,7 @@
         .form-input:focus, .form-textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 12px var(--accent-glow); }
 
         .btn-submit {
-            width: 100%; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 14px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase;
+            width: 100%; font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-size: 14px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase;
             background: var(--accent); color: var(--black); border: none; padding: 16px; cursor: pointer; border-radius: 2px; transition: all 0.3s;
             box-shadow: 0 0 20px var(--accent-glow); margin-top: 10px;
         }
@@ -652,8 +652,8 @@
         .contact-info-box { background: var(--surface); border: 1px solid var(--border); padding: 40px; border-radius: 4px; }
         .contact-info-item { margin-bottom: 24px; }
         .contact-info-item:last-child { margin-bottom: 0; }
-        .contact-info-item .label { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-weight: 700; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 6px; }
-        .contact-info-item a { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-weight: 500; font-size: 15px; color: var(--text-bright); text-decoration: none; transition: color 0.2s; }
+        .contact-info-item .label { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-weight: 700; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 6px; }
+        .contact-info-item a { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-weight: 500; font-size: 15px; color: var(--text-bright); text-decoration: none; transition: color 0.2s; }
         .contact-info-item a:hover { color: var(--accent); }
 
         /* Modal */
@@ -664,7 +664,7 @@
         #form-modal.open { display: flex; }
         .modal-content { background: var(--surface); border: 1px solid var(--accent); padding: 48px; border-radius: 4px; max-width: 480px; text-align: center; box-shadow: 0 0 50px var(--accent-glow); }
         .modal-icon { font-size: 48px; color: var(--accent); margin-bottom: 16px; }
-        .modal-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 36px; color: var(--text-bright); margin-bottom: 12px; }
+        .modal-title { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 800; font-size: 36px; color: var(--text-bright); margin-bottom: 12px; }
         .modal-desc { font-size: 15px; color: var(--text-dim); line-height: 1.8; margin-bottom: 28px; }
 
         /* ── FOOTER ── */
@@ -672,19 +672,19 @@
         .footer-inner { max-width: 1240px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
         .footer-nav { display: flex; gap: 32px; }
         .footer-nav button {
-            background: none; border: none; cursor: pointer; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 13px; font-weight: 600;
+            background: none; border: none; cursor: pointer; font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-size: 13px; font-weight: 600;
             letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-dim); transition: color 0.2s;
         }
         .footer-nav button:hover { color: var(--accent); }
-        .footer-copy { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 13px; color: var(--text-dim); letter-spacing: 0.05em; opacity: 0.7; }
-        .footer-status { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-weight: 600; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; opacity: 0.85; display: flex; align-items: center; gap: 8px; }
+        .footer-copy { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-size: 13px; color: var(--text-dim); letter-spacing: 0.05em; opacity: 0.7; }
+        .footer-status { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-weight: 600; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; opacity: 0.85; display: flex; align-items: center; gap: 8px; }
         .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 2s infinite; box-shadow: 0 0 6px var(--accent); }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
         /* ── PRICING ── */
         .pricing-tabs { display: flex; gap: 2px; margin-bottom: 56px; background: var(--border); padding: 2px; border-radius: 4px; }
         .pricing-tab {
-            flex: 1; padding: 18px 24px; cursor: pointer; background: var(--surface); border: none; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;
+            flex: 1; padding: 18px 24px; cursor: pointer; background: var(--surface); border: none; font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600;
             font-size: 14px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-dim); text-align: center; transition: all 0.3s;
         }
         .pricing-tab:hover { color: var(--text-bright); }
@@ -700,25 +700,25 @@
         .price-item:hover { border-color: rgba(95, 163, 150, 0.25); background: var(--surface-hover); }
         .price-item-left { display: flex; gap: 24px; align-items: flex-start; }
         .price-item-icon { width: 40px; height: 40px; flex-shrink: 0; color: var(--accent); opacity: 0.85; margin-top: 2px; }
-        .price-item-name { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 16px; font-weight: 700; color: var(--text-bright); margin-bottom: 12px; letter-spacing: 0.05em; }
+        .price-item-name { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-size: 16px; font-weight: 700; color: var(--text-bright); margin-bottom: 12px; letter-spacing: 0.05em; }
         .price-tiers { display: flex; flex-direction: column; gap: 8px; }
         .price-tier { font-size: 14px; color: var(--text-dim); line-height: 1.6; }
         .price-tier .amt { font-family: 'Space Mono', monospace; font-size: 15px; color: var(--accent); margin-right: 10px; font-weight: 700; }
-        .price-item-badge { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-weight: 600; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); border: 1px solid var(--border); padding: 4px 12px; white-space: nowrap; flex-shrink: 0; border-radius: 2px; }
+        .price-item-badge { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-weight: 600; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); border: 1px solid var(--border); padding: 4px 12px; white-space: nowrap; flex-shrink: 0; border-radius: 2px; }
 
         .plan-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
         .plan-card { background: var(--surface); border: 1px solid var(--border); padding: 48px; border-radius: 4px; transition: all 0.3s; position: relative; overflow: hidden; }
         .plan-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--accent); transform: scaleX(0); transition: transform 0.4s; }
         .plan-card:hover { border-color: rgba(95, 163, 150, 0.3); }
         .plan-card:hover::after { transform: scaleX(1); }
-        .plan-eyebrow { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-weight: 700; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 8px; }
-        .plan-name { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 36px; letter-spacing: 0.05em; color: var(--text-bright); margin-bottom: 6px; }
+        .plan-eyebrow { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-weight: 700; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 8px; }
+        .plan-name { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 800; font-size: 36px; letter-spacing: 0.05em; color: var(--text-bright); margin-bottom: 6px; }
         .plan-subtitle { font-size: 18px; color: var(--accent); font-family: 'Space Mono', monospace; font-weight: 700; margin-bottom: 32px; }
         .plan-items { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px; }
         .plan-items li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; color: var(--text-dim); line-height: 1.6; }
         .plan-items li::before { content: '—'; color: var(--accent); opacity: 0.8; flex-shrink: 0; }
         .plan-items li strong { color: var(--text-bright); font-weight: 500; }
-        .plan-footer { border-top: 1px solid var(--border); padding-top: 24px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.02em; color: var(--text-dim); }
+        .plan-footer { border-top: 1px solid var(--border); padding-top: 24px; font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.02em; color: var(--text-dim); }
 
         .pricing-note { margin-top: 48px; padding: 36px 40px; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
         .pricing-note p { font-size: 15px; color: var(--text-dim); line-height: 1.8; }
@@ -731,15 +731,15 @@
             padding: 36px 40px; transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1); cursor: pointer;
         }
         .article-card:hover { border-color: rgba(95, 163, 150, 0.3); background: var(--surface-hover); transform: translateX(4px); }
-        .article-meta { display: flex; gap: 16px; flex-wrap: wrap; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-weight: 600; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 14px; }
+        .article-meta { display: flex; gap: 16px; flex-wrap: wrap; font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-weight: 600; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 14px; }
         .article-meta span { display: inline-flex; align-items: center; gap: 6px; }
-        .article-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 32px; color: var(--text-bright); margin-bottom: 10px; letter-spacing: 0.03em; line-height: 1.1; }
+        .article-title { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 800; font-size: 32px; color: var(--text-bright); margin-bottom: 10px; letter-spacing: 0.03em; line-height: 1.1; }
         .article-excerpt { font-size: 15px; color: var(--text-dim); line-height: 1.8; margin-bottom: 20px; max-width: 720px; }
-        .article-readmore { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-weight: 700; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); }
+        .article-readmore { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 600; font-weight: 700; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); }
 
         .article-body { max-width: 740px; margin-top: 48px; }
         .article-body p { font-size: 16px; color: var(--text); line-height: 2; margin-bottom: 26px; }
-        .article-body h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 30px; color: var(--text-bright); margin: 52px 0 20px; letter-spacing: 0.03em; }
+        .article-body h3 { font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 800; font-size: 30px; color: var(--text-bright); margin: 52px 0 20px; letter-spacing: 0.03em; }
         .article-body ul { margin: 0 0 26px 22px; display: flex; flex-direction: column; gap: 10px; }
         .article-body li { font-size: 15px; color: var(--text); line-height: 1.8; }
         .article-body strong { color: var(--text-bright); font-weight: 600; }
@@ -945,7 +945,7 @@
                 </div>
 
                 <!-- Modern Tech Stack Breakdown -->
-                <h4 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:13px; font-weight:700; letter-spacing:0.4em; text-transform:uppercase; color:var(--accent); margin-bottom:16px;">前端工程規格標準</h4>
+                <h4 style="font-family:'Plus Jakarta Sans','Noto Sans TC',sans-serif; font-size:13px; font-weight:700; letter-spacing:0.4em; text-transform:uppercase; color:var(--accent); margin-bottom:16px;">前端工程規格標準</h4>
                 <div class="tech-stack-grid">
                     <div class="tech-item reveal tilt-card">
                         <div class="tech-title">01. 語意化結構</div>
@@ -998,7 +998,7 @@
         <!-- Development Workflow Steps -->
         <div style="margin-top: 100px;" class="reveal">
             <p class="section-eyebrow">Standardized Flow</p>
-            <h3 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:48px; color:var(--text-bright); margin-bottom:32px;">5 階段開發建構流程</h3>
+            <h3 style="font-family:'Plus Jakarta Sans','Noto Sans TC',sans-serif; font-size:48px; color:var(--text-bright); margin-bottom:32px;">5 階段開發建構流程</h3>
             <div class="process-flow">
                 <div class="process-flow-card reveal tilt-card">
                     <div class="process-flow-num">01</div>
@@ -1196,7 +1196,7 @@
 
         <!-- Matrix Comparison -->
         <div class="matrix-table-wrap reveal tilt-card">
-            <h3 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:36px; color:var(--text-bright); margin-bottom:20px;">模組方案選型與對比矩陣</h3>
+            <h3 style="font-family:'Plus Jakarta Sans','Noto Sans TC',sans-serif; font-size:36px; color:var(--text-bright); margin-bottom:20px;">模組方案選型與對比矩陣</h3>
             <table class="matrix-table">
                 <thead>
                     <tr>
@@ -1424,7 +1424,7 @@
                     <h3 class="work-title">攝影工作室</h3>
                     <div style="display:inline-flex; align-items:center; gap:6px; background:rgba(0,210,200,0.1); border:1px solid rgba(0,210,200,0.3); padding:3px 10px; margin-bottom:12px; border-radius:2px;">
                         <span style="color:var(--accent); font-size:12px;">✦</span>
-                        <span style="font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.1em; color:var(--accent);">真實交案</span>
+                        <span style="font-family:'Plus Jakarta Sans','Noto Sans TC',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.1em; color:var(--accent);">真實交案</span>
                     </div>
                     <p class="work-desc">高雄左營「小方光影設計」官方品牌網站。20年資歷、國際獲獎攝影團隊，涵蓋攝影作品集分類、影片作品、團隊介紹、攝影教學課程與三地工作室資訊。</p>
                     <div class="work-tags">
@@ -1444,7 +1444,7 @@
                     <h3 class="work-title">按摩工作室</h3>
                     <div style="display:inline-flex; align-items:center; gap:6px; background:rgba(0,210,200,0.1); border:1px solid rgba(0,210,200,0.3); padding:3px 10px; margin-bottom:12px; border-radius:2px;">
                         <span style="color:var(--accent); font-size:12px;">✦</span>
-                        <span style="font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.1em; color:var(--accent);">真實交案</span>
+                        <span style="font-family:'Plus Jakarta Sans','Noto Sans TC',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.1em; color:var(--accent);">真實交案</span>
                     </div>
                     <p class="work-desc">「iMassage 專業按摩」官網遷移紀實。因應 Weebly 台灣服務終止，將既有網站完整搬遷至 WordPress，保留原有內容與服務資訊，同時換來更高的客製彈性。</p>
                     <div class="work-tags">
@@ -1486,7 +1486,7 @@
         <!-- Diagnosis -->
         <div style="margin-top:80px;" class="reveal">
             <p class="section-eyebrow">Diagnosis / 進場時的狀況</p>
-            <h3 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:44px; color:var(--text-bright); margin-bottom:32px;">遷移前要處理的事.</h3>
+            <h3 style="font-family:'Plus Jakarta Sans','Noto Sans TC',sans-serif; font-size:44px; color:var(--text-bright); margin-bottom:32px;">遷移前要處理的事.</h3>
             <div class="about-features tilt-card">
                 <div class="feature-item">
                     <h5>服務項目頁面搬遷</h5>
@@ -1518,7 +1518,7 @@
         <!-- Process -->
         <div style="margin-top:100px;" class="reveal">
             <p class="section-eyebrow">Resolution / 遷移流程</p>
-            <h3 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:44px; color:var(--text-bright); margin-bottom:32px;">從決定搬家到上線，5 個步驟.</h3>
+            <h3 style="font-family:'Plus Jakarta Sans','Noto Sans TC',sans-serif; font-size:44px; color:var(--text-bright); margin-bottom:32px;">從決定搬家到上線，5 個步驟.</h3>
             <div class="process-flow">
                 <div class="process-flow-card reveal tilt-card">
                     <div class="process-flow-num">01</div>
@@ -1551,7 +1551,7 @@
         <!-- Result -->
         <div style="margin-top:100px;" class="reveal">
             <p class="section-eyebrow">Result / 驗收成果</p>
-            <h3 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:44px; color:var(--text-bright); margin-bottom:32px;">搬遷後的網站狀態.</h3>
+            <h3 style="font-family:'Plus Jakarta Sans','Noto Sans TC',sans-serif; font-size:44px; color:var(--text-bright); margin-bottom:32px;">搬遷後的網站狀態.</h3>
             <div class="stats-grid" style="margin-top:0;">
                 <div class="stat-card reveal tilt-card">
                     <div class="stat-number"><span class="counter" data-target="0">0</span></div>
@@ -2144,12 +2144,12 @@
                     </div>
                     <div class="contact-info-item">
                         <p class="label">服務時間 / Availability</p>
-                        <p style="font-family:'Plus Jakarta Sans',sans-serif; font-size:14px; color:var(--text-bright);">Mon – Sat · 10:00–20:00</p>
+                        <p style="font-family:'Plus Jakarta Sans','Noto Sans TC',sans-serif; font-size:14px; color:var(--text-bright);">Mon – Sat · 10:00–20:00</p>
                     </div>
                 </div>
 
                 <div class="contact-info-box tilt-card" style="background: rgba(0,210,200,0.03); border-color: rgba(0,210,200,0.2);">
-                    <h5 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:14px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:12px;">24小時快速回應承諾</h5>
+                    <h5 style="font-family:'Plus Jakarta Sans','Noto Sans TC',sans-serif; font-size:14px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:12px;">24小時快速回應承諾</h5>
                     <p style="font-size:14px; color:var(--text-dim); line-height:1.7;">送出需求單後，會自動帶出一封寫好的郵件草稿，您按下「傳送」內容才會真正寄達 hung911017@gmail.com。信件送達後，建構師將於 24 小時內親自審閱並回覆初步可行性評估與預估時程表。</p>
                 </div>
             </div>
