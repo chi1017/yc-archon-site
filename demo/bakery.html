@@ -1,0 +1,2132 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Maison de Rêve 夢幻之屋 | 頂級法日手作烘焙與精品甜點</title>
+    <meta name="description" content="Maison de Rêve 夢幻之屋烘焙坊，融合法式極致美學與日系職人手藝。每日現烤生吐司、極致千層蛋糕、黃金可頌與手工馬卡龍，嚴選頂級進口天然食材，為您締造極致幸福的甜蜜溫度。">
+    <meta name="keywords" content="烘焙坊, 甜點品牌, 精品蛋糕, 生吐司, 可頌, 法式甜點, 彌月禮盒, 婚禮甜點, 台北甜點, 手工餅乾, 客製化蛋糕">
+    <link rel="canonical" href="https://maisondereve.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Maison de Rêve 夢幻之屋 | 頂級法日手作烘焙與精品甜點">
+    <meta property="og:description" content="法日極致手作烘焙，精選頂級無添加食材，每日職人限量手作現烤，傳遞最純粹的心靈感動。">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop">
+    <meta property="og:url" content="https://maisondereve.com/">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Maison de Rêve 夢幻之屋 | 頂級法日手作烘焙">
+    <meta name="twitter:description" content="法式工藝與日系細節的極致揉合，預約每一日的奢華日常。">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS & Frameworks -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#D4AF37',       // Luxury champagne gold
+                            golddark: '#B89025',
+                            cream: '#FAF6F0',      // Soft linen cream
+                            dark: '#1E110F',       // Elegant roast cocoa deep brown
+                            darklight: '#2E1D1B',  // Lighter cocoa
+                            rose: '#E8A08A',       // Soft clay/terracotta rose
+                            clay: '#9F5C4A',       // Rich terracotta accent
+                            sage: '#7D8C7B'        // Warm natural sage
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Fine-tuned Styles for Premium Experience */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(3deg); }
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+        .blur-backdrop {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .transition-page {
+            transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1), transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF6F0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B89025;
+        }
+        /* Hide active view classes dynamically */
+        .page-view {
+            display: none;
+            opacity: 0;
+            transform: translateY(15px);
+        }
+        .page-view.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-brand-dark font-sans overflow-x-hidden selection:bg-brand-rose selection:text-white">
+
+    <!-- Loading & Logo Reveal Screen -->
+    <div id="preloader" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-brand-dark transition-all duration-700">
+        <div class="relative flex flex-col items-center text-center">
+            <!-- Animated SVG Brand Mark -->
+            <svg class="w-24 h-24 mb-6 stroke-current text-brand-gold animate-pulse-slow" viewBox="0 0 100 100" fill="none">
+                <circle cx="50" cy="50" r="40" stroke-width="2" stroke-linecap="round"></circle>
+                <path d="M35,45 Q50,25 65,45 T50,75 Z" stroke-width="3" stroke-linejoin="round"></path>
+                <path d="M42,50 L58,50" stroke-width="2"></path>
+            </svg>
+            <h1 class="font-serif text-3xl font-light tracking-widest text-brand-gold mb-2">Maison de Rêve</h1>
+            <p class="text-xs tracking-[0.25em] text-brand-cream opacity-60">L'ART DE LA BOULANGERIE</p>
+            <div class="w-48 h-[1px] bg-white/10 mt-8 relative overflow-hidden">
+                <div id="loader-bar" class="absolute top-0 left-0 h-full bg-brand-gold transition-all duration-300" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating & Dynamic Header -->
+    <header id="main-header" class="fixed top-0 left-0 w-full z-40 transition-all duration-500 bg-transparent py-5">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#index" class="nav-link flex flex-col items-start select-none group focus:outline-none">
+                <span class="font-serif text-2xl md:text-3xl font-light tracking-wider text-brand-gold transition-all duration-300 group-hover:text-brand-rose">Maison de Rêve</span>
+                <span class="text-[9px] tracking-[0.3em] uppercase text-brand-cream/80 group-hover:text-brand-cream transition-all duration-300">夢幻之屋烘焙坊</span>
+            </a>
+
+            <!-- Desktop Navigation Menu -->
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium tracking-wider text-brand-cream transition-all duration-500" id="desktop-nav">
+                <a href="#index" class="nav-link relative py-2 hover:text-brand-gold transition-colors duration-300 focus:outline-none group">
+                    首頁 <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#about" class="nav-link relative py-2 hover:text-brand-gold transition-colors duration-300 focus:outline-none group">
+                    品牌故事 <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#products" class="nav-link relative py-2 hover:text-brand-gold transition-colors duration-300 focus:outline-none group">
+                    精緻產品 <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#custom-cake" class="nav-link relative py-2 text-brand-rose hover:text-brand-gold transition-colors duration-300 focus:outline-none group font-semibold">
+                    客製蛋糕 <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-brand-rose transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#blog" class="nav-link relative py-2 hover:text-brand-gold transition-colors duration-300 focus:outline-none group">
+                    烘焙日誌 <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#store" class="nav-link relative py-2 hover:text-brand-gold transition-colors duration-300 focus:outline-none group">
+                    門市資訊 <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#faq" class="nav-link relative py-2 hover:text-brand-gold transition-colors duration-300 focus:outline-none group">
+                    常見問答 <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#contact" class="nav-link relative py-2 hover:text-brand-gold transition-colors duration-300 focus:outline-none group">
+                    聯絡預訂 <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </nav>
+
+            <!-- Navigation Controls (Cart, Menu Toggle) -->
+            <div class="flex items-center space-x-5">
+                <!-- Basket Quick Link -->
+                <button id="cart-toggle-btn" class="relative text-brand-cream hover:text-brand-gold transition-colors p-2 focus:outline-none focus:ring-1 focus:ring-brand-gold rounded-full" aria-label="購物籃">
+                    <i class="fa-solid fa-basket-shopping text-xl"></i>
+                    <span id="cart-count" class="absolute -top-1 -right-1 bg-brand-rose text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold">0</span>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-brand-cream hover:text-brand-gold transition-colors p-2 focus:outline-none" aria-label="切換選單">
+                    <i id="menu-icon" class="fa-solid fa-bars-staggered text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Panel -->
+        <div id="mobile-nav-panel" class="fixed inset-y-0 right-0 w-80 bg-brand-dark/95 backdrop-blur-xl z-50 transform translate-x-full transition-transform duration-500 ease-out p-8 shadow-2xl flex flex-col justify-between lg:hidden">
+            <div>
+                <div class="flex items-center justify-between mb-12">
+                    <span class="font-serif text-xl tracking-wider text-brand-gold">Maison de Rêve</span>
+                    <button id="mobile-menu-close" class="text-brand-cream hover:text-brand-gold focus:outline-none">
+                        <i class="fa-solid fa-xmark text-2xl"></i>
+                    </button>
+                </div>
+                <nav class="flex flex-col space-y-6 text-lg font-light tracking-widest text-brand-cream">
+                    <a href="#index" class="mobile-nav-link hover:text-brand-gold transition-colors">首頁</a>
+                    <a href="#about" class="mobile-nav-link hover:text-brand-gold transition-colors">品牌故事</a>
+                    <a href="#products" class="mobile-nav-link hover:text-brand-gold transition-colors">精緻產品</a>
+                    <a href="#custom-cake" class="mobile-nav-link text-brand-rose hover:text-brand-gold transition-colors font-semibold">客製蛋糕</a>
+                    <a href="#blog" class="mobile-nav-link hover:text-brand-gold transition-colors">烘焙日誌</a>
+                    <a href="#store" class="mobile-nav-link hover:text-brand-gold transition-colors">門市資訊</a>
+                    <a href="#faq" class="mobile-nav-link hover:text-brand-gold transition-colors">常見問答</a>
+                    <a href="#contact" class="mobile-nav-link hover:text-brand-gold transition-colors">聯絡預訂</a>
+                </nav>
+            </div>
+            <div class="border-t border-white/10 pt-6">
+                <p class="text-xs text-brand-cream/40 mb-2">客服電話 / (02) 2345-6789</p>
+                <p class="text-xs text-brand-cream/40">營業時間 / 週二至週日 11:00 - 20:00</p>
+            </div>
+        </div>
+    </header>
+
+    <main id="app-content" class="min-h-screen">
+        
+        <!-- PAGE 1: HOME (index) -->
+        <section id="view-index" class="page-view active transition-page">
+            
+            <!-- Ken Burns Animated Hero Banner with Floating Flour Particle Canvas Overlay -->
+            <div class="relative h-screen overflow-hidden bg-brand-dark flex items-center justify-center">
+                <!-- Background Image (Ken Burns Zoom) -->
+                <div class="absolute inset-0 bg-cover bg-center opacity-40 scale-100 transition-transform duration-[10000ms] ease-out animate-[scale-slow_20s_infinite_alternate]" 
+                     style="background-image: url('https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1920&auto=format&fit=crop');">
+                </div>
+                <!-- Gradient Masking -->
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-brand-dark/80"></div>
+                
+                <!-- Floating Particle Layer -->
+                <canvas id="hero-particles" class="absolute inset-0 pointer-events-none mix-blend-screen opacity-70"></canvas>
+
+                <!-- Hero Content -->
+                <div class="relative z-10 text-center max-w-4xl px-6 flex flex-col items-center">
+                    <span class="text-brand-gold font-serif text-sm tracking-[0.4em] uppercase mb-4 animate-[fadeInUp_1s_ease]">Boutique Bakery & Dessert Artisan</span>
+                    <h2 class="font-serif text-4xl sm:text-6xl md:text-7xl font-extralight text-white leading-tight mb-6 animate-[fadeInUp_1.2s_ease]">
+                        每日現烤，傳遞<br class="sm:hidden">幸福的甜蜜溫度
+                    </h2>
+                    <p class="text-brand-cream/80 text-sm sm:text-base md:text-lg max-w-xl font-light leading-relaxed mb-10 tracking-wide animate-[fadeInUp_1.4s_ease]">
+                        嚴選頂級法日頂級進口原物料，融入手工慢製工藝。<br>在夢幻之屋，每一顆剛出爐的麵包與極致千層，都是一首對感官朝聖的詩篇。
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 animate-[fadeInUp_1.6s_ease]">
+                        <a href="#products" class="px-8 py-4 bg-brand-gold text-brand-dark font-medium tracking-widest text-xs uppercase hover:bg-brand-rose hover:text-white transition-all duration-300 shadow-xl shadow-black/30 hover:scale-105 active:scale-95 focus:outline-none">
+                            查看今日甜點
+                        </a>
+                        <a href="#custom-cake" class="px-8 py-4 bg-transparent border border-white/20 text-white font-medium tracking-widest text-xs uppercase hover:bg-white hover:text-brand-dark transition-all duration-300 backdrop-blur-sm hover:scale-105 active:scale-95 focus:outline-none">
+                            客製蛋糕服務
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Custom SVG Wave Transition at Bottom of Hero -->
+                <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+                    <svg class="relative block w-full h-[60px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M0,0 C150,90 350,120 600,100 C850,80 1050,110 1200,80 L1200,120 L0,120 Z" class="fill-brand-cream"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Section 2: Craftsmanship Philosophy -->
+            <section class="py-24 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative group">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-brand-gold"></div>
+                    <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-brand-gold"></div>
+                    <!-- Master Baker Artisan Image -->
+                    <figure class="overflow-hidden shadow-2xl relative">
+                        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=800&auto=format&fit=crop" 
+                             alt="每日現烤奶油可頌麵包與職人製作手藝" 
+                             class="w-full h-[450px] object-cover transition-transform duration-[4000ms] group-hover:scale-105">
+                        <div class="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-all duration-500"></div>
+                    </figure>
+                </div>
+                
+                <div class="flex flex-col justify-center">
+                    <span class="text-brand-clay font-serif font-medium tracking-widest text-xs uppercase mb-3">ARTISAN SPIRIT</span>
+                    <h3 class="font-serif text-3xl md:text-4xl text-brand-dark font-light leading-snug mb-6">手作精神與頂級天然食料的溫暖奏鳴</h3>
+                    <p class="text-brand-dark/70 leading-relaxed mb-6 font-light">
+                        我們秉持「手作職人」的精神，將麵團置於恆溫發酵室中慢慢熟成。在夢幻之屋，絕無任何人工化學防腐劑或人工香精。我們深信只有時間的沈澱、手掌心的溫度與純淨的頂級原料，才能烤製出真正感動舌尖的幸福滋味。
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mt-4">
+                        <div class="flex items-start space-x-3">
+                            <span class="text-brand-gold text-xl"><i class="fa-solid fa-wheat-awn"></i></span>
+                            <div>
+                                <h4 class="font-semibold text-brand-dark text-sm">嚴選法國/日本進口麵粉</h4>
+                                <p class="text-xs text-brand-dark/50 mt-1">麥香純粹，創造蓬鬆與彈性兼備的絕佳質地</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="text-brand-gold text-xl"><i class="fa-solid fa-droplet"></i></span>
+                            <div>
+                                <h4 class="font-semibold text-brand-dark text-sm">頂級 AOP 產區發酵奶油</h4>
+                                <p class="text-xs text-brand-dark/50 mt-1">來自歐洲保護產區，醇厚天然乳香縈繞齒頰</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-10">
+                        <a href="#about" class="inline-flex items-center text-brand-gold hover:text-brand-rose font-medium text-xs tracking-wider uppercase group">
+                            探索我們的創立故事 
+                            <i class="fa-solid fa-arrow-right-long ml-2 transition-transform duration-300 group-hover:translate-x-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Trending Products Highlight -->
+            <section class="py-24 bg-brand-dark text-brand-cream relative">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center max-w-2xl mx-auto mb-16">
+                        <span class="text-brand-gold font-serif text-xs tracking-[0.3em] uppercase mb-2 block">SIGNATURE SELECTIONS</span>
+                        <h3 class="font-serif text-3xl md:text-4xl text-white font-light">極致熱門．主廚推薦</h3>
+                        <div class="w-12 h-[1px] bg-brand-gold mx-auto mt-4"></div>
+                    </div>
+
+                    <!-- Trending Carousel Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" id="trending-grid">
+                        <!-- Dynamic Cards will load here programmatically -->
+                    </div>
+
+                    <div class="text-center mt-16">
+                        <a href="#products" class="inline-block px-10 py-4 bg-transparent border border-brand-gold text-brand-gold text-xs font-semibold uppercase tracking-widest hover:bg-brand-gold hover:text-brand-dark transition-all duration-300">
+                            瀏覽全部烘焙與甜點
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Ingredient Timeline & Process -->
+            <section class="py-24 max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-brand-clay font-serif text-xs tracking-[0.3em] uppercase mb-2 block">THE BAKING TIMELINE</span>
+                    <h3 class="font-serif text-3xl md:text-4xl text-brand-dark font-light">一塊麵包，24小時的熟成禮讚</h3>
+                    <div class="w-12 h-[1px] bg-brand-clay mx-auto mt-4"></div>
+                </div>
+
+                <!-- Process Timeline Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-sm border border-brand-gold/10 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-brand-cream rounded-full flex items-center justify-center text-brand-gold font-serif font-bold mb-6">1</div>
+                        <h4 class="font-serif text-lg text-brand-dark mb-2">極致篩選與攪拌</h4>
+                        <p class="text-xs text-brand-dark/60 leading-relaxed">早晨 5:00 嚴格篩分日本鳥越麵粉，與微冰泉水攪拌。精準控制水合與揉捏力道。</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-sm border border-brand-gold/10 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-brand-cream rounded-full flex items-center justify-center text-brand-gold font-serif font-bold mb-6">2</div>
+                        <h4 class="font-serif text-lg text-brand-dark mb-2">低溫慢速雙重發酵</h4>
+                        <p class="text-xs text-brand-dark/60 leading-relaxed">將麵團送入 16℃ 恆溫室中慢發酵 18 小時，慢慢孕育天然香氣與絕佳彈性。</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-sm border border-brand-gold/10 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-brand-cream rounded-full flex items-center justify-center text-brand-gold font-serif font-bold mb-6">3</div>
+                        <h4 class="font-serif text-lg text-brand-dark mb-2">職人手工塑形整形</h4>
+                        <p class="text-xs text-brand-dark/60 leading-relaxed">憑藉職人手指熟練的觸覺和按壓，排出適量氣泡並完美塑出藝術麵包的外形。</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-sm border border-brand-gold/10 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-brand-cream rounded-full flex items-center justify-center text-brand-gold font-serif font-bold mb-6">4</div>
+                        <h4 class="font-serif text-lg text-brand-dark mb-2">石窯高溫蒸汽出爐</h4>
+                        <p class="text-xs text-brand-dark/60 leading-relaxed">在高溫蒸氣石底烤爐烤製。瞬間高熱封存核心水分，打造薄脆外皮與Q彈組織。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Customer Reviews (Interactive Slider) -->
+            <section class="py-24 bg-brand-cream relative overflow-hidden border-t border-brand-gold/20">
+                <div class="max-w-4xl mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <span class="text-brand-gold font-serif text-xs tracking-[0.3em] uppercase block mb-2">TRUE EMOTIONS</span>
+                        <h3 class="font-serif text-3xl text-brand-dark font-light">顧客的真實溫度回饋</h3>
+                    </div>
+
+                    <!-- Reviews Viewport -->
+                    <div class="relative min-h-[250px] overflow-hidden">
+                        <div id="reviews-container" class="transition-all duration-500 ease-out flex">
+                            <!-- Review Card 1 -->
+                            <div class="w-full shrink-0 flex flex-col items-center text-center px-4">
+                                <p class="font-serif text-xl sm:text-2xl italic text-brand-dark/80 leading-relaxed mb-8">
+                                    「這絕對是我吃過最迷人的千層蛋糕！奶油細緻而不膩，一層層的層次在口中輕柔散開，完全是最高水準的法式工藝。」
+                                </p>
+                                <div class="flex items-center space-x-3">
+                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=150" alt="高級草莓千層蛋糕評價顧客" class="w-12 h-12 rounded-full object-cover">
+                                    <div class="text-left">
+                                        <h4 class="font-bold text-brand-dark text-sm">Olivia Cheng</h4>
+                                        <p class="text-xs text-brand-gold"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Review Card 2 -->
+                            <div class="w-full shrink-0 flex flex-col items-center text-center px-4">
+                                <p class="font-serif text-xl sm:text-2xl italic text-brand-dark/80 leading-relaxed mb-8">
+                                    「生吐司柔軟到不可思議，烤過後外酥內綿密。帶有淡淡的天然麥香與香草奶油味，我們全家人每天早晨的最佳選擇！」
+                                </p>
+                                <div class="flex items-center space-x-3">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150" alt="頂級生吐司評價顧客" class="w-12 h-12 rounded-full object-cover">
+                                    <div class="text-left">
+                                        <h4 class="font-bold text-brand-dark text-sm">Vincent Yang</h4>
+                                        <p class="text-xs text-brand-gold"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review Navigation Buttons -->
+                        <div class="absolute bottom-0 left-0 right-0 flex justify-center space-x-3 mt-6">
+                            <button id="prev-review-btn" class="w-8 h-8 rounded-full border border-brand-gold/30 flex items-center justify-center hover:bg-brand-gold hover:text-brand-dark transition-colors focus:outline-none" aria-label="上一則評論">
+                                <i class="fa-solid fa-chevron-left text-xs"></i>
+                            </button>
+                            <button id="next-review-btn" class="w-8 h-8 rounded-full border border-brand-gold/30 flex items-center justify-center hover:bg-brand-gold hover:text-brand-dark transition-colors focus:outline-none" aria-label="下一則評論">
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- PAGE 2: PRODUCTS (products.html) -->
+        <section id="view-products" class="page-view transition-page py-32 max-w-7xl mx-auto px-6">
+            <!-- Catalogue Title -->
+            <div class="text-center mb-12">
+                <span class="text-brand-clay font-serif text-xs tracking-[0.3em] uppercase block mb-2">LA PATISSERIE ET LE PAIN</span>
+                <h2 class="font-serif text-4xl text-brand-dark font-light mb-4">法日工藝甜點與麵包</h2>
+                <div class="w-16 h-[1px] bg-brand-gold mx-auto"></div>
+            </div>
+
+            <!-- Interactive Filters & Sorters -->
+            <div class="flex flex-col md:flex-row items-center justify-between border-b border-brand-dark/10 pb-6 mb-10 gap-6">
+                <!-- Category Tabs -->
+                <div class="flex space-x-3 overflow-x-auto w-full md:w-auto py-2" id="category-filter-group">
+                    <button data-cat="all" class="px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-brand-dark text-white shadow-md filter-btn focus:outline-none">全部</button>
+                    <button data-cat="bread" class="px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-white text-brand-dark hover:bg-brand-gold hover:text-white filter-btn focus:outline-none">職人麵包</button>
+                    <button data-cat="pastry" class="px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-white text-brand-dark hover:bg-brand-gold hover:text-white filter-btn focus:outline-none">精緻甜點</button>
+                    <button data-cat="gift" class="px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-white text-brand-dark hover:bg-brand-gold hover:text-white filter-btn focus:outline-none">節慶禮盒</button>
+                </div>
+                
+                <!-- Sorter Selector -->
+                <div class="flex items-center space-x-4 self-end md:self-auto">
+                    <label for="price-sort" class="text-xs tracking-wider text-brand-dark/60 font-medium">排序條件：</label>
+                    <select id="price-sort" class="bg-white border border-brand-gold/20 text-xs px-3 py-2 rounded focus:outline-none focus:ring-1 focus:ring-brand-gold">
+                        <option value="default">熱門推薦</option>
+                        <option value="price-asc">價格：由低到高</option>
+                        <option value="price-desc">價格：由高到低</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Dynamic Product Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" id="products-catalog-grid">
+                <!-- Javascript will load the products dynamicaly with realistic mock content -->
+            </div>
+        </section>
+
+        <!-- PAGE 3: PRODUCT DETAIL (product-detail.html) -->
+        <section id="view-product-detail" class="page-view transition-page py-32 max-w-7xl mx-auto px-6">
+            <div class="mb-8">
+                <a href="#products" class="inline-flex items-center text-xs tracking-wider uppercase text-brand-dark/60 hover:text-brand-gold">
+                    <i class="fa-solid fa-chevron-left mr-2"></i> 返回產品目錄
+                </a>
+            </div>
+
+            <!-- Detailed Presentation Component -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16" id="product-detail-container">
+                <!-- Generated dynamically via detail router to show images, pricing, materials, baking notes, recommendations, and purchase action. -->
+            </div>
+        </section>
+
+        <!-- PAGE 4: ABOUT STORY (about.html) -->
+        <section id="view-about" class="page-view transition-page py-32">
+            <div class="max-w-7xl mx-auto px-6">
+                <!-- Top Brand Mission -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-28">
+                    <div>
+                        <span class="text-brand-gold font-serif text-sm tracking-[0.4em] uppercase mb-3 block">MAISON DE RÊVE STORY</span>
+                        <h2 class="font-serif text-4xl sm:text-5xl text-brand-dark font-light leading-tight mb-8">夢幻之屋的烘焙夢境與工藝信仰</h2>
+                        <div class="w-16 h-[1px] bg-brand-gold mb-8"></div>
+                        <p class="text-brand-dark/70 leading-relaxed mb-6 font-light">
+                            創立於 2021 年春季，「Maison de Rêve」（法語「夢幻之屋」）誕生自一個純粹的夢想：我們希望將歐洲經典頂級甜點極致工藝，與日本職人一絲不苟的細密心意完美結合。
+                        </p>
+                        <p class="text-brand-dark/70 leading-relaxed mb-6 font-light">
+                            創辦人兼主廚 Jean-Luc Lin 在巴黎頂尖烘焙工藝學院進修、並於東京米其林星級名店歷練多年。在夢幻之屋的烘焙坊中，每一次的麵粉過篩、每次酵母的起伏、每一抹細膩奶油的塗抹，都是對完美極致追求。
+                        </p>
+                    </div>
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?q=80&w=800&auto=format&fit=crop" 
+                             alt="烘焙坊創立故事與主廚研發照片" 
+                             class="w-full h-[500px] object-cover rounded shadow-2xl">
+                    </div>
+                </div>
+
+                <!-- The Core Values & Eco Pledge -->
+                <div class="bg-brand-dark text-brand-cream py-20 px-8 sm:px-16 rounded-lg shadow-xl mb-28">
+                    <div class="max-w-4xl mx-auto">
+                        <h3 class="font-serif text-2xl sm:text-3xl text-brand-gold mb-6 text-center">我們對品質、健康與永續無可妥協的承諾</h3>
+                        <p class="text-center text-brand-cream/70 leading-relaxed font-light mb-12">
+                            除了嚴苛的食材採購標準外，我們深信永續環保的重要性。Maison de Rêve 承諾 100% 採用環保再生紙盒作為甜點盒包裝，完全杜絕一次性塑膠防潮膜，讓舌尖上的香醇也能與大自然和諧共存。
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                            <div class="text-center border-r border-white/10 last:border-0 pr-4">
+                                <div class="text-brand-gold text-3xl mb-4"><i class="fa-solid fa-shield-halved"></i></div>
+                                <h4 class="font-bold text-sm mb-2">100% 無化學添加</h4>
+                                <p class="text-xs text-brand-cream/50">拒絕防腐劑與人造色素，為您家人的健康嚴格把關</p>
+                            </div>
+                            <div class="text-center border-r border-white/10 last:border-0 pr-4">
+                                <div class="text-brand-gold text-3xl mb-4"><i class="fa-solid fa-recycle"></i></div>
+                                <h4 class="font-bold text-sm mb-2">環保包裝包材</h4>
+                                <p class="text-xs text-brand-cream/50">使用森林認證FSC紙質盒包材，減少碳排不留負擔</p>
+                            </div>
+                            <div class="text-center border-r border-white/10 last:border-0 pr-4">
+                                <div class="text-brand-gold text-3xl mb-4"><i class="fa-solid fa-handshake"></i></div>
+                                <h4 class="font-bold text-sm mb-2">永續公平貿易食材</h4>
+                                <p class="text-xs text-brand-cream/50">與各小農公平合約採購優質新鮮水果、自產茶葉與契作雞蛋</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 5: BLOG (blog.html) -->
+        <section id="view-blog" class="page-view transition-page py-32 max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-brand-clay font-serif text-xs tracking-[0.3em] uppercase block mb-2">ARTISAN KNOWLEDGE</span>
+                <h2 class="font-serif text-4xl text-brand-dark font-light mb-4">烘焙日誌與美食知識庫</h2>
+                <div class="w-16 h-[1px] bg-brand-gold mx-auto"></div>
+                <p class="text-xs text-brand-dark/50 mt-4 max-w-md mx-auto">
+                    由 Maison de Rêve 的主廚與甜點師撰寫。與您分享烘焙選料奧秘、品嚐美學與甜點背後優雅的故事。
+                </p>
+            </div>
+
+            <!-- Blog Post Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" id="blog-grid-container">
+                <!-- Populated programmatically below -->
+            </div>
+        </section>
+
+        <!-- PAGE 6: STORE (store.html) -->
+        <section id="view-store" class="page-view transition-page py-32 max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-brand-clay font-serif text-xs tracking-[0.3em] uppercase block mb-2">BOUTIQUE LOCATIONS</span>
+                <h2 class="font-serif text-4xl text-brand-dark font-light mb-4">門市營運與交通指南</h2>
+                <div class="w-16 h-[1px] bg-brand-gold mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                <!-- Location Info -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <h3 class="font-serif text-2xl text-brand-dark mb-4">Maison de Rêve 信義旗艦店</h3>
+                        <p class="text-xs text-brand-dark/60 leading-relaxed">
+                            位於繁華的信義商圈靜謐一隅。全店採用日式溫潤木質調與極簡法式拱門建築交融設計，現場提供精美法式甜點現作盤飾服務與烘焙現烤選購。
+                        </p>
+                    </div>
+
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-start space-x-4">
+                            <span class="text-brand-gold mt-1"><i class="fa-solid fa-map-location-dot"></i></span>
+                            <div>
+                                <h4 class="font-bold text-brand-dark">地址與位置</h4>
+                                <p class="text-brand-dark/70 text-xs mt-1">台北市信義區信義路五段 88 號 1 樓</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-brand-gold mt-1"><i class="fa-solid fa-clock"></i></span>
+                            <div>
+                                <h4 class="font-bold text-brand-dark">營業時間</h4>
+                                <p class="text-brand-dark/70 text-xs mt-1">週二至週日 11:00 - 20:00 (週一店休)</p>
+                                <p class="text-[10px] text-brand-rose mt-0.5 font-medium">✨ 烘焙出爐時段：每日 12:30 / 15:30 / 17:00</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-brand-gold mt-1"><i class="fa-solid fa-square-parking"></i></span>
+                            <div>
+                                <h4 class="font-bold text-brand-dark">停車資訊</h4>
+                                <p class="text-brand-dark/70 text-xs mt-1">旗艦大樓備有專屬地下收費停車場（於門市單筆消費滿 NT$1,000 可折抵停車 1 小時）</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <span class="text-brand-gold mt-1"><i class="fa-solid fa-bus"></i></span>
+                            <div>
+                                <h4 class="font-bold text-brand-dark">交通捷運指引</h4>
+                                <p class="text-brand-dark/70 text-xs mt-1">搭乘台北捷運淡水信義線（紅線）至「象山站」2 號出口，步行約 3 分鐘即可抵達。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mock Map Visual -->
+                <div class="lg:col-span-7 bg-white p-4 rounded-xl shadow-lg border border-brand-gold/15">
+                    <div class="relative w-full h-[400px] bg-[#E5E3DF] rounded-lg overflow-hidden flex items-center justify-center">
+                        <!-- High Fidelity Beautiful SVG Interactive Map Overlay -->
+                        <svg class="absolute inset-0 w-full h-full opacity-60" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background Map Styling -->
+                            <rect width="800" height="400" fill="#EAE8E4"/>
+                            <!-- Rivers / Canals -->
+                            <path d="M 0,380 C 100,370 200,390 350,330 C 500,270 650,220 800,230" stroke="#BACEDD" stroke-width="40" fill="none" opacity="0.8"/>
+                            <!-- Roads Grid -->
+                            <line x1="50" y1="0" x2="100" y2="400" stroke="#FDFDFD" stroke-width="12" />
+                            <line x1="200" y1="0" x2="250" y2="400" stroke="#FDFDFD" stroke-width="12" />
+                            <line x1="380" y1="0" x2="420" y2="400" stroke="#FDFDFD" stroke-width="24" />
+                            <line x1="550" y1="0" x2="600" y2="400" stroke="#FDFDFD" stroke-width="12" />
+                            
+                            <line x1="0" y1="80" x2="800" y2="90" stroke="#FDFDFD" stroke-width="14" />
+                            <line x1="0" y1="210" x2="800" y2="200" stroke="#FDFDFD" stroke-width="24" />
+                            <line x1="0" y1="320" x2="800" y2="330" stroke="#FDFDFD" stroke-width="12" />
+                            
+                            <!-- Green Parks -->
+                            <rect x="50" y="100" width="120" height="80" rx="8" fill="#D3DFD1" />
+                            <rect x="440" y="240" width="100" height="70" rx="8" fill="#D3DFD1" />
+                        </svg>
+                        
+                        <!-- Map Pin and Pulse Wave -->
+                        <div class="relative z-10 flex flex-col items-center">
+                            <!-- Map Pin Icon Ripple -->
+                            <span class="absolute w-12 h-12 bg-brand-gold/40 rounded-full animate-ping pointer-events-none"></span>
+                            <div class="w-12 h-12 bg-brand-dark text-brand-gold rounded-full flex items-center justify-center shadow-lg border-2 border-brand-gold">
+                                <i class="fa-solid fa-cake-candles text-lg"></i>
+                            </div>
+                            <div class="bg-brand-dark/95 backdrop-blur text-white px-4 py-2 rounded-lg shadow-xl mt-3 text-center border border-brand-gold/20">
+                                <p class="text-xs font-bold font-serif tracking-wider text-brand-gold">Maison de Rêve</p>
+                                <p class="text-[9px] text-white/70 mt-0.5">信義區信義路五段88號</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 7: FAQ (faq.html) -->
+        <section id="view-faq" class="page-view transition-page py-32 max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-brand-clay font-serif text-xs tracking-[0.3em] uppercase block mb-2">SUPPORT & ASSISTANCE</span>
+                <h2 class="font-serif text-4xl text-brand-dark font-light mb-4">常見問題與訂購細則</h2>
+                <div class="w-16 h-[1px] bg-brand-gold mx-auto"></div>
+            </div>
+
+            <!-- FAQ Collapsible items -->
+            <div class="space-y-4" id="faq-accordions">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white border border-brand-gold/15 rounded-lg overflow-hidden transition-all duration-300">
+                    <button class="w-full text-left p-6 flex justify-between items-center hover:bg-brand-cream/40 transition-colors focus:outline-none faq-header">
+                        <span class="font-serif text-brand-dark font-medium text-base sm:text-lg">Q1. 產品可以宅配到府嗎？配送範圍與溫層為何？</span>
+                        <i class="fa-solid fa-chevron-down text-brand-gold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <div class="p-6 border-t border-brand-gold/10 text-brand-dark/70 text-xs sm:text-sm leading-relaxed space-y-2">
+                            <p>為了維持頂級甜點的最優質風味，不同商品有不同的溫層要求：</p>
+                            <ul class="list-disc list-inside space-y-1 ml-2">
+                                <li><strong>低溫冷藏配送：</strong> 適用於千層蛋糕、生日鮮奶油蛋糕。目前僅提供「雙北地區」當日專車常溫/冷藏快遞（免去摔損風險）。</li>
+                                <li><strong>冷凍低溫配送：</strong> 適用於可頌、貝果、馬卡龍與生吐司。提供全台黑貓宅急便配送。</li>
+                                <li><strong>常溫配送：</strong> 手工餅乾禮盒，可享全省常溫便利宅配或超商取貨。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white border border-brand-gold/15 rounded-lg overflow-hidden transition-all duration-300">
+                    <button class="w-full text-left p-6 flex justify-between items-center hover:bg-brand-cream/40 transition-colors focus:outline-none faq-header">
+                        <span class="font-serif text-brand-dark font-medium text-base sm:text-lg">Q2. 商品有保存期限與保存秘訣嗎？</span>
+                        <i class="fa-solid fa-chevron-down text-brand-gold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <div class="p-6 border-t border-brand-gold/10 text-brand-dark/70 text-xs sm:text-sm leading-relaxed space-y-2">
+                            <p>我們的所有商品皆為純手工現作且完全不含化學防腐劑。建議賞味秘訣如下：</p>
+                            <ul class="list-disc list-inside space-y-1 ml-2">
+                                <li><strong>現烤千層/蛋糕：</strong> 冷藏保存最多 2 日內食用最為香醇。</li>
+                                <li><strong>職人麵包/生吐司：</strong> 當天未食用完，請務必切片後「密封冷凍」保存，可保存 14 日。食用前以烤箱 180℃ 噴水烤 3-5 分鐘或電鍋乾蒸即可恢復完美鬆軟度。請勿放置冷藏，冷藏會導致澱粉老化變乾。</li>
+                                <li><strong>手工餅乾：</strong> 常溫陰涼處密封可保存 14 日。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white border border-brand-gold/15 rounded-lg overflow-hidden transition-all duration-300">
+                    <button class="w-full text-left p-6 flex justify-between items-center hover:bg-brand-cream/40 transition-colors focus:outline-none faq-header">
+                        <span class="font-serif text-brand-dark font-medium text-base sm:text-lg">Q3. 是否可以客製化生日蛋糕與婚禮宴會甜點？</span>
+                        <i class="fa-solid fa-chevron-down text-brand-gold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <div class="p-6 border-t border-brand-gold/10 text-brand-dark/70 text-xs sm:text-sm leading-relaxed">
+                            <p>是的！Maison de Rêve 擁有獨立的精緻客製化工坊。您可以利用我們特設的「<strong>客製蛋糕 (custom-cake)</strong>」線上設計面板直接進行外觀配色、層數與裝飾選擇；若需大型婚宴外燴、活動甜點塔或企業彌月訂製，請至「聯絡預訂」頁面填寫需求或致電專線諮詢，我們將會由專屬甜點顧問為您對接策劃。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 8: CONTACT (contact.html) -->
+        <section id="view-contact" class="page-view transition-page py-32 max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-brand-clay font-serif text-xs tracking-[0.3em] uppercase block mb-2">RESERVATION & ENQUIRY</span>
+                <h2 class="font-serif text-4xl text-brand-dark font-light mb-4">線上預約及聯絡信箱</h2>
+                <div class="w-16 h-[1px] bg-brand-gold mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                <!-- Info block -->
+                <div class="lg:col-span-5 space-y-8 bg-brand-dark text-brand-cream p-10 rounded-xl shadow-xl">
+                    <h3 class="font-serif text-2xl text-brand-gold">門市直接聯絡諮詢</h3>
+                    <p class="text-xs text-brand-cream/60 leading-relaxed">
+                        不論是針對當日現烤麵包的留貨保留、大型慶典、彌月預約諮詢，我們親切的客服專員會隨時為您竭誠服務。
+                    </p>
+
+                    <div class="space-y-4 text-xs tracking-wider">
+                        <div class="flex items-center space-x-3">
+                            <span class="text-brand-gold"><i class="fa-solid fa-phone-volume"></i></span>
+                            <p>專線電話：(02) 2345-6789</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-brand-gold"><i class="fa-solid fa-envelope"></i></span>
+                            <p>官方信箱：service@maisondereve.com</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-brand-gold"><i class="fa-solid fa-house-chimney"></i></span>
+                            <p>台北總店：台北市信義區信義路五段 88 號</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Pre-order Enquiry Form -->
+                <div class="lg:col-span-7 bg-white p-8 rounded-xl shadow-lg border border-brand-gold/15">
+                    <h3 class="font-serif text-xl text-brand-dark mb-6">填寫您的預定及諮詢需求</h3>
+                    <form id="contact-enquiry-form" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="contact-name" class="block text-xs font-semibold uppercase tracking-wider text-brand-dark/70 mb-2">您的姓名</label>
+                                <input type="text" id="contact-name" required class="w-full bg-brand-cream/50 border border-brand-gold/20 px-4 py-3 rounded text-sm focus:outline-none focus:border-brand-gold" placeholder="王小明">
+                            </div>
+                            <div>
+                                <label for="contact-phone" class="block text-xs font-semibold uppercase tracking-wider text-brand-dark/70 mb-2">聯絡電話</label>
+                                <input type="tel" id="contact-phone" required class="w-full bg-brand-cream/50 border border-brand-gold/20 px-4 py-3 rounded text-sm focus:outline-none focus:border-brand-gold" placeholder="0912-345678">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="contact-email" class="block text-xs font-semibold uppercase tracking-wider text-brand-dark/70 mb-2">電子信箱</label>
+                            <input type="email" id="contact-email" required class="w-full bg-brand-cream/50 border border-brand-gold/20 px-4 py-3 rounded text-sm focus:outline-none focus:border-brand-gold" placeholder="yourname@gmail.com">
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="enquiry-type" class="block text-xs font-semibold uppercase tracking-wider text-brand-dark/70 mb-2">諮詢項目</label>
+                                <select id="enquiry-type" class="w-full bg-brand-cream/50 border border-brand-gold/20 px-4 py-3 rounded text-sm focus:outline-none focus:border-brand-gold">
+                                    <option value="delivery">門市自取預約</option>
+                                    <option value="catering">彌月/婚宴大宗預訂</option>
+                                    <option value="complaint">一般品牌合作與回饋</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="booking-date" class="block text-xs font-semibold uppercase tracking-wider text-brand-dark/70 mb-2">預約自取 / 活動日期 (非必填)</label>
+                                <input type="date" id="booking-date" class="w-full bg-brand-cream/50 border border-brand-gold/20 px-4 py-3 rounded text-sm focus:outline-none focus:border-brand-gold">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="contact-message" class="block text-xs font-semibold uppercase tracking-wider text-brand-dark/70 mb-2">詳細說明需求</label>
+                            <textarea id="contact-message" required rows="4" class="w-full bg-brand-cream/50 border border-brand-gold/20 px-4 py-3 rounded text-sm focus:outline-none focus:border-brand-gold" placeholder="請填寫您想要預約留貨的品項與數量，或活動詳情..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-brand-dark hover:bg-brand-gold text-white hover:text-brand-dark font-bold text-xs uppercase tracking-widest transition-all duration-300 rounded shadow-md">
+                            發送預約諮詢單
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 9: CUSTOM CAKE (custom-cake.html) -->
+        <section id="view-custom-cake" class="page-view transition-page py-32 max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-brand-clay font-serif text-xs tracking-[0.3em] uppercase block mb-2">BESPOKE CAKE DESIGNER</span>
+                <h2 class="font-serif text-4xl text-brand-dark font-light mb-4">客製精品蛋糕線上配置器</h2>
+                <div class="w-16 h-[1px] bg-brand-gold mx-auto mb-4"></div>
+                <p class="text-xs text-brand-dark/50 max-w-md mx-auto">
+                    自由配置專屬的高雅蛋糕。選取您的尺寸、口味層數、外層淋醬及頂層點綴裝飾，即時檢視客製外觀渲染。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <!-- Live Rendering Canvas Box -->
+                <div class="lg:col-span-6 bg-white p-6 rounded-2xl shadow-xl border border-brand-gold/15 flex flex-col items-center">
+                    <h3 class="font-serif text-brand-dark mb-4 text-sm font-semibold tracking-wider">即時配置視覺效果</h3>
+                    
+                    <!-- SVG Interactive Cake Builder Box -->
+                    <div class="w-full h-[350px] bg-brand-cream rounded-xl flex items-center justify-center relative overflow-hidden" id="cake-preview-canvas-container">
+                        <!-- Custom Dynamic SVG Rendering of Bespoke Cake -->
+                        <svg id="cake-svg" class="w-64 h-64" viewBox="0 0 200 200">
+                            <!-- Background Platform -->
+                            <ellipse cx="100" cy="170" rx="65" ry="15" fill="#E2DCD3" stroke="#D4AF37" stroke-width="2"/>
+                            
+                            <!-- Tier 1 Base Layer -->
+                            <rect id="cake-base" x="50" y="100" width="100" height="50" fill="#F4EAE1" rx="5" />
+                            <ellipse id="cake-top-surface" cx="100" cy="100" rx="50" ry="15" fill="#EAD9CB" />
+
+                            <!-- Cream Layer Center line -->
+                            <rect id="cake-cream-filling" x="51" y="122" width="98" height="6" fill="#FFFFFF" />
+
+                            <!-- Dynamic Top Topping Decorative Element -->
+                            <g id="cake-decorations">
+                                <!-- Strawberries or Chocolates dynamically rendering based on configuration -->
+                            </g>
+                        </svg>
+                        
+                        <!-- Mini Badge Info -->
+                        <div class="absolute top-4 right-4 bg-brand-dark text-brand-gold text-[10px] uppercase font-bold tracking-widest py-1 px-2.5 rounded-full shadow border border-brand-gold/15">
+                            Bespoke #MAISON
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Selector Panel -->
+                <div class="lg:col-span-6 bg-white p-8 rounded-2xl shadow-xl border border-brand-gold/15 space-y-6">
+                    <div>
+                        <h4 class="font-serif text-lg text-brand-dark mb-3">1. 選擇底層蛋糕與夾餡風味</h4>
+                        <div class="grid grid-cols-3 gap-3" id="cake-flavor-options">
+                            <button data-flavor="vanilla" data-color="#F4EAE1" data-cream="#FFFFFF" class="p-3 border-2 border-brand-gold bg-brand-cream rounded text-center focus:outline-none flex flex-col items-center">
+                                <span class="text-xs font-bold">經典香草香緹</span>
+                                <span class="text-[9px] text-brand-dark/50 mt-1">NT$ 980 起</span>
+                            </button>
+                            <button data-flavor="chocolate" data-color="#5C3D2E" data-cream="#D32F2F" class="p-3 border border-brand-gold/20 bg-brand-cream rounded text-center focus:outline-none flex flex-col items-center">
+                                <span class="text-xs font-bold">比利時深巧黑櫻桃</span>
+                                <span class="text-[9px] text-brand-dark/50 mt-1">NT$ 1,080 起</span>
+                            </button>
+                            <button data-flavor="matcha" data-color="#A2B38B" data-cream="#FFFFFF" class="p-3 border border-brand-gold/20 bg-brand-cream rounded text-center focus:outline-none flex flex-col items-center">
+                                <span class="text-xs font-bold">宇治抹茶玄米紅豆</span>
+                                <span class="text-[9px] text-brand-dark/50 mt-1">NT$ 1,120 起</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-serif text-lg text-brand-dark mb-3">2. 選擇頂層點綴與裝飾</h4>
+                        <div class="grid grid-cols-3 gap-3" id="cake-topping-options">
+                            <button data-topping="strawberry" class="p-3 border-2 border-brand-gold bg-brand-cream rounded text-center focus:outline-none flex flex-col items-center">
+                                <span class="text-xs font-bold">大湖草莓 & 鮮奶油</span>
+                                <span class="text-[9px] text-brand-dark/50 mt-1">+ NT$ 150</span>
+                            </button>
+                            <button data-topping="blueberry" class="p-3 border border-brand-gold/20 bg-brand-cream rounded text-center focus:outline-none flex flex-col items-center">
+                                <span class="text-xs font-bold">高山藍莓 & 糖粉</span>
+                                <span class="text-[9px] text-brand-dark/50 mt-1">+ NT$ 120</span>
+                            </button>
+                            <button data-topping="goldleaf" class="p-3 border border-brand-gold/20 bg-brand-cream rounded text-center focus:outline-none flex flex-col items-center">
+                                <span class="text-xs font-bold">金箔馬卡龍</span>
+                                <span class="text-[9px] text-brand-dark/50 mt-1">+ NT$ 200</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-serif text-lg text-brand-dark mb-3">3. 蛋糕尺寸設定</h4>
+                        <div class="grid grid-cols-2 gap-3" id="cake-size-options">
+                            <button data-size="6" class="p-3 border-2 border-brand-gold bg-brand-cream rounded text-center focus:outline-none">
+                                <span class="text-xs font-bold">6 吋精品蛋糕</span>
+                                <span class="text-[9px] text-brand-dark/50 block mt-1">適合 4-6 人品嚐</span>
+                            </button>
+                            <button data-size="8" class="p-3 border border-brand-gold/20 bg-brand-cream rounded text-center focus:outline-none">
+                                <span class="text-xs font-bold">8 吋精緻宴會蛋糕</span>
+                                <span class="text-[9px] text-brand-dark/50 block mt-1">適合 8-12 人共享</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-brand-dark/10 pt-6 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-brand-dark/60 block">客製預估總價：</span>
+                            <span class="text-2xl font-serif text-brand-clay font-bold" id="custom-cake-price-text">NT$ 1,130</span>
+                        </div>
+                        <button id="add-custom-cake-to-cart-btn" class="px-8 py-3 bg-brand-dark hover:bg-brand-gold text-white hover:text-brand-dark text-xs uppercase tracking-widest font-bold transition-all duration-300 rounded shadow">
+                            加入預購購物籃
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Slide-out Shopping Basket Drawer -->
+    <div id="cart-drawer" class="fixed inset-y-0 right-0 w-full sm:w-96 bg-brand-cream shadow-2xl z-50 transform translate-x-full transition-transform duration-500 flex flex-col justify-between border-l border-brand-gold/10">
+        <div class="p-6 overflow-y-auto flex-1">
+            <div class="flex items-center justify-between border-b border-brand-dark/10 pb-4 mb-6">
+                <div class="flex items-center space-x-2">
+                    <span class="text-brand-gold"><i class="fa-solid fa-basket-shopping text-xl"></i></span>
+                    <h3 class="font-serif text-lg text-brand-dark font-medium">購物袋中的甜蜜預約</h3>
+                </div>
+                <button id="cart-drawer-close" class="text-brand-dark/60 hover:text-brand-dark focus:outline-none">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Dynamic basket items container -->
+            <div id="cart-items-container" class="space-y-4">
+                <!-- Appended dynamically with JS. Fallback empty banner is shown if list is clear -->
+                <div class="text-center py-12 text-brand-dark/40" id="empty-cart-text">
+                    <i class="fa-solid fa-cookie-bite text-4xl mb-3"></i>
+                    <p class="text-sm">購物袋空空如也，前往尋找幸福甜品吧！</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sticky Cart Action bar -->
+        <div class="bg-white p-6 border-t border-brand-dark/10 space-y-4 shadow-[0_-4px_10px_rgba(0,0,0,0.03)]">
+            <div class="flex justify-between items-center text-sm font-semibold text-brand-dark">
+                <span>合計金額</span>
+                <span id="cart-total-price-text" class="text-brand-clay text-lg">NT$ 0</span>
+            </div>
+            <button id="cart-checkout-btn" class="w-full py-4 bg-brand-dark hover:bg-brand-gold text-white hover:text-brand-dark font-bold text-xs uppercase tracking-widest transition-all duration-300 rounded">
+                確認預留訂單 (前往自取取貨)
+            </button>
+        </div>
+    </div>
+
+    <!-- Background dim overlay when drawer is open -->
+    <div id="backdrop" class="fixed inset-0 bg-black/40 z-40 hidden transition-opacity duration-500 opacity-0"></div>
+
+    <!-- Quick View Overlay Modal for quick item specs -->
+    <div id="quickview-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-brand-dark/50 backdrop-blur-sm hidden opacity-0 transition-all duration-300">
+        <div class="bg-brand-cream max-w-xl w-full rounded-2xl overflow-hidden shadow-2xl border border-brand-gold/15 relative transform scale-95 transition-transform duration-300">
+            <button id="quickview-modal-close" class="absolute top-4 right-4 text-brand-dark/60 hover:text-brand-dark z-10 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center shadow-md focus:outline-none">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div id="quickview-modal-content" class="p-6 sm:p-8">
+                <!-- Dynamically generated specs detail layout -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Beautiful Page Footer -->
+    <footer class="bg-brand-dark text-brand-cream pt-20 pb-10 border-t border-brand-gold/20 relative">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <!-- Footer Col 1: About Brand -->
+            <div class="space-y-4">
+                <h3 class="font-serif text-2xl text-brand-gold tracking-wide">Maison de Rêve</h3>
+                <p class="text-brand-cream/60 text-xs leading-relaxed">
+                    Maison de Rêve 夢幻之屋烘焙坊將法式極致優雅與日系純淨執念完美融合。嚴選進口天然原料，每日限量手工揉捏新鮮出爐，打造觸動味蕾的幸福之禮。
+                </p>
+                <div class="flex space-x-4 pt-2">
+                    <a href="https://facebook.com/" target="_blank" rel="noopener" class="text-brand-cream/60 hover:text-brand-gold transition-colors text-lg" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://instagram.com/" target="_blank" rel="noopener" class="text-brand-cream/60 hover:text-brand-gold transition-colors text-lg" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://line.me/" target="_blank" rel="noopener" class="text-brand-cream/60 hover:text-brand-gold transition-colors text-lg" aria-label="LINE"><i class="fa-brands fa-line"></i></a>
+                </div>
+            </div>
+
+            <!-- Footer Col 2: Useful Links -->
+            <div class="space-y-4">
+                <h4 class="font-bold text-sm tracking-widest text-brand-gold uppercase">網站選單</h4>
+                <div class="grid grid-cols-2 gap-2 text-xs text-brand-cream/60 font-light">
+                    <a href="#index" class="nav-link hover:text-brand-gold transition-colors">首頁目錄</a>
+                    <a href="#about" class="nav-link hover:text-brand-gold transition-colors">品牌創立故事</a>
+                    <a href="#products" class="nav-link hover:text-brand-gold transition-colors">精緻甜點麵包</a>
+                    <a href="#custom-cake" class="nav-link text-brand-rose hover:text-brand-gold transition-colors font-medium">客製蛋糕</a>
+                    <a href="#blog" class="nav-link hover:text-brand-gold transition-colors">烘焙知識部落格</a>
+                    <a href="#store" class="nav-link hover:text-brand-gold transition-colors">門市交通指南</a>
+                    <a href="#faq" class="nav-link hover:text-brand-gold transition-colors">常見問題解答</a>
+                    <a href="#contact" class="nav-link hover:text-brand-gold transition-colors">聯絡我們預訂</a>
+                </div>
+            </div>
+
+            <!-- Footer Col 3: Safe Certification -->
+            <div class="space-y-4">
+                <h4 class="font-bold text-sm tracking-widest text-brand-gold uppercase">食品安全認證</h4>
+                <p class="text-brand-cream/60 text-xs leading-relaxed">
+                    本坊全面投保和泰產物產品責任保險新台幣貳仟萬元整。全店食材100%均通過SGS檢測無防腐劑、重金屬等殘留，給您最尊榮、最安心的保障。
+                </p>
+                <div class="flex items-center space-x-3 text-[10px] text-brand-gold/80 bg-brand-darklight px-3 py-2 rounded">
+                    <i class="fa-solid fa-circle-check text-base"></i>
+                    <span>SGS無添加檢驗核可．已投保2,000萬責任險</span>
+                </div>
+            </div>
+
+            <!-- Footer Col 4: Newsletter -->
+            <div class="space-y-4">
+                <h4 class="font-bold text-sm tracking-widest text-brand-gold uppercase">烘焙新品快報</h4>
+                <p class="text-brand-cream/60 text-xs leading-relaxed">
+                    訂閱我們，搶先獲得全新法式甜點、中秋節慶禮盒優惠、VIP甜點免費品鑑活動與主廚食譜分享。
+                </p>
+                <form id="newsletter-form" class="flex flex-col sm:flex-row space-y-2 sm:space-y-0">
+                    <input type="email" placeholder="輸入電子信箱" required class="bg-brand-darklight text-xs text-white placeholder-white/30 px-4 py-3 rounded-t sm:rounded-t-none sm:rounded-l focus:outline-none focus:ring-1 focus:ring-brand-gold w-full">
+                    <button type="submit" class="bg-brand-gold hover:bg-brand-rose text-brand-dark hover:text-white text-[11px] font-bold tracking-wider px-5 py-3 rounded-b sm:rounded-b-none sm:rounded-r uppercase transition-all duration-300">
+                        訂閱
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-brand-cream/40 space-y-4 md:space-y-0">
+            <p>© 2026 Maison de Rêve Ltd. 夢幻之屋烘焙坊有限公司。保留一切權利。</p>
+            <div class="flex space-x-6">
+                <a href="#faq" class="hover:text-brand-gold">服務條款</a>
+                <a href="#faq" class="hover:text-brand-gold">隱私權政策</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Interactive Contact Tool Widget for Quick Messaging -->
+    <a href="#contact" class="fixed bottom-6 right-6 z-30 bg-brand-dark text-brand-gold w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-brand-rose hover:text-white transition-all duration-300 focus:outline-none border border-brand-gold/10 group hover:scale-110 active:scale-95" aria-label="線上留言聯絡預約">
+        <i class="fa-solid fa-paper-plane text-lg group-hover:animate-bounce"></i>
+    </a>
+
+    <!-- Custom Elegant System Notification Container -->
+    <div id="toast-container" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 pointer-events-none flex flex-col space-y-3"></div>
+
+    <!-- JAVASCRIPT LOGIC CONTAINER -->
+    <script>
+        // Comprehensive Luxury Product & Blog Databases
+        const PRODUCTS_DB = [
+            {
+                id: 1,
+                name: '法式極致草莓千層蛋糕',
+                seoAlt: '法式草莓千層蛋糕甜點，頂級鮮奶油與香草夾餡',
+                image: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=600&auto=format&fit=crop',
+                category: 'pastry',
+                categoryZH: '精緻甜點',
+                price: 1380,
+                desc: '二十四層純手工極薄脆皮蛋皮，搭配大溪地馬達加斯加頂級香草莢與法國發酵鮮奶油慢速打發。夾入酸甜飽滿的當季新鮮大湖草莓，果香與奶香完美融和。',
+                ingredients: '頂級馬達加斯加香草莢、大湖新鮮草莓、法國AOP依思尼發酵奶油、日本優質昭和小麥粉、牧場契作雞蛋。',
+                flavors: '細緻絲滑的乳酪鮮奶，伴隨著熟成草莓天然的酸甜果酸，完美層次。',
+                storage: '冷藏密封保存。建議 2 天之內完食以享有最佳蛋皮脆軟口感。',
+                duration: '冷藏可保存約 48 小時。',
+                pairing: '推薦搭配法式大吉嶺紅茶或冰萃香草燕麥拿鐵。',
+                badge: '極致主廚推薦'
+            },
+            {
+                id: 2,
+                name: '頂級皇家香草生吐司',
+                seoAlt: '頂級黃金熟成生吐司，日本鳥越麵粉與牧場鮮乳',
+                image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=600&auto=format&fit=crop',
+                category: 'bread',
+                categoryZH: '職人麵包',
+                price: 280,
+                desc: '使用高比例日本最高級鳥越麵粉，添加天然自製酵母低溫 18 小時水合發酵。全程不加任何一滴水，採用小農鮮乳與天然龍眼蜂蜜慢速揉捏，柔軟綿密。',
+                ingredients: '日本鳥越小麥粉、小農鮮乳、北海道十勝煉乳、純龍眼蜜、法國發酵奶油。',
+                flavors: '手撕柔軟如棉，帶有濃郁的蜂蜜香甜與溫潤高雅的小麥麥香。',
+                storage: '放置室溫可保存 1.5 天。未食用完建議切片密封置於冷凍，可放置約 14 天。',
+                duration: '冷凍可存放 14 天。',
+                pairing: '推薦搭配經典手工草莓玫瑰花醬或佐原味有鹽發酵奶油。',
+                badge: '經典必買'
+            },
+            {
+                id: 3,
+                name: '極致法式黃金可頌',
+                seoAlt: '每日現烤黃金可頌麵包，酥鬆蜂巢內膜剖面',
+                image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=600&auto=format&fit=crop',
+                category: 'bread',
+                categoryZH: '職人麵包',
+                price: 85,
+                desc: '法國頂級 AOP 發酵奶油與純麥芽香小麥粉完美揉合，經過 12 折極致三摺工藝。烘烤出完美蜂巢網狀內面，外皮極致酥脆。',
+                ingredients: '法國 Lescure 發酵奶油、法國T55經典麵粉、岩鹽、天然酵母。',
+                flavors: '外皮咬下帶著清脆的碎裂聲，內層富含飽滿溫潤的濃厚奶乳香氣。',
+                storage: '常溫可存放 24 小時。冷凍可保存 10 天，回烤前噴水以 180℃ 烤 3-5 分鐘。',
+                duration: '冷凍可存放 10 天。',
+                pairing: '非常適合佐英式早餐茶或耶加雪菲極致冰美式。',
+                badge: '超人氣'
+            },
+            {
+                id: 4,
+                name: '皇家黑巧馬卡龍精裝禮盒',
+                seoAlt: '法式手工馬卡龍甜點，金箔黑巧克力餡與彩色外殼',
+                image: 'https://images.unsplash.com/photo-1569864358642-9d1684040f43?q=80&w=600&auto=format&fit=crop',
+                category: 'gift',
+                categoryZH: '節慶禮盒',
+                price: 720,
+                desc: '被譽為「少女的酥胸」。採用西西里頂級杏仁粉配以義式蛋白霜法慢烤，外層酥脆。夾餡使用 70% 比利時頂級極致黑巧克力甘納許，並缀飾食用金箔。',
+                ingredients: '美國頂級杏仁粉、70%比利時黑巧、新鮮蛋白、食用金箔、有機糖粉。',
+                flavors: '層次由香酥逐漸轉為濕潤黏牙，巧克力可可甘醇帶有細膩微酸。',
+                storage: '必須冷藏密封保存。',
+                duration: '冷藏可存放 7 天。',
+                pairing: '完美契合特濃無糖義式黑咖啡或皇家伯爵茶。',
+                badge: '節慶人氣伴手禮'
+            },
+            {
+                id: 5,
+                name: '宇治抹茶柚香小聖木塔',
+                seoAlt: '宇治抹茶柚香塔精美盤飾，翠綠慕斯與塔皮酥殼',
+                image: 'https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=600&auto=format&fit=crop',
+                category: 'pastry',
+                categoryZH: '精緻甜點',
+                price: 240,
+                desc: '精選日本宇治小山園抹茶粉，製作成如慕斯般濃郁清新的抹茶甘納許，內餡隱藏酸甜微苦的日本高知黃柚醬與脆口沙布列塔皮，多層次交融。',
+                ingredients: '小山園若竹抹茶粉、高知柚子果泥、紐西蘭發酵奶油、特製杏仁塔殼。',
+                flavors: '抹茶微苦的高雅回甘與柚子耀眼的果酸在口中達到絕妙平衡。',
+                storage: '請保持 2-4℃ 冷藏存放。',
+                duration: '冷藏可存放 36 小時。',
+                pairing: '極佳搭配日式煎茶或手沖耶加雪菲淡雅單品。',
+                badge: '主廚獨創'
+            },
+            {
+                id: 6,
+                name: '中秋法日名選烘焙常溫禮盒',
+                seoAlt: '手工精品烘焙綜合常溫禮盒，磅蛋糕與瑪德蓮餅乾組合',
+                image: 'https://images.unsplash.com/photo-1544982503-9f984c14501a?q=80&w=600&auto=format&fit=crop',
+                category: 'gift',
+                categoryZH: '節慶禮盒',
+                price: 950,
+                desc: '匯聚法日最經典的手工磅蛋糕、焙茶瑪德蓮、榛果費南雪及皇家巧克力餅乾。獨立優雅無菌包裝，搭配永續環保極簡香檳金硬木禮盒，送禮最為高雅尊貴。',
+                ingredients: '特選焦香發酵奶油、伊勢焙茶粉、日本海藻糖、熟成萊姆酒干果。',
+                flavors: '各式糕點各自閃耀焦糖香、草本茶香與堅果圓潤風韻，甘甜而不膩。',
+                storage: '常溫陰涼避光處，可保存約 14 天。',
+                duration: '常溫可放置 14 天。',
+                pairing: '十分適合佐下午茶時段、熱紅茶或特磨美式咖啡。',
+                badge: '限量供應'
+            }
+        ];
+
+        const BLOG_DB = [
+            {
+                id: 1,
+                title: '如何挑選天然健康的好麵包？麵粉與天然發酵的真實秘密',
+                seoAlt: '手工烘焙小麥粉與發酵麵團，如何挑選無化學添加物好麵包',
+                image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=600&auto=format&fit=crop',
+                category: '烘焙知識',
+                date: '2026-05-15',
+                summary: '在琳瑯滿目的麵包架上，如何分辨化學香精膨鬆劑與天然長時間慢速發酵的匠心烘焙？主廚親授四大絕招，帶您找回最純粹的麥香感動。'
+            },
+            {
+                id: 2,
+                title: '一探法式甜點靈魂：奶油（Butter）與麵粉的頂級產區秘密',
+                seoAlt: '頂級法國發酵發泡鮮奶油原料與烘焙小麥粉原料挑選',
+                image: 'https://images.unsplash.com/photo-1517433456452-f9633a875f6f?q=80&w=600&auto=format&fit=crop',
+                category: '食材考究',
+                date: '2026-04-20',
+                summary: '為什麼 AOP 產區的發酵奶油能烤出如此酥鬆芬芳的可頌？小麥蛋白對於生吐司細膩組織又有何關聯？讓我們為您揭露高級甜點背後的食材美學。'
+            },
+            {
+                id: 3,
+                title: '甜點與精緻蛋糕的正確保存與極致賞味加熱秘訣',
+                seoAlt: '草莓鮮奶油蛋糕常溫冷藏與生吐司冷凍保存回烤指南',
+                image: 'https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=600&auto=format&fit=crop',
+                category: '美味提案',
+                date: '2026-03-10',
+                summary: '剛買回家的千層蛋糕該如何冰鎮才不會受潮？生吐司放三天乾硬了怎麼回烤才能還原極致Q彈？一文看懂所有烘焙糕點保存的實用保鮮守則。'
+            }
+        ];
+
+        // Core Reactive Application State
+        let state = {
+            cart: [],
+            currentRoute: 'index',
+            currentDetailProductId: 1,
+            selectedFlavor: 'vanilla',
+            selectedTopping: 'strawberry',
+            selectedCakeSize: '6',
+            activeReviewIndex: 0
+        };
+
+        // Custom Bespoke Cake Visualizer and pricing logic
+        const CAKE_OPTIONS = {
+            flavors: {
+                vanilla: { basePrice: 980, color: '#F4EAE1', fillingColor: '#FFFFFF', name: '經典香草香緹' },
+                chocolate: { basePrice: 1080, color: '#5C3D2E', fillingColor: '#D32F2F', name: '比利時深巧黑櫻桃' },
+                matcha: { basePrice: 1120, color: '#A2B38B', fillingColor: '#FFFFFF', name: '宇治抹茶玄米紅豆' }
+            },
+            toppings: {
+                strawberry: { price: 150, name: '大湖草莓 & 鮮奶油', svg: `
+                    <!-- Strawberries -->
+                    <circle cx="70" cy="85" r="5" fill="#E53935"/>
+                    <circle cx="100" cy="85" r="5" fill="#E53935"/>
+                    <circle cx="130" cy="85" r="5" fill="#E53935"/>
+                    <!-- Cream dollops -->
+                    <circle cx="85" cy="85" r="4" fill="#FFFFFF"/>
+                    <circle cx="115" cy="85" r="4" fill="#FFFFFF"/>
+                ` },
+                blueberry: { price: 120, name: '高山藍莓 & 糖粉', svg: `
+                    <!-- Blueberries -->
+                    <circle cx="70" cy="85" r="4" fill="#3F51B5"/>
+                    <circle cx="85" cy="85" r="4" fill="#3F51B5"/>
+                    <circle cx="100" cy="85" r="4" fill="#3F51B5"/>
+                    <circle cx="115" cy="85" r="4" fill="#3F51B5"/>
+                    <circle cx="130" cy="85" r="4" fill="#3F51B5"/>
+                    <!-- Sugar dusting -->
+                    <circle cx="75" cy="80" r="1" fill="#FFFFFF"/>
+                    <circle cx="110" cy="82" r="1" fill="#FFFFFF"/>
+                    <circle cx="125" cy="80" r="1" fill="#FFFFFF"/>
+                ` },
+                goldleaf: { price: 200, name: '金箔馬卡龍', svg: `
+                    <!-- Macarons -->
+                    <ellipse cx="80" cy="82" rx="7" ry="5" fill="#D4AF37"/>
+                    <ellipse cx="120" cy="82" rx="7" ry="5" fill="#D4AF37"/>
+                    <!-- Gold flecks -->
+                    <polygon points="100,82 102,84 100,86 98,84" fill="#FFD700" />
+                ` }
+            },
+            sizes: {
+                '6': { multiplier: 1.0, name: '6 吋精品蛋糕' },
+                '8': { multiplier: 1.4, name: '8 吋精緻宴會蛋糕' }
+            }
+        };
+
+        // Render Cake Builder SVG real-time changes
+        function updateCakeVisualizer() {
+            const baseSvg = document.getElementById('cake-base');
+            const topSvg = document.getElementById('cake-top-surface');
+            const creamSvg = document.getElementById('cake-cream-filling');
+            const decorsContainer = document.getElementById('cake-decorations');
+            const priceText = document.getElementById('custom-cake-price-text');
+
+            const fData = CAKE_OPTIONS.flavors[state.selectedFlavor];
+            const tData = CAKE_OPTIONS.toppings[state.selectedTopping];
+            const sData = CAKE_OPTIONS.sizes[state.selectedCakeSize];
+
+            if (baseSvg && topSvg && creamSvg && decorsContainer) {
+                // Animate change with scaling
+                baseSvg.style.transition = "fill 0.4s ease";
+                topSvg.style.transition = "fill 0.4s ease";
+                creamSvg.style.transition = "fill 0.4s ease";
+
+                baseSvg.setAttribute('fill', fData.color);
+                topSvg.setAttribute('fill', fData.color);
+                creamSvg.setAttribute('fill', fData.fillingColor);
+
+                // Load decoration child nodes
+                decorsContainer.innerHTML = tData.svg;
+
+                // Adjust SVG dimension ratios slightly based on size factor
+                const scaleFactor = state.selectedCakeSize === '8' ? 1.15 : 1.0;
+                const svgElement = document.getElementById('cake-svg');
+                if (svgElement) {
+                    svgElement.style.transform = `scale(${scaleFactor})`;
+                    svgElement.style.transition = "transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)";
+                }
+            }
+
+            // Price formulation
+            const subtotal = Math.round((fData.basePrice + tData.price) * sData.multiplier);
+            if (priceText) {
+                priceText.textContent = `NT$ ${subtotal.toLocaleString()}`;
+            }
+            return subtotal;
+        }
+
+        function setupCakeBuilderListeners() {
+            const flavorGroup = document.getElementById('cake-flavor-options');
+            const toppingGroup = document.getElementById('cake-topping-options');
+            const sizeGroup = document.getElementById('cake-size-options');
+            const addToCartBtn = document.getElementById('add-custom-cake-to-cart-btn');
+
+            if (flavorGroup) {
+                const buttons = flavorGroup.querySelectorAll('button');
+                buttons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        buttons.forEach(b => b.classList.replace('border-brand-gold', 'border-brand-gold/20'));
+                        btn.classList.replace('border-brand-gold/20', 'border-brand-gold');
+                        state.selectedFlavor = btn.getAttribute('data-flavor');
+                        updateCakeVisualizer();
+                    });
+                });
+            }
+
+            if (toppingGroup) {
+                const buttons = toppingGroup.querySelectorAll('button');
+                buttons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        buttons.forEach(b => b.classList.replace('border-brand-gold', 'border-brand-gold/20'));
+                        btn.classList.replace('border-brand-gold/20', 'border-brand-gold');
+                        state.selectedTopping = btn.getAttribute('data-topping');
+                        updateCakeVisualizer();
+                    });
+                });
+            }
+
+            if (sizeGroup) {
+                const buttons = sizeGroup.querySelectorAll('button');
+                buttons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        buttons.forEach(b => b.classList.replace('border-brand-gold', 'border-brand-gold/20'));
+                        btn.classList.replace('border-brand-gold/20', 'border-brand-gold');
+                        state.selectedCakeSize = btn.getAttribute('data-size');
+                        updateCakeVisualizer();
+                    });
+                });
+            }
+
+            if (addToCartBtn) {
+                addToCartBtn.addEventListener('click', () => {
+                    const price = updateCakeVisualizer();
+                    const flavorName = CAKE_OPTIONS.flavors[state.selectedFlavor].name;
+                    const toppingName = CAKE_OPTIONS.toppings[state.selectedTopping].name;
+                    const sizeName = CAKE_OPTIONS.sizes[state.selectedCakeSize].name;
+
+                    const bespokeItem = {
+                        id: `bespoke-${Date.now()}`,
+                        name: `客製珍選甜點蛋糕 [${sizeName}]`,
+                        details: `夾餡口味：${flavorName} / 裝飾點綴：${toppingName}`,
+                        price: price,
+                        qty: 1,
+                        image: 'https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=150&auto=format&fit=crop'
+                    };
+
+                    addToCart(bespokeItem);
+                });
+            }
+        }
+
+        // Dynamic SEO Structured Data Script injector helper
+        function updateJSONLD(route, payload = null) {
+            let existingScript = document.getElementById('json-ld-schema');
+            if (existingScript) existingScript.remove();
+
+            let schema = {};
+
+            const baseBakerySchema = {
+                "@context": "https://schema.org",
+                "@type": "Bakery",
+                "name": "Maison de Rêve 夢幻之屋烘焙坊",
+                "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop",
+                "@id": "https://maisondereve.com/#bakery",
+                "url": "https://maisondereve.com/",
+                "telephone": "+886-2-2345-6789",
+                "priceRange": "$$",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "信義路五段 88 號 1 樓",
+                    "addressLocality": "信義區",
+                    "addressRegion": "台北市",
+                    "postalCode": "110",
+                    "addressCountry": "TW"
+                },
+                "openingHoursSpecification": {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday",
+                        "Saturday",
+                        "Sunday"
+                    ],
+                    "opens": "11:00",
+                    "closes": "20:00"
+                }
+            };
+
+            if (route === 'index') {
+                schema = {
+                    "@context": "https://schema.org",
+                    "@graph": [
+                        baseBakerySchema,
+                        {
+                            "@type": "WebSite",
+                            "name": "Maison de Rêve Official Boutique",
+                            "url": "https://maisondereve.com/"
+                        }
+                    ]
+                };
+            } else if (route === 'products') {
+                schema = {
+                    "@context": "https://schema.org",
+                    "@type": "ItemList",
+                    "itemListElement": PRODUCTS_DB.map((p, index) => ({
+                        "@type": "ListItem",
+                        "position": index + 1,
+                        "url": `https://maisondereve.com/#product-detail?id=${p.id}`,
+                        "name": p.name
+                    }))
+                };
+            } else if (route === 'product-detail' && payload) {
+                schema = {
+                    "@context": "https://schema.org",
+                    "@type": "Product",
+                    "name": payload.name,
+                    "image": payload.image,
+                    "description": payload.desc,
+                    "sku": `MDR-00${payload.id}`,
+                    "offers": {
+                        "@type": "Offer",
+                        "priceCurrency": "TWD",
+                        "price": payload.price,
+                        "availability": "https://schema.org/InStock",
+                        "url": `https://maisondereve.com/#product-detail?id=${payload.id}`
+                    }
+                };
+            } else if (route === 'faq') {
+                schema = {
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "Q1. 產品可以宅配到府嗎？配送範圍與溫層為何？",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "為了維持頂級甜點的最優質風味，不同商品有不同的溫層要求。目前提供雙北地區當日專車冷藏常溫快遞，其餘地區提供冷凍黑貓宅急便或常溫宅配等。"
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Q2. 商品有保存期限與保存秘訣嗎？",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "所有烘焙皆為純手工天然無化學防腐劑。千層冷藏可放 2 天，吐司與麵包如需延長保存建議切片後低溫冷凍，可存 14 天並可通過噴水回烤回春組織風味。"
+                            }
+                        }
+                    ]
+                };
+            } else {
+                schema = baseBakerySchema;
+            }
+
+            const script = document.createElement('script');
+            script.id = 'json-ld-schema';
+            script.type = 'application/ld+json';
+            script.innerHTML = JSON.stringify(schema, null, 2);
+            document.head.appendChild(script);
+        }
+
+        // SPA Client-side Route Handler
+        function handleRouting() {
+            const hash = window.location.hash || '#index';
+            
+            // Extract core route and query parameters (e.g. ?id=1)
+            const [routePath, queryString] = hash.split('?');
+            const route = routePath.replace('#', '');
+            
+            const params = {};
+            if (queryString) {
+                const searchParams = new URLSearchParams(queryString);
+                for (const [key, val] of searchParams.entries()) {
+                    params[key] = val;
+                }
+            }
+
+            // Close Mobile Nav Menu instantly upon route transitions
+            const mobilePanel = document.getElementById('mobile-nav-panel');
+            if (mobilePanel) mobilePanel.classList.add('translate-x-full');
+
+            // Find matching views container
+            const allViews = document.querySelectorAll('.page-view');
+            let activeView = document.getElementById(`view-${route}`);
+
+            if (!activeView) {
+                // Fallback to default index route view if invalid path
+                activeView = document.getElementById('view-index');
+                state.currentRoute = 'index';
+            } else {
+                state.currentRoute = route;
+            }
+
+            // Scroll directly to page head smoothly
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Animate swap layout transition
+            allViews.forEach(v => {
+                v.classList.remove('active');
+                v.style.opacity = '0';
+                v.style.transform = 'translateY(15px)';
+            });
+
+            setTimeout(() => {
+                activeView.classList.add('active');
+                setTimeout(() => {
+                    activeView.style.opacity = '1';
+                    activeView.style.transform = 'translateY(0px)';
+                }, 50);
+            }, 300);
+
+            // Update Header Nav active bar position visual focus
+            updateHeaderStyle(state.currentRoute);
+
+            // Dynamic route render payloads
+            if (state.currentRoute === 'products') {
+                renderProductsCatalog();
+            } else if (state.currentRoute === 'product-detail') {
+                const pid = parseInt(params.id) || 1;
+                state.currentDetailProductId = pid;
+                renderProductDetails(pid);
+            } else if (state.currentRoute === 'custom-cake') {
+                updateCakeVisualizer();
+            }
+
+            // Dynamically synchronize head tags for optimal simulated search crawler index
+            updateMetaTags(state.currentRoute);
+        }
+
+        function updateMetaTags(route) {
+            let titleText = "Maison de Rêve 夢幻之屋 | 頂級法日手作烘焙與精品甜點";
+            let descText = "Maison de Rêve 夢幻之屋烘焙坊，融合法式極致美學與日系職人手藝。每日限量手工精品甜點及低溫熟成可頌。";
+
+            if (route === 'products') {
+                titleText = "法日手作精緻甜點與職人現烤麵包目錄 | Maison de Rêve 夢幻之屋";
+                descText = "探索大溪地香草草莓千層、低溫水合熟成生吐司、法式金箔馬卡龍及黃金蜂巢可頌等多款奢華工藝美味目錄。";
+            } else if (route === 'product-detail') {
+                const product = PRODUCTS_DB.find(p => p.id === state.currentDetailProductId);
+                if (product) {
+                    titleText = `【極致手作】${product.name} 頂級天然食材配置 | Maison de Rêve 夢幻之屋`;
+                    descText = `${product.desc.substring(0, 80)}... 嚴選頂級進口發酵奶油，全台新鮮預約外派取貨。`;
+                }
+            } else if (route === 'about') {
+                titleText = "職人理念與法式經典創立故事 | Maison de Rêve 夢幻之屋";
+                descText = "了解極致主廚Jean-Luc Lin的法國工藝背景與堅持，天然無人工合成添加的堅持，與對環境減塑綠色包裝的環保承諾。";
+            } else if (route === 'blog') {
+                titleText = "經典烘焙大師日誌與食材知識庫 | Maison de Rêve 夢幻之屋";
+                descText = "學習如何分辨劣質添加麵包與天然慢酵老麵包、了解頂級發酵奶油的卓越之處與高階甜點美味加熱保存守則。";
+            } else if (route === 'store') {
+                titleText = "信義旗艦店營業交通與現烤出爐時段 | Maison de Rêve 夢幻之屋";
+                descText = "台北信義旗艦大樓現場環境一覽，地鐵象山站步程3分，提供每日烘焙出爐實用時段與地下室大宗客戶預約停車抵扣指南。";
+            } else if (route === 'faq') {
+                titleText = "精品外送配送溫層與手工餅乾保存問答 | Maison de Rêve 夢幻之屋";
+                descText = "雙北精品低溫常溫配送、蛋糕防碰撞包裝、麵包冷凍密封回烤秘訣及客製蛋糕預購細則支援中心。";
+            } else if (route === 'contact') {
+                titleText = "節慶外燴禮盒線上預定與顧問諮詢 | Maison de Rêve 夢幻之屋";
+                descText = "即時留言申請，由專屬禮盒顧問為您量身規劃彌月禮盒、大宗宴會外燴與手作自取甜點保留單。";
+            } else if (route === 'custom-cake') {
+                titleText = "極致高雅客製生日蛋糕線上即時配置器 | Maison de Rêve 夢幻之屋";
+                descText = "線上挑選專屬尺寸層數、宇治抹茶或比利時巧克夾餡，綴飾金箔與草莓，打造出心目中奢華唯美的慶典藝術。";
+            }
+
+            document.title = titleText;
+            document.querySelector('meta[name="description"]').setAttribute('content', descText);
+            document.querySelector('meta[property="og:title"]').setAttribute('content', titleText);
+            document.querySelector('meta[property="og:description"]').setAttribute('content', descText);
+
+            // Programmatically inject matching structural micro-data schema
+            if (route === 'product-detail') {
+                const product = PRODUCTS_DB.find(p => p.id === state.currentDetailProductId);
+                updateJSONLD(route, product);
+            } else {
+                updateJSONLD(route);
+            }
+        }
+
+        function updateHeaderStyle(route) {
+            const header = document.getElementById('main-header');
+            const desktopNav = document.getElementById('desktop-nav');
+            const cartBtn = document.getElementById('cart-toggle-btn');
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const logoText = header.querySelector('.font-serif');
+            const subLogoText = header.querySelector('.text-\\[9px\\]');
+
+            if (!header) return;
+
+            // If Hero Page view index is loaded, navbar should be floating transparent, otherwise solid clean linen
+            if (route === 'index' && window.scrollY < 80) {
+                header.className = "fixed top-0 left-0 w-full z-40 transition-all duration-500 bg-transparent py-5";
+                desktopNav?.classList.replace('text-brand-dark', 'text-brand-cream');
+                cartBtn?.classList.replace('text-brand-dark', 'text-brand-cream');
+                menuBtn?.classList.replace('text-brand-dark', 'text-brand-cream');
+                if (logoText) logoText.className = "font-serif text-2xl md:text-3xl font-light tracking-wider text-brand-gold transition-all duration-300";
+                if (subLogoText) subLogoText.className = "text-[9px] tracking-[0.3em] uppercase text-brand-cream/80 transition-all duration-300";
+            } else {
+                header.className = "fixed top-0 left-0 w-full z-40 transition-all duration-500 bg-brand-cream/90 blur-backdrop py-4 shadow-sm border-b border-brand-gold/10";
+                desktopNav?.classList.replace('text-brand-cream', 'text-brand-dark');
+                cartBtn?.classList.replace('text-brand-cream', 'text-brand-dark');
+                menuBtn?.classList.replace('text-brand-cream', 'text-brand-dark');
+                if (logoText) logoText.className = "font-serif text-2xl md:text-3xl font-light tracking-wider text-brand-dark transition-all duration-300";
+                if (subLogoText) subLogoText.className = "text-[9px] tracking-[0.3em] uppercase text-brand-dark/60 transition-all duration-300";
+            }
+        }
+
+        // Elegant non-blocking popup notification
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toast-container');
+            if (!container) return;
+
+            const toast = document.createElement('div');
+            toast.className = "bg-brand-dark text-brand-cream border border-brand-gold/25 px-5 py-3.5 rounded-lg shadow-2xl text-xs sm:text-sm flex items-center space-x-3 pointer-events-auto transform translate-y-2 opacity-0 transition-all duration-300 min-w-[280px]";
+            
+            const icon = type === 'success' ? '<i class="fa-solid fa-circle-check text-brand-gold text-base"></i>' : '<i class="fa-solid fa-triangle-exclamation text-brand-rose text-base"></i>';
+            toast.innerHTML = `
+                ${icon}
+                <span class="font-medium tracking-wide">${message}</span>
+            `;
+
+            container.appendChild(toast);
+
+            // Trigger animation
+            setTimeout(() => {
+                toast.classList.replace('translate-y-2', 'translate-y-0');
+                toast.classList.replace('opacity-0', 'opacity-1');
+            }, 50);
+
+            // Auto dismiss toast after duration
+            setTimeout(() => {
+                toast.classList.replace('translate-y-0', 'translate-y-2');
+                toast.classList.replace('opacity-1', 'opacity-0');
+                setTimeout(() => {
+                    toast.remove();
+                }, 300);
+            }, 3500);
+        }
+
+        // Add single product or custom layout items to cart
+        function addToCart(product) {
+            const existing = state.cart.find(item => item.id === product.id);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                state.cart.push(product);
+            }
+            showToast(`已成功預約保留： ${product.name}`);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const countBadge = document.getElementById('cart-count');
+            const itemsContainer = document.getElementById('cart-items-container');
+            const emptyLabel = document.getElementById('empty-cart-text');
+            const totalPriceText = document.getElementById('cart-total-price-text');
+
+            const totalCount = state.cart.reduce((acc, curr) => acc + curr.qty, 0);
+            if (countBadge) countBadge.textContent = totalCount;
+
+            if (state.cart.length === 0) {
+                emptyLabel?.classList.remove('hidden');
+                itemsContainer.innerHTML = '';
+                if (totalPriceText) totalPriceText.textContent = "NT$ 0";
+                return;
+            }
+
+            emptyLabel?.classList.add('hidden');
+            let innerHTML = '';
+            let totalAmount = 0;
+
+            state.cart.forEach(item => {
+                const sub = item.price * item.qty;
+                totalAmount += sub;
+
+                innerHTML += `
+                    <div class="flex items-start space-x-4 border-b border-brand-dark/10 pb-4 last:border-b-0">
+                        <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover rounded border border-brand-gold/15 flex-shrink-0">
+                        <div class="flex-1 min-w-0">
+                            <h4 class="font-semibold text-xs text-brand-dark truncate">${item.name}</h4>
+                            <p class="text-[10px] text-brand-dark/50 mt-0.5 line-clamp-1">${item.details || ''}</p>
+                            <div class="flex items-center justify-between mt-2">
+                                <span class="text-xs text-brand-clay font-bold">NT$ ${item.price.toLocaleString()}</span>
+                                <div class="flex items-center space-x-2">
+                                    <button onclick="changeCartQty('${item.id}', -1)" class="w-5 h-5 bg-brand-cream border border-brand-gold/20 rounded flex items-center justify-center text-xs hover:bg-brand-gold/20 focus:outline-none" aria-label="減少數量">-</button>
+                                    <span class="text-xs font-semibold">${item.qty}</span>
+                                    <button onclick="changeCartQty('${item.id}', 1)" class="w-5 h-5 bg-brand-cream border border-brand-gold/20 rounded flex items-center justify-center text-xs hover:bg-brand-gold/20 focus:outline-none" aria-label="增加數量">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            if (itemsContainer) itemsContainer.innerHTML = innerHTML;
+            if (totalPriceText) totalPriceText.textContent = `NT$ ${totalAmount.toLocaleString()}`;
+        }
+
+        window.changeCartQty = function(id, delta) {
+            const item = state.cart.find(i => i.id === id);
+            if (!item) return;
+            item.qty += delta;
+            if (item.qty <= 0) {
+                state.cart = state.cart.filter(i => i.id !== id);
+                showToast("已從購物袋中移除甜點品項", "warning");
+            }
+            updateCartUI();
+        };
+
+        function renderProductsCatalog() {
+            const catalogGrid = document.getElementById('products-catalog-grid');
+            if (!catalogGrid) return;
+
+            // Retrive currently active filter
+            const activeFilterBtn = document.querySelector('#category-filter-group .bg-brand-dark');
+            const category = activeFilterBtn ? activeFilterBtn.getAttribute('data-cat') : 'all';
+
+            // Retrieve price sort criteria
+            const sortVal = document.getElementById('price-sort').value;
+
+            let filtered = PRODUCTS_DB.filter(p => category === 'all' || p.category === category);
+
+            if (sortVal === 'price-asc') {
+                filtered.sort((a, b) => a.price - b.price);
+            } else if (sortVal === 'price-desc') {
+                filtered.sort((a, b) => b.price - a.price);
+            }
+
+            let innerHTML = '';
+            filtered.forEach(p => {
+                innerHTML += `
+                    <article class="bg-white border border-brand-gold/15 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                        <div class="relative overflow-hidden aspect-video">
+                            <!-- Badge -->
+                            <span class="absolute top-4 left-4 bg-brand-dark/90 backdrop-blur text-brand-gold text-[9px] uppercase font-bold tracking-widest py-1 px-3 z-10 rounded-full border border-brand-gold/20 shadow-md">${p.badge}</span>
+                            <img src="${p.image}" alt="${p.seoAlt}" class="w-full h-full object-cover transition-transform duration-[4000ms] group-hover:scale-110">
+                            <!-- Quick Overlay Action -->
+                            <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-3">
+                                <button onclick="triggerQuickView(${p.id})" class="w-10 h-10 bg-brand-cream hover:bg-brand-gold text-brand-dark rounded-full flex items-center justify-center shadow focus:outline-none" aria-label="快速檢視">
+                                    <i class="fa-solid fa-magnifying-glass text-sm"></i>
+                                </button>
+                                <button onclick="triggerAddToCart(${p.id})" class="w-10 h-10 bg-brand-cream hover:bg-brand-gold text-brand-dark rounded-full flex items-center justify-center shadow focus:outline-none" aria-label="直接預約加入購物袋">
+                                    <i class="fa-solid fa-basket-shopping text-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-[10px] uppercase tracking-wider text-brand-clay font-bold">${p.categoryZH}</span>
+                                    <span class="text-xs font-semibold text-brand-dark/40"><i class="fa-solid fa-star text-brand-gold mr-1"></i>5.0</span>
+                                </div>
+                                <h3 class="font-serif text-lg font-bold text-brand-dark mb-2 hover:text-brand-gold transition-colors"><a href="#product-detail?id=${p.id}">${p.name}</a></h3>
+                                <p class="text-brand-dark/60 text-xs leading-relaxed mb-4 line-clamp-2">${p.desc}</p>
+                            </div>
+                            <div class="flex items-center justify-between border-t border-brand-dark/5 pt-4 mt-2">
+                                <span class="font-serif text-brand-clay text-sm font-bold">NT$ ${p.price.toLocaleString()} 起</span>
+                                <a href="#product-detail?id=${p.id}" class="text-xs uppercase tracking-wider text-brand-dark hover:text-brand-gold font-bold transition-colors">
+                                    細節說明 & 訂購 <i class="fa-solid fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                `;
+            });
+
+            catalogGrid.innerHTML = innerHTML;
+        }
+
+        window.triggerQuickView = function(pid) {
+            const p = PRODUCTS_DB.find(item => item.id === pid);
+            if (!p) return;
+
+            const modal = document.getElementById('quickview-modal');
+            const contentBox = document.getElementById('quickview-modal-content');
+            if (!modal || !contentBox) return;
+
+            contentBox.innerHTML = `
+                <div class="grid grid-cols-1 sm:grid-cols-12 gap-8">
+                    <div class="sm:col-span-5 relative">
+                        <img src="${p.image}" alt="${p.name}" class="w-full h-48 sm:h-64 object-cover rounded-lg border border-brand-gold/15 shadow-md">
+                        <span class="absolute top-2 left-2 bg-brand-dark text-brand-gold text-[8px] py-0.5 px-2 font-bold tracking-widest rounded-full uppercase">${p.badge}</span>
+                    </div>
+                    <div class="sm:col-span-7 space-y-4">
+                        <span class="text-[10px] text-brand-clay font-bold uppercase tracking-wider">${p.categoryZH}</span>
+                        <h3 class="font-serif text-xl sm:text-2xl text-brand-dark leading-snug">${p.name}</h3>
+                        <p class="text-brand-dark/60 text-xs leading-relaxed line-clamp-4">${p.desc}</p>
+                        <div class="border-t border-brand-dark/10 pt-4 flex items-center justify-between">
+                            <span class="font-serif text-brand-clay text-lg font-bold">NT$ ${p.price.toLocaleString()}</span>
+                            <button onclick="triggerAddToCart(${p.id}); closeModal('quickview-modal')" class="px-5 py-2.5 bg-brand-dark hover:bg-brand-gold text-white hover:text-brand-dark text-xs font-semibold tracking-wider uppercase rounded shadow transition-all duration-300">
+                                加入購物籃
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.replace('opacity-0', 'opacity-100');
+                modal.querySelector('.bg-brand-cream').classList.replace('scale-95', 'scale-100');
+            }, 50);
+        };
+
+        window.closeModal = function(id) {
+            const m = document.getElementById(id);
+            if (!m) return;
+            m.classList.replace('opacity-100', 'opacity-0');
+            m.querySelector('.bg-brand-cream').classList.replace('scale-100', 'scale-95');
+            setTimeout(() => {
+                m.classList.add('hidden');
+            }, 300);
+        };
+
+        window.triggerAddToCart = function(pid) {
+            const p = PRODUCTS_DB.find(item => item.id === pid);
+            if (!p) return;
+            const cartItem = {
+                id: p.id,
+                name: p.name,
+                price: p.price,
+                qty: 1,
+                image: p.image,
+                details: p.categoryZH
+            };
+            addToCart(cartItem);
+        };
+
+        function renderTrendingHome() {
+            const tGrid = document.getElementById('trending-grid');
+            if (!tGrid) return;
+
+            // Pick first 3 signature items
+            const trending = PRODUCTS_DB.slice(0, 3);
+            let innerHTML = '';
+            
+            trending.forEach(p => {
+                innerHTML += `
+                    <article class="bg-brand-darklight border border-brand-gold/10 rounded-xl overflow-hidden group hover:border-brand-gold/40 transition-colors flex flex-col justify-between">
+                        <div class="relative overflow-hidden aspect-video">
+                            <img src="${p.image}" alt="${p.seoAlt}" class="w-full h-full object-cover transition-transform duration-[4000ms] group-hover:scale-110">
+                            <span class="absolute top-4 left-4 bg-brand-dark text-brand-gold text-[9px] uppercase font-bold tracking-widest py-1 px-3 rounded-full border border-brand-gold/20 z-10">${p.badge}</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <span class="text-[9px] uppercase tracking-widest text-brand-gold block mb-2 font-medium">${p.categoryZH}</span>
+                                <h4 class="font-serif text-lg text-white mb-3 hover:text-brand-gold transition-colors"><a href="#product-detail?id=${p.id}">${p.name}</a></h4>
+                                <p class="text-brand-cream/60 text-xs leading-relaxed mb-4 line-clamp-2">${p.desc}</p>
+                            </div>
+                            <div class="flex items-center justify-between border-t border-white/5 pt-4 mt-2">
+                                <span class="font-serif text-brand-gold text-sm font-semibold">NT$ ${p.price.toLocaleString()}</span>
+                                <a href="#product-detail?id=${p.id}" class="text-xs uppercase tracking-wider text-brand-gold hover:text-brand-rose transition-colors font-semibold">
+                                    瀏覽品賞細節 <i class="fa-solid fa-arrow-right-long ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                `;
+            });
+
+            tGrid.innerHTML = innerHTML;
+        }
+
+        function renderProductDetails(pid) {
+            const container = document.getElementById('product-detail-container');
+            if (!container) return;
+
+            const p = PRODUCTS_DB.find(item => item.id === pid) || PRODUCTS_DB[0];
+
+            container.innerHTML = `
+                <div class="lg:col-span-6 relative group">
+                    <div class="absolute -top-3 -left-3 w-16 h-16 border-t border-l border-brand-gold"></div>
+                    <img src="${p.image}" alt="${p.seoAlt}" class="w-full h-[380px] sm:h-[480px] object-cover rounded shadow-lg">
+                    <!-- Dynamic micro badges -->
+                    <span class="absolute top-4 right-4 bg-brand-dark text-brand-gold text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded-full shadow border border-brand-gold/15">${p.badge}</span>
+                </div>
+
+                <div class="lg:col-span-6 space-y-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-2">
+                            <span class="text-[10px] text-brand-clay font-bold tracking-widest uppercase">${p.categoryZH}</span>
+                            <span class="text-xs text-brand-dark/40">．SGS檢驗核可無化學添加物</span>
+                        </div>
+                        <h1 class="font-serif text-3xl sm:text-4xl text-brand-dark font-light leading-snug">${p.name}</h1>
+                        <div class="w-12 h-[1px] bg-brand-gold my-4"></div>
+                        <p class="text-brand-dark/70 text-sm leading-relaxed font-light">${p.desc}</p>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-lg border border-brand-gold/10 space-y-3 text-xs">
+                        <p class="text-brand-dark/80"><strong class="font-bold">主要使用食材：</strong> ${p.ingredients}</p>
+                        <p class="text-brand-dark/80"><strong class="font-bold">口味特色：</strong> ${p.flavors}</p>
+                        <p class="text-brand-dark/80"><strong class="font-bold">保存方式：</strong> ${p.storage}</p>
+                        <p class="text-brand-dark/80"><strong class="font-bold">最推薦美味搭配：</strong> ${p.pairing}</p>
+                        <p class="text-brand-dark/80"><strong class="font-bold">有效保存期限：</strong> ${p.duration}</p>
+                    </div>
+
+                    <div class="border-t border-brand-dark/10 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                        <div>
+                            <span class="text-xs text-brand-dark/50 block mb-1">特選預估價格：</span>
+                            <span class="font-serif text-brand-clay text-2xl font-bold">NT$ ${p.price.toLocaleString()}</span>
+                        </div>
+                        <div class="flex space-x-4 w-full sm:w-auto">
+                            <button onclick="triggerAddToCart(${p.id})" class="flex-1 sm:flex-none px-8 py-4 bg-brand-dark hover:bg-brand-gold text-white hover:text-brand-dark font-bold text-xs uppercase tracking-widest transition-all duration-300 rounded shadow">
+                                加入我的預留購物袋
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderBlogGrid() {
+            const container = document.getElementById('blog-grid-container');
+            if (!container) return;
+
+            let innerHTML = '';
+            BLOG_DB.forEach(post => {
+                innerHTML += `
+                    <article class="bg-white border border-brand-gold/15 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow group">
+                        <div class="relative overflow-hidden aspect-[4/3]">
+                            <img src="${post.image}" alt="${post.seoAlt}" class="w-full h-full object-cover transition-transform duration-[4000ms] group-hover:scale-110">
+                            <span class="absolute top-4 left-4 bg-brand-dark text-brand-gold text-[9px] font-bold tracking-wider uppercase py-1 px-2.5 rounded shadow">${post.category}</span>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-[10px] text-brand-dark/40 font-medium block mb-2"><i class="fa-regular fa-calendar-days mr-1"></i> ${post.date}</span>
+                            <h3 class="font-serif text-lg text-brand-dark mb-3 hover:text-brand-gold transition-colors font-bold leading-snug"><a href="#blog">${post.title}</a></h3>
+                            <p class="text-brand-dark/60 text-xs leading-relaxed mb-4 line-clamp-3">${post.summary}</p>
+                            <a href="#blog" class="inline-flex items-center text-xs tracking-wider text-brand-clay font-bold uppercase hover:text-brand-gold transition-colors">
+                                點擊閱讀全文 <i class="fa-solid fa-angle-right ml-1"></i>
+                            </a>
+                        </div>
+                    </article>
+                `;
+            });
+
+            container.innerHTML = innerHTML;
+        }
+
+        // Floating Flour Particles canvas effect for hero banner background
+        function initHeroParticles() {
+            const canvas = document.getElementById('hero-particles');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            
+            let particles = [];
+            
+            function resize() {
+                canvas.width = canvas.parentElement.clientWidth;
+                canvas.height = canvas.parentElement.clientHeight;
+            }
+            resize();
+            window.addEventListener('resize', resize);
+
+            class FlourParticle {
+                constructor() {
+                    this.reset();
+                }
+                reset() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height + canvas.height;
+                    this.size = Math.random() * 2 + 0.5;
+                    this.speedY = -(Math.random() * 0.4 + 0.1);
+                    this.speedX = Math.random() * 0.2 - 0.1;
+                    this.alpha = Math.random() * 0.5 + 0.2;
+                }
+                update() {
+                    this.y += this.speedY;
+                    this.x += this.speedX;
+                    if (this.y < 0) this.reset();
+                }
+                draw() {
+                    ctx.save();
+                    ctx.globalAlpha = this.alpha;
+                    ctx.fillStyle = '#FFF8EE';
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.restore();
+                }
+            }
+
+            for (let i = 0; i < 60; i++) {
+                particles.push(new FlourParticle());
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => {
+                    p.update();
+                    p.draw();
+                });
+                requestAnimationFrame(animate);
+            }
+            animate();
+        }
+
+        function initFAQAccordions() {
+            const accordionHeaders = document.querySelectorAll('.faq-header');
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const icon = header.querySelector('i');
+                    const item = header.parentElement;
+
+                    // Toggle active item collapse heights
+                    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                        content.style.maxHeight = '0px';
+                        icon.style.transform = 'rotate(0deg)';
+                        item.classList.replace('border-brand-gold', 'border-brand-gold/15');
+                    } else {
+                        // Close all open brothers first
+                        document.querySelectorAll('.faq-content').forEach(c => c.style.maxHeight = '0px');
+                        document.querySelectorAll('.faq-header i').forEach(i => i.style.transform = 'rotate(0deg)');
+                        document.querySelectorAll('#faq-accordions > div').forEach(div => div.className = "bg-white border border-brand-gold/15 rounded-lg overflow-hidden transition-all duration-300");
+
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.style.transform = 'rotate(180deg)';
+                        item.className = "bg-white border-2 border-brand-gold rounded-lg overflow-hidden shadow-md transition-all duration-300";
+                    }
+                });
+            });
+        }
+
+        function initReviewsSlider() {
+            const container = document.getElementById('reviews-container');
+            const prevBtn = document.getElementById('prev-review-btn');
+            const nextBtn = document.getElementById('next-review-btn');
+            if (!container) return;
+
+            const cards = container.children;
+            const total = cards.length;
+
+            function slideTo(idx) {
+                if (idx < 0) idx = total - 1;
+                if (idx >= total) idx = 0;
+                state.activeReviewIndex = idx;
+                
+                // Slide with percentage translation based on current card width
+                container.style.transform = `translateX(-${idx * 100}%)`;
+            }
+
+            if (prevBtn) prevBtn.addEventListener('click', () => slideTo(state.activeReviewIndex - 1));
+            if (nextBtn) nextBtn.addEventListener('click', () => slideTo(state.activeReviewIndex + 1));
+
+            // Auto rotation interval helper
+            setInterval(() => {
+                slideTo(state.activeReviewIndex + 1);
+            }, 8000);
+        }
+
+        function setupFormSubmissions() {
+            const contactForm = document.getElementById('contact-enquiry-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const name = document.getElementById('contact-name').value;
+                    showToast(`謝謝您，${name}！我們已收到您的諮詢申請，預約顧問將在 24 小時內與您聯繫。`);
+                    contactForm.reset();
+                });
+            }
+
+            const newsletterForm = document.getElementById('newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    showToast("感謝您的訂閱！我們已將迎新招待優惠券發送至您的信箱。");
+                    newsletterForm.reset();
+                });
+            }
+        }
+
+        // Document Ready Entrypoint
+        window.onload = function() {
+            // Dismiss Loading splash screen smoothly after simulation
+            const loaderBar = document.getElementById('loader-bar');
+            const preloader = document.getElementById('preloader');
+
+            if (loaderBar) {
+                let progress = 0;
+                const interval = setInterval(() => {
+                    progress += 15;
+                    loaderBar.style.width = `${progress}%`;
+                    if (progress >= 100) {
+                        clearInterval(interval);
+                        setTimeout(() => {
+                            if (preloader) {
+                                preloader.style.opacity = '0';
+                                preloader.style.pointerEvents = 'none';
+                                setTimeout(() => preloader.remove(), 800);
+                            }
+                        }, 200);
+                    }
+                }, 50);
+            }
+
+            // Fire up active route renderer
+            handleRouting();
+            setupCakeBuilderListeners();
+            setupFormSubmissions();
+            initHeroParticles();
+            initReviewsSlider();
+            initFAQAccordions();
+            renderTrendingHome();
+            renderBlogGrid();
+
+            // Hook Global Route Hash Watcher
+            window.addEventListener('hashchange', handleRouting);
+
+            // Scroll position header style tracker
+            window.addEventListener('scroll', () => {
+                updateHeaderStyle(state.currentRoute);
+            });
+
+            // Navigation menu controls setup
+            const cartToggle = document.getElementById('cart-toggle-btn');
+            const cartClose = document.getElementById('cart-drawer-close');
+            const cartDrawer = document.getElementById('cart-drawer');
+            const backdrop = document.getElementById('backdrop');
+
+            function toggleCart(open) {
+                if (open) {
+                    cartDrawer?.classList.remove('translate-x-full');
+                    backdrop?.classList.remove('hidden');
+                    setTimeout(() => backdrop?.classList.replace('opacity-0', 'opacity-100'), 50);
+                } else {
+                    cartDrawer?.classList.add('translate-x-full');
+                    backdrop?.classList.replace('opacity-100', 'opacity-0');
+                    setTimeout(() => backdrop?.classList.add('hidden'), 500);
+                }
+            }
+
+            if (cartToggle) cartToggle.addEventListener('click', () => toggleCart(true));
+            if (cartClose) cartClose.addEventListener('click', () => toggleCart(false));
+            if (backdrop) backdrop.addEventListener('click', () => toggleCart(false));
+
+            // Mobile Menu Panels Trigger Setup
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenuClose = document.getElementById('mobile-menu-close');
+            const mobilePanel = document.getElementById('mobile-nav-panel');
+
+            if (mobileMenuBtn && mobilePanel) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobilePanel.classList.remove('translate-x-full');
+                });
+            }
+
+            if (mobileMenuClose && mobilePanel) {
+                mobileMenuClose.addEventListener('click', () => {
+                    mobilePanel.classList.add('translate-x-full');
+                });
+            }
+
+            // Products Filter system event delegator
+            const filterGroup = document.getElementById('category-filter-group');
+            if (filterGroup) {
+                filterGroup.addEventListener('click', (e) => {
+                    const btn = e.target.closest('button');
+                    if (!btn) return;
+
+                    filterGroup.querySelectorAll('button').forEach(b => {
+                        b.className = "px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-white text-brand-dark hover:bg-brand-gold hover:text-white filter-btn focus:outline-none";
+                    });
+
+                    btn.className = "px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-brand-dark text-white shadow-md filter-btn focus:outline-none";
+                    renderProductsCatalog();
+                });
+            }
+
+            const priceSort = document.getElementById('price-sort');
+            if (priceSort) {
+                priceSort.addEventListener('change', renderProductsCatalog);
+            }
+
+            // Checkout Pre-order booking simulated checkout
+            const checkoutBtn = document.getElementById('cart-checkout-btn');
+            if (checkoutBtn) {
+                checkoutBtn.addEventListener('submit', (e) => e.preventDefault());
+                checkoutBtn.addEventListener('click', () => {
+                    if (state.cart.length === 0) {
+                        showToast("您的預定購物袋中尚未有任何甜品！", "warning");
+                        return;
+                    }
+                    showToast("感謝您的預定預留申請！已成功生成取貨訂單，取貨代碼為 #MDR-202677，請於預定出爐時間攜此至信義旗艦店結帳提貨。");
+                    state.cart = [];
+                    updateCartUI();
+                    toggleCart(false);
+                });
+            }
+
+            // Close Quickview Modal when click background overlay
+            const quickModal = document.getElementById('quickview-modal');
+            if (quickModal) {
+                quickModal.addEventListener('click', (e) => {
+                    if (e.target === quickModal) {
+                        closeModal('quickview-modal');
+                    }
+                });
+            }
+            const qCloseBtn = document.getElementById('quickview-modal-close');
+            if (qCloseBtn) qCloseBtn.addEventListener('click', () => closeModal('quickview-modal'));
+        };
+    </script>
+</body>
+</html>

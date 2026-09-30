@@ -1,0 +1,2118 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 預設 SEO 標籤 (由 JS 依據頁面動態更新) -->
+    <title>AURA CASA | 義式奢華極簡美學家具 - 頂級空間美學的總和</title>
+    <meta name="description" content="AURA CASA 致力於將義大利極簡美學與侘寂工藝注入當代居家空間。精選頂級牛皮、進口實木與高訂工藝，為您打造沉浸式奢華家具。立即探索沙發、餐桌、設計師單椅及專屬軟裝訂製服務。">
+    <meta name="keywords" content="精品家具, 義式家具, 極簡沙發, 設計師家具, 進口餐桌, AURA CASA, 侘寂風家具, 奢華裝潢, 軟裝設計">
+    <link rel="canonical" href="https://www.auracasa.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.auracasa.com/">
+    <meta property="og:title" content="AURA CASA | 義式奢華極簡美學家具">
+    <meta property="og:description" content="探索極致生活美學，AURA CASA 精選全球最頂尖的設計工藝，為您的家居注入不凡靈魂。">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.auracasa.com/">
+    <meta property="twitter:title" content="AURA CASA | 義式奢華極簡美學家具">
+    <meta property="twitter:description" content="探索極致生活美學，AURA CASA 精選全球最頂尖的設計工藝，為您的家居注入不凡靈魂。">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Favicon (Fallback Vector) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='serif' fill='%23c5a880'>A</text></svg>">
+
+    <!-- Google Fonts (精品專用襯線體 + 優雅無襯線體) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#c5a880',
+                            goldDark: '#b39268',
+                            goldLight: '#e4d2b9',
+                            stone: '#1c1917',
+                            alabaster: '#f5f5f4',
+                            clay: '#ebe9e6',
+                            charcoal: '#0c0a09',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Style Sheet For Premium Transitions, Gradients and Complex Animations -->
+    <style>
+        /* Smooth Scrollbar & Selection */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0c0a09;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c5a880;
+            border-radius: 3px;
+        }
+        ::selection {
+            background-color: #c5a880;
+            color: #0c0a09;
+        }
+
+        /* Fluid Gradient Animated Background (Aurora & Mesh) */
+        .mesh-gradient {
+            background: radial-gradient(circle at 0% 0%, rgba(197,168,128,0.1) 0%, transparent 40%),
+                        radial-gradient(circle at 100% 100%, rgba(197,168,128,0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 50% 50%, rgba(28,25,22,0.05) 0%, transparent 80%),
+                        #0c0a09;
+        }
+
+        /* Glassmorphism Classes */
+        .glass-panel {
+            background: rgba(28, 25, 22, 0.45);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glass-panel-light {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Ken Burns Effect for Hero Backgrounds */
+        @keyframes kenburns {
+            0% { transform: scale(1) translate(0, 0); }
+            50% { transform: scale(1.08) translate(-1%, 0.5%); }
+            100% { transform: scale(1) translate(0, 0); }
+        }
+        .animate-kenburns {
+            animation: kenburns 36s infinite alternate ease-in-out;
+        }
+
+        /* Floating Light Glow Orbs */
+        @keyframes floatOrb {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.95); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-float-orb-1 {
+            animation: floatOrb 12s infinite alternate ease-in-out;
+        }
+        .animate-float-orb-2 {
+            animation: floatOrb 16s infinite alternate-reverse ease-in-out;
+        }
+
+        /* Loading Screen Animation */
+        @keyframes drawLine {
+            to { stroke-dashoffset: 0; }
+        }
+        .logo-draw {
+            stroke-dasharray: 600;
+            stroke-dashoffset: 600;
+            animation: drawLine 3s forwards cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Hotspot Pulse */
+        @keyframes pulseHotspot {
+            0% { transform: scale(0.9); opacity: 0.8; }
+            50% { transform: scale(1.4); opacity: 0.3; }
+            100% { transform: scale(2); opacity: 0; }
+        }
+        .pulse-ring {
+            animation: pulseHotspot 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+        }
+
+        /* Marquee / Infinite Slider */
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 25s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+
+        /* Slide Transition for Pages */
+        .page-enter {
+            opacity: 0;
+            transform: translateY(12px) scale(0.99);
+            filter: blur(8px);
+        }
+        .page-enter-active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            filter: blur(0);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+        }
+
+        /* Tilt effect */
+        .tilt-container {
+            perspective: 1000px;
+        }
+        .tilt-card {
+            transition: transform 0.3s ease;
+            transform-style: preserve-3d;
+        }
+
+        /* 360 viewer controller styling */
+        .scroller-indicator::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #c5a880;
+            cursor: pointer;
+            border: 2px solid #0c0a09;
+            box-shadow: 0 0 10px rgba(197, 168, 128, 0.5);
+        }
+
+        /* Fluid/Blob Morphing Shape */
+        @keyframes blobMorph {
+            0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+            50% { border-radius: 30% 60% 70% 30% / 50% 60% 30% 70%; }
+            100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        }
+        .blob-shape {
+            animation: blobMorph 8s ease-in-out infinite alternate;
+        }
+    </style>
+
+    <!-- Dynamic Schema JSON-LD Holder -->
+    <script id="json-ld-schema" type="application/ld+json"></script>
+</head>
+<body class="bg-brand-charcoal text-stone-100 font-sans overflow-x-hidden selection:bg-brand-gold selection:text-brand-charcoal">
+
+    <!-- 1. 全域極致加載動畫頁 (Loading Screen & Logo Reveal) -->
+    <div id="loading-screen" class="fixed inset-0 bg-brand-charcoal z-[9999] flex flex-col items-center justify-content-center transition-all duration-1000 ease-out flex items-center justify-center">
+        <div class="text-center flex flex-col items-center">
+            <!-- Elegant Luxury Monogram Vector Draw -->
+            <svg class="w-24 h-24 mb-4" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="logo-draw" d="M30 80 L50 20 L70 80 M40 60 L60 60" stroke="#c5a880" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle class="logo-draw" cx="50" cy="50" r="45" stroke="#c5a880" stroke-opacity="0.2" stroke-width="1"/>
+            </svg>
+            <h2 class="font-serif text-2xl tracking-[0.4em] text-brand-gold uppercase ml-[0.4em]">AURA CASA</h2>
+            <div class="mt-4 w-48 h-[1px] bg-stone-800 relative overflow-hidden">
+                <div class="absolute inset-0 bg-brand-gold translate-x-[-100%] animate-[marquee_2s_infinite_linear]"></div>
+            </div>
+            <p class="text-[10px] uppercase tracking-[0.2em] text-stone-500 mt-2">Italian Minimalist Living Art</p>
+        </div>
+    </div>
+
+    <!-- 2. 全域粘性模糊導航列 (Sticky Navbar & Blur Reveal) -->
+    <header id="sticky-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 border-b border-white/5 bg-transparent">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 md:h-24 flex items-center justify-between">
+            <!-- 品牌 Monogram & 標誌 -->
+            <a href="#index" class="flex items-center space-x-3 group nav-link">
+                <span class="font-serif text-2xl md:text-3xl tracking-[0.3em] font-light text-stone-100 group-hover:text-brand-gold transition-colors duration-300">AURA <span class="text-brand-gold font-normal">CASA</span></span>
+            </a>
+
+            <!-- 桌面主選單 (具備優雅 Hover 滑動指示器效果) -->
+            <nav class="hidden lg:flex items-center space-x-10 text-xs tracking-[0.25em] uppercase font-medium text-stone-300">
+                <a href="#index" class="nav-link relative py-2 text-stone-100 hover:text-brand-gold transition-colors duration-300 border-b border-transparent hover:border-brand-gold/40">首頁</a>
+                <a href="#products" class="nav-link relative py-2 hover:text-brand-gold transition-colors duration-300 border-b border-transparent hover:border-brand-gold/40">產品系列</a>
+                <a href="#about" class="nav-link relative py-2 hover:text-brand-gold transition-colors duration-300 border-b border-transparent hover:border-brand-gold/40">品牌故事</a>
+                <a href="#inspirations" class="nav-link relative py-2 hover:text-brand-gold transition-colors duration-300 border-b border-transparent hover:border-brand-gold/40">空間靈感</a>
+                <a href="#projects" class="nav-link relative py-2 hover:text-brand-gold transition-colors duration-300 border-b border-transparent hover:border-brand-gold/40">設計案例</a>
+                <a href="#testimonials" class="nav-link relative py-2 hover:text-brand-gold transition-colors duration-300 border-b border-transparent hover:border-brand-gold/40">客戶評價</a>
+                <a href="#faq" class="nav-link relative py-2 hover:text-brand-gold transition-colors duration-300 border-b border-transparent hover:border-brand-gold/40">常見問題</a>
+                <a href="#contact" class="nav-link relative py-2 hover:text-brand-gold transition-colors duration-300 border-b border-transparent hover:border-brand-gold/40">聯絡我們</a>
+            </nav>
+
+            <!-- 右側功能按鈕 (客訂詢價 & 語系切換) -->
+            <div class="hidden lg:flex items-center space-x-6">
+                <button onclick="toggleSearch()" class="text-stone-300 hover:text-brand-gold transition-colors duration-300" aria-label="搜尋產品">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                </button>
+                <a href="#contact" class="px-5 py-2.5 text-[10px] tracking-[0.2em] font-medium uppercase border border-brand-gold/50 text-brand-gold hover:bg-brand-gold hover:text-brand-charcoal rounded-full transition-all duration-500 shadow-lg shadow-brand-gold/5">
+                    預約展間體驗
+                </a>
+            </div>
+
+            <!-- 行動端選單按鈕 (漢堡排動畫) -->
+            <button id="mobile-menu-btn" class="lg:hidden flex flex-col justify-center items-end space-y-1.5 w-8 h-8 focus:outline-none z-50" aria-label="開啟選單">
+                <span class="w-6 h-[1.5px] bg-stone-100 transition-all duration-300 rounded-full origin-right"></span>
+                <span class="w-4 h-[1.5px] bg-stone-100 transition-all duration-300 rounded-full"></span>
+                <span class="w-5 h-[1.5px] bg-stone-100 transition-all duration-300 rounded-full origin-right"></span>
+            </button>
+        </div>
+
+        <!-- 全螢幕行動端選單 (Liquid Motion Slide Screen) -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-brand-charcoal/98 backdrop-blur-xl z-40 translate-x-full transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-between px-8 py-24">
+            <nav class="flex flex-col space-y-6 text-xl tracking-[0.2em] font-serif mt-10">
+                <a href="#index" class="mobile-nav-link text-stone-400 hover:text-brand-gold">首頁 <span class="text-xs text-stone-600 block mt-1 tracking-widest font-sans">HOME</span></a>
+                <a href="#products" class="mobile-nav-link text-stone-400 hover:text-brand-gold">產品系列 <span class="text-xs text-stone-600 block mt-1 tracking-widest font-sans">PRODUCTS</span></a>
+                <a href="#about" class="mobile-nav-link text-stone-400 hover:text-brand-gold">品牌故事 <span class="text-xs text-stone-600 block mt-1 tracking-widest font-sans">STORY</span></a>
+                <a href="#inspirations" class="mobile-nav-link text-stone-400 hover:text-brand-gold">空間靈感 <span class="text-xs text-stone-600 block mt-1 tracking-widest font-sans">INSPIRATIONS</span></a>
+                <a href="#projects" class="mobile-nav-link text-stone-400 hover:text-brand-gold">設計案例 <span class="text-xs text-stone-600 block mt-1 tracking-widest font-sans">PROJECTS</span></a>
+                <a href="#testimonials" class="mobile-nav-link text-stone-400 hover:text-brand-gold">客戶評價 <span class="text-xs text-stone-600 block mt-1 tracking-widest font-sans">TESTIMONIALS</span></a>
+                <a href="#faq" class="mobile-nav-link text-stone-400 hover:text-brand-gold">常見問題 <span class="text-xs text-stone-600 block mt-1 tracking-widest font-sans">FAQ</span></a>
+                <a href="#contact" class="mobile-nav-link text-stone-400 hover:text-brand-gold">聯絡我們 <span class="text-xs text-stone-600 block mt-1 tracking-widest font-sans">CONTACT</span></a>
+            </nav>
+            <div class="space-y-4">
+                <a href="#contact" class="block text-center w-full py-4 text-xs tracking-widest uppercase border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-charcoal transition-all rounded-full">
+                    預約展間 Private Viewing
+                </a>
+                <p class="text-[10px] text-stone-500 tracking-wider text-center">© 2026 AURA CASA. Design For Luxury.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. 全局背景光暈 (Aurora Mesh Glow Element) -->
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none z-[-1] overflow-hidden">
+        <div class="absolute top-[10%] left-[-20%] w-[60vw] h-[60vw] rounded-full bg-brand-gold/5 blur-[120px] animate-float-orb-1"></div>
+        <div class="absolute bottom-[20%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-brand-gold/10 blur-[150px] animate-float-orb-2"></div>
+    </div>
+
+    <!-- 4. 全域搜尋遮罩 (Luxury Overlay Search Panel) -->
+    <div id="search-modal" class="fixed inset-0 z-[100] bg-brand-charcoal/95 backdrop-blur-2xl opacity-0 pointer-events-none transition-all duration-500 flex items-center justify-center">
+        <button onclick="toggleSearch()" class="absolute top-8 right-8 text-stone-400 hover:text-brand-gold transition-colors duration-300" aria-label="關閉搜尋">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        <div class="w-full max-w-3xl px-6 text-center">
+            <h3 class="font-serif text-3xl text-brand-gold mb-6 tracking-wider">探索奢華靈感</h3>
+            <div class="relative border-b-2 border-stone-700 focus-within:border-brand-gold transition-colors duration-500 py-3">
+                <input type="text" id="search-input" placeholder="請輸入產品類型或空間風格..." class="w-full bg-transparent text-stone-100 text-xl md:text-2xl font-light text-center focus:outline-none placeholder:text-stone-600">
+                <button onclick="executeSearch()" class="absolute right-2 top-1/2 -translate-y-1/2 text-brand-gold hover:scale-115 transition-transform" aria-label="執行搜尋">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </button>
+            </div>
+            <div class="flex flex-wrap justify-center gap-3 mt-8 text-xs tracking-widest text-stone-400">
+                <span class="text-stone-600">熱門搜尋：</span>
+                <a href="#products?cat=sofa" onclick="toggleSearch()" class="hover:text-brand-gold underline underline-offset-4">極簡沙發</a>
+                <a href="#products?cat=table" onclick="toggleSearch()" class="hover:text-brand-gold underline underline-offset-4">岩板餐桌</a>
+                <a href="#products?cat=chair" onclick="toggleSearch()" class="hover:text-brand-gold underline underline-offset-4">大師設計椅</a>
+                <a href="#inspirations" onclick="toggleSearch()" class="hover:text-brand-gold underline underline-offset-4">侘寂宅配置</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. 核心多頁式內容容器 (DOM-based Simulated Multi-page System) -->
+    <main class="pt-24 min-h-screen">
+
+        <!-- ==================== (1) 首頁: #index ==================== -->
+        <section id="view-index" class="page-view animate-enter">
+            <!-- Hero Banner (沉浸式 Ken Burns Zoom & Glass CTA) -->
+            <div class="relative h-[90vh] w-full overflow-hidden flex items-center justify-center">
+                <!-- 輪播/單張高品質空間大圖 (帶 Ken Burns Zoom) -->
+                <div class="absolute inset-0 z-0">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=2000&q=90" alt="AURA CASA 奢華起居展間" class="w-full h-full object-cover animate-kenburns">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-brand-charcoal/30 to-transparent"></div>
+                    <div class="absolute inset-0 bg-black/20"></div>
+                </div>
+
+                <!-- 品牌標語 & 精緻層次文字 (Blur Reveal Effect) -->
+                <div class="relative z-10 max-w-5xl mx-auto text-center px-6">
+                    <span class="text-xs uppercase tracking-[0.4em] text-brand-gold block mb-6 animate-[bounce_2s_infinite]">ITALIAN CONTEMPORARY MASTERPIECE</span>
+                    <h1 class="font-serif text-4xl sm:text-6xl md:text-8xl font-light text-stone-100 tracking-wider leading-tight mb-8">
+                        以極致細節<br><span class="italic text-brand-gold font-normal">重塑奢華空間</span>
+                    </h1>
+                    <p class="text-stone-300 font-light text-sm md:text-lg tracking-widest max-w-2xl mx-auto mb-10 leading-relaxed">
+                        AURA CASA 將義式奢華剪裁、前衛建築學構造與匠人手感溫度揉合。我們販售的不僅是家具，而是名為「家」的沉浸式藝術展間。
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                        <a href="#products" class="w-full sm:w-auto px-8 py-4 bg-brand-gold text-brand-charcoal text-xs tracking-widest uppercase font-semibold hover:bg-stone-100 hover:text-brand-stone transition-all duration-500 rounded-full shadow-xl shadow-brand-gold/15">
+                            探索館藏系列
+                        </a>
+                        <a href="#about" class="w-full sm:w-auto px-8 py-4 border border-white/20 hover:border-brand-gold text-stone-200 hover:text-brand-gold backdrop-blur-md bg-white/5 text-xs tracking-widest uppercase font-medium transition-all duration-500 rounded-full">
+                            探索品牌故事
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 浮動捲動指示器 (SVG Wave / Scroll Indicator) -->
+                <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 text-center animate-bounce">
+                    <span class="text-[9px] uppercase tracking-[0.3em] text-stone-400 block mb-2">SCROLL TO DISCOVER</span>
+                    <div class="w-[1px] h-12 bg-gradient-to-b from-brand-gold to-transparent mx-auto"></div>
+                </div>
+            </div>
+
+            <!-- 品牌哲學與理念 (微光極光 Aurora Card Layout) -->
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 py-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8">
+                        <span class="text-xs tracking-[0.3em] uppercase text-brand-gold">PHILOSOPHY</span>
+                        <h2 class="font-serif text-3xl md:text-5xl font-light tracking-wide leading-tight">
+                            將家具視作<br><span class="italic font-normal text-brand-gold">微縮的現代建築</span>
+                        </h2>
+                        <p class="text-stone-400 font-light leading-relaxed tracking-wider text-sm md:text-base">
+                            我們繼承了義大利北部 Brianza 家具製造重鎮的極致工藝，並融入日式侘寂與現代北歐的洗練。拒絕工業化的千篇一律，AURA CASA 堅持採用 70% 比例的手工訂製剪裁與防護塗裝工序。
+                        </p>
+                        <blockquote class="border-l border-brand-gold/40 pl-6 py-2 italic text-stone-300 font-light text-sm">
+                            「一件真正頂級的家具，在你觸摸它之前，便已透過其光影結構在靈魂深處激盪起漣漪。」 — AURA CASA 設計總監 Lorenzo Moretti
+                        </blockquote>
+                        <div class="pt-4">
+                            <a href="#about" class="inline-flex items-center space-x-3 group text-xs tracking-widest text-brand-gold uppercase font-medium">
+                                <span>觀看我們的設計師團隊</span>
+                                <svg class="w-4 h-4 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 互動 3D 空間情境 Hotspots (客廳情境圖 + 脈衝氣泡點) -->
+                    <div class="relative overflow-hidden rounded-2xl group border border-white/5 tilt-container">
+                        <div class="tilt-card relative">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80" alt="熱點生活空間搭配" class="w-full h-[450px] object-cover group-hover:scale-105 transition-transform duration-[1.5s]">
+                            <div class="absolute inset-0 bg-stone-900/10 transition-colors group-hover:bg-transparent"></div>
+                            
+                            <!-- Hotspot 1: Sofa -->
+                            <div class="absolute top-[45%] left-[35%] group/hotspot">
+                                <div class="absolute -inset-2 rounded-full pulse-ring bg-brand-gold/40"></div>
+                                <button onclick="triggerQuickView('P001')" class="relative w-5 h-5 rounded-full bg-brand-gold text-brand-charcoal text-[9px] font-bold flex items-center justify-center hover:scale-110 transition-transform focus:outline-none" aria-label="查看商品 AURA 模組化沙發">
+                                    +
+                                </button>
+                                <div class="absolute left-7 top-1/2 -translate-y-1/2 w-48 glass-panel text-left p-3 rounded-xl opacity-0 translate-x-2 group-hover/hotspot:opacity-100 group-hover/hotspot:translate-x-0 transition-all duration-300 pointer-events-none">
+                                    <h4 class="text-xs font-semibold text-brand-gold">AURA 模組化沙發</h4>
+                                    <p class="text-[10px] text-stone-300 mt-1">頂級阿尼林頭層牛皮，可自由拼接配置。</p>
+                                    <span class="text-[10px] font-serif text-brand-gold block mt-2">NT$ 248,000 起</span>
+                                </div>
+                            </div>
+
+                            <!-- Hotspot 2: Coffee Table -->
+                            <div class="absolute top-[65%] left-[60%] group/hotspot">
+                                <div class="absolute -inset-2 rounded-full pulse-ring bg-brand-gold/40"></div>
+                                <button onclick="triggerQuickView('P003')" class="relative w-5 h-5 rounded-full bg-brand-gold text-brand-charcoal text-[9px] font-bold flex items-center justify-center hover:scale-110 transition-transform focus:outline-none" aria-label="查看商品 CRONOS 岩板茶几">
+                                    +
+                                </button>
+                                <div class="absolute left-7 top-1/2 -translate-y-1/2 w-48 glass-panel text-left p-3 rounded-xl opacity-0 translate-x-2 group-hover/hotspot:opacity-100 group-hover/hotspot:translate-x-0 transition-all duration-300 pointer-events-none">
+                                    <h4 class="text-xs font-semibold text-brand-gold">CRONOS 義大利岩板茶几</h4>
+                                    <p class="text-[10px] text-stone-300 mt-1">一體成型抗撞耐高溫、絲滑大理石紋理。</p>
+                                    <span class="text-[10px] font-serif text-brand-gold block mt-2">NT$ 46,000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 熱銷與新品推薦 (具有 3D 懸停微光效果) -->
+            <div class="bg-brand-stone/40 border-y border-white/5 py-24">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                        <div class="space-y-4">
+                            <span class="text-xs tracking-[0.3em] uppercase text-brand-gold">CURATED SELECTION</span>
+                            <h2 class="font-serif text-3xl md:text-5xl font-light tracking-wide">本季經典奢華館藏</h2>
+                        </div>
+                        <div class="flex items-center space-x-4 mt-6 md:mt-0">
+                            <a href="#products" class="px-6 py-3 border border-stone-800 text-stone-300 hover:text-brand-gold hover:border-brand-gold text-xs tracking-widest uppercase transition-all rounded-full">
+                                瀏覽全品項家具
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 3D 奢華家具精選 Card Slider Container -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Product 1 -->
+                        <div class="group relative overflow-hidden bg-brand-charcoal border border-white/5 rounded-2xl hover:border-brand-gold/30 transition-all duration-500">
+                            <div class="relative overflow-hidden aspect-[4/3] w-full">
+                                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80" alt="AURA 模組化沙發" class="w-full h-full object-cover transition-transform duration-[1.2s] group-hover:scale-108">
+                                <span class="absolute top-4 left-4 px-3 py-1 bg-brand-gold text-brand-charcoal text-[9px] uppercase tracking-widest font-bold rounded-full">HOT</span>
+                                <button onclick="triggerQuickView('P001')" class="absolute bottom-4 right-4 p-3 bg-brand-charcoal/80 text-stone-200 hover:text-brand-gold backdrop-blur-md rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 shadow-lg" aria-label="快速預覽">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                                </button>
+                            </div>
+                            <div class="p-6 space-y-3">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-serif text-lg text-stone-100 tracking-wide">AURA 經典拼接沙發</h3>
+                                    <span class="text-xs text-brand-gold font-serif">NT$ 248,000</span>
+                                </div>
+                                <p class="text-xs text-stone-400 font-light leading-relaxed">選用義大利頂層粒面苯染皮，配以羽絨與記憶棉複合結構填充，尊享雲端坐感。</p>
+                                <div class="pt-4 border-t border-white/5 flex justify-between items-center text-xs">
+                                    <span class="text-[10px] tracking-wider text-stone-500 uppercase">12 款頂級皮革色可訂製</span>
+                                    <a href="#product-detail?id=P001" class="text-brand-gold hover:underline font-medium">配置專屬款式</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="group relative overflow-hidden bg-brand-charcoal border border-white/5 rounded-2xl hover:border-brand-gold/30 transition-all duration-500">
+                            <div class="relative overflow-hidden aspect-[4/3] w-full">
+                                <img src="https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?auto=format&fit=crop&w=800&q=80" alt="ECLIPSE 圓弧餐桌" class="w-full h-full object-cover transition-transform duration-[1.2s] group-hover:scale-108">
+                                <span class="absolute top-4 left-4 px-3 py-1 bg-brand-gold text-brand-charcoal text-[9px] uppercase tracking-widest font-bold rounded-full">NEW</span>
+                                <button onclick="triggerQuickView('P002')" class="absolute bottom-4 right-4 p-3 bg-brand-charcoal/80 text-stone-200 hover:text-brand-gold backdrop-blur-md rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 shadow-lg" aria-label="快速預覽">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                                </button>
+                            </div>
+                            <div class="p-6 space-y-3">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-serif text-lg text-stone-100 tracking-wide">ECLIPSE 圓弧餐桌</h3>
+                                    <span class="text-xs text-brand-gold font-serif">NT$ 112,000</span>
+                                </div>
+                                <p class="text-xs text-stone-400 font-light leading-relaxed">北美頂級黑胡桃木實木桌腳搭配天然手工玉石圓弧面板，凝聚非凡工藝底蘊。</p>
+                                <div class="pt-4 border-t border-white/5 flex justify-between items-center text-xs">
+                                    <span class="text-[10px] tracking-wider text-stone-500 uppercase">3 種實木木種可客製</span>
+                                    <a href="#product-detail?id=P002" class="text-brand-gold hover:underline font-medium">配置專屬款式</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="group relative overflow-hidden bg-brand-charcoal border border-white/5 rounded-2xl hover:border-brand-gold/30 transition-all duration-500">
+                            <div class="relative overflow-hidden aspect-[4/3] w-full">
+                                <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=800&q=80" alt="STELLA 大師設計單椅" class="w-full h-full object-cover transition-transform duration-[1.2s] group-hover:scale-108">
+                                <span class="absolute top-4 left-4 px-3 py-1 bg-brand-gold text-brand-charcoal text-[9px] uppercase tracking-widest font-bold rounded-full">POPULAR</span>
+                                <button onclick="triggerQuickView('P004')" class="absolute bottom-4 right-4 p-3 bg-brand-charcoal/80 text-stone-200 hover:text-brand-gold backdrop-blur-md rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 shadow-lg" aria-label="快速預覽">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                                </button>
+                            </div>
+                            <div class="p-6 space-y-3">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-serif text-lg text-stone-100 tracking-wide">STELLA 輕奢單椅</h3>
+                                    <span class="text-xs text-brand-gold font-serif">NT$ 22,000</span>
+                                </div>
+                                <p class="text-xs text-stone-400 font-light leading-relaxed">極簡主義不鏽鋼鍍鈦金色骨架，搭配頂級羊毛絨坐墊，完美裝點空間焦點。</p>
+                                <div class="pt-4 border-t border-white/5 flex justify-between items-center text-xs">
+                                    <span class="text-[10px] tracking-wider text-stone-500 uppercase">現貨庫存（3 日內出貨）</span>
+                                    <a href="#product-detail?id=P004" class="text-brand-gold hover:underline font-medium">配置專屬款式</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 無限滾動的合作設計師與頂級品牌標誌 (Infinite Marquee) -->
+            <div class="py-16 bg-brand-charcoal border-b border-white/5 overflow-hidden">
+                <div class="max-w-7xl mx-auto px-6 text-center mb-8">
+                    <p class="text-[10px] tracking-[0.3em] uppercase text-stone-500">PARTNERS & AWARD WINNING DESIGNERS</p>
+                </div>
+                <div class="relative w-full flex overflow-x-hidden">
+                    <div class="flex space-x-16 items-center whitespace-nowrap animate-marquee">
+                        <span class="font-serif text-2xl tracking-[0.2em] text-stone-600 uppercase hover:text-brand-gold transition-colors">Milan Design Lab</span>
+                        <span class="font-serif text-2xl tracking-[0.2em] text-stone-600 uppercase hover:text-brand-gold transition-colors">Brianza Crafts Guild</span>
+                        <span class="font-serif text-2xl tracking-[0.2em] text-stone-600 uppercase hover:text-brand-gold transition-colors">Moretti Studio</span>
+                        <span class="font-serif text-2xl tracking-[0.2em] text-stone-600 uppercase hover:text-brand-gold transition-colors">Wabi-Sabi Tokyo</span>
+                        <span class="font-serif text-2xl tracking-[0.2em] text-stone-600 uppercase hover:text-brand-gold transition-colors">Nordic Form</span>
+                        <span class="font-serif text-2xl tracking-[0.2em] text-stone-600 uppercase hover:text-brand-gold transition-colors">Florence Atelier</span>
+                    </div>
+                    <!-- Duplicate for infinite seamless scroll -->
+                    <div class="flex space-x-16 items-center whitespace-nowrap animate-marquee" aria-hidden="true">
+                        <span class="font-serif text-2xl tracking-[0.2em] text-stone-600 uppercase hover:text-brand-gold transition-colors">Milan Design Lab</span>
+                        <span class="font-serif text-2xl tracking-[0.2em] text-stone-600 uppercase hover:text-brand-gold transition-colors">Brianza Crafts Guild</span>
+                        <span class="font-serif text-2xl tracking-[0.2em] text-stone-600 uppercase hover:text-brand-gold transition-colors">Moretti Studio</span>
+                        <span class="font-serif text-2xl tracking-[0.2em] text-stone-600 uppercase hover:text-brand-gold transition-colors">Wabi-Sabi Tokyo</span>
+                        <span class="font-serif text-2xl tracking-[0.2em] text-stone-600 uppercase hover:text-brand-gold transition-colors">Nordic Form</span>
+                        <span class="font-serif text-2xl tracking-[0.2em] text-stone-600 uppercase hover:text-brand-gold transition-colors">Florence Atelier</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 品味家見證 (優雅橫向評價輪播) -->
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 py-24">
+                <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                    <span class="text-xs tracking-[0.3em] uppercase text-brand-gold">TESTIMONIALS</span>
+                    <h2 class="font-serif text-3xl md:text-5xl font-light tracking-wide">高端屋主的至臻評價</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Review 1 -->
+                    <div class="p-8 md:p-10 bg-stone-900/40 border border-white/5 rounded-2xl space-y-6">
+                        <div class="flex text-brand-gold space-x-1">
+                            <span class="text-lg">★</span><span class="text-lg">★</span><span class="text-lg">★</span><span class="text-lg">★</span><span class="text-lg">★</span>
+                        </div>
+                        <p class="text-stone-300 font-light text-sm md:text-base leading-relaxed">
+                            「當初為別墅挑選家具時跑遍了各大進口品牌，最後被 AURA CASA 的極簡剪裁以及對天然皮革細節的極致追求所打動。實品放在客廳簡直是藝術品般的存在。」
+                        </p>
+                        <div class="flex items-center space-x-4 pt-4 border-t border-white/5">
+                            <div class="w-12 h-12 rounded-full bg-stone-800 flex items-center justify-center font-serif text-brand-gold text-lg">W</div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-stone-100">林先生 | 新竹帝寶別墅屋主</h4>
+                                <p class="text-[10px] text-stone-500">訂製：AURA 沙發 & ECLIPSE 岩板餐桌組合</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="p-8 md:p-10 bg-stone-900/40 border border-white/5 rounded-2xl space-y-6">
+                        <div class="flex text-brand-gold space-x-1">
+                            <span class="text-lg">★</span><span class="text-lg">★</span><span class="text-lg">★</span><span class="text-lg">★</span><span class="text-lg">★</span>
+                        </div>
+                        <p class="text-stone-300 font-light text-sm md:text-base leading-relaxed">
+                            「非常驚艷於他們提供的 1 對 1 私人軟裝師諮詢服務，完美契合了我的侘寂風玄關與起居空間。連來訪的設計師客人都讚嘆家具的收邊細節太精準了。」
+                        </p>
+                        <div class="flex items-center space-x-4 pt-4 border-t border-white/5">
+                            <div class="w-12 h-12 rounded-full bg-stone-800 flex items-center justify-center font-serif text-brand-gold text-lg">C</div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-stone-100">張小姐 | 台北信義豪宅屋主</h4>
+                                <p class="text-[10px] text-stone-500">訂製：STELLA 輕奢單椅 & 訂製大理石玄關几</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 優質 CTA 底部宣傳區 (高轉換諮詢預約按鈕) -->
+            <div class="relative py-28 overflow-hidden bg-stone-950 border-t border-white/5">
+                <div class="absolute inset-0 z-0 opacity-20">
+                    <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=1500&q=80" alt="高級家具展示" class="w-full h-full object-cover">
+                </div>
+                <div class="relative z-10 max-w-4xl mx-auto text-center px-6 space-y-8">
+                    <h2 class="font-serif text-3xl sm:text-5xl font-light tracking-wide text-stone-100 leading-tight">
+                        開啟您的私享奢華空間旅程
+                    </h2>
+                    <p class="text-stone-400 font-light text-sm md:text-base max-w-2xl mx-auto">
+                        我們的台北與台中旗艦展館採完全預約制，提供專屬茶飲、私密看展動線與高訂家飾大師一對一軟裝諮詢。
+                    </p>
+                    <div class="pt-4 flex flex-wrap justify-center gap-4">
+                        <a href="#contact" class="px-8 py-4 bg-brand-gold text-brand-charcoal text-xs tracking-widest uppercase font-semibold hover:bg-stone-100 transition-colors rounded-full shadow-lg shadow-brand-gold/15">
+                            預約私人展館導覽
+                        </a>
+                        <a href="#products" class="px-8 py-4 border border-stone-700 text-stone-300 hover:text-brand-gold hover:border-brand-gold text-xs tracking-widest uppercase transition-all rounded-full">
+                            搶先探索新品型錄
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==================== (2) 產品系列: #products ==================== -->
+        <section id="view-products" class="page-view hidden animate-enter">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 py-16">
+                <!-- 頁面頭部與過濾器 -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-white/5 pb-10 mb-12">
+                    <div class="space-y-4">
+                        <span class="text-xs tracking-[0.3em] uppercase text-brand-gold">LUXURY COLLECTION</span>
+                        <h1 class="font-serif text-3xl md:text-5xl font-light tracking-wide">高端家具全系列</h1>
+                    </div>
+                    <!-- 搜尋與產品數量顯示 -->
+                    <div class="text-xs text-stone-400 tracking-wider mt-4 md:mt-0" id="product-count-display">
+                        呈現 8 件大師級原創家具
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+                    <!-- 左側高級分類篩選器 (桌面端固定) -->
+                    <div class="lg:col-span-1 space-y-8">
+                        <div class="glass-panel p-6 rounded-2xl space-y-6">
+                            <h3 class="font-serif text-lg text-brand-gold tracking-wide border-b border-white/5 pb-3">空間類別</h3>
+                            <div class="flex flex-col space-y-3 text-xs tracking-widest text-stone-300" id="category-filter-list">
+                                <button onclick="filterProducts('all')" class="text-left py-1 hover:text-brand-gold transition-colors font-semibold border-l-2 border-brand-gold pl-3">全部館藏 (8)</button>
+                                <button onclick="filterProducts('sofa')" class="text-left py-1 hover:text-brand-gold transition-colors border-l-2 border-transparent pl-3">義式沙發 (2)</button>
+                                <button onclick="filterProducts('table')" class="text-left py-1 hover:text-brand-gold transition-colors border-l-2 border-transparent pl-3">高訂餐桌 (2)</button>
+                                <button onclick="filterProducts('chair')" class="text-left py-1 hover:text-brand-gold transition-colors border-l-2 border-transparent pl-3">設計師單椅 (2)</button>
+                                <button onclick="filterProducts('cabinet')" class="text-left py-1 hover:text-brand-gold transition-colors border-l-2 border-transparent pl-3">藝術收納櫃 (2)</button>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel p-6 rounded-2xl space-y-6">
+                            <h3 class="font-serif text-lg text-brand-gold tracking-wide border-b border-white/5 pb-3">訂製材質</h3>
+                            <div class="flex flex-wrap gap-2 text-[10px] tracking-widest">
+                                <span class="px-3 py-1.5 bg-stone-800 rounded-full text-stone-300">頭層阿尼林皮</span>
+                                <span class="px-3 py-1.5 bg-stone-800 rounded-full text-stone-300">北美黑胡桃實木</span>
+                                <span class="px-3 py-1.5 bg-stone-800 rounded-full text-stone-300">義大利卡拉拉白岩板</span>
+                                <span class="px-3 py-1.5 bg-stone-800 rounded-full text-stone-300">比利時原產亞麻</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 右側產品卡片網格 (動態篩選) -->
+                    <div class="lg:col-span-3">
+                        <div id="product-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- JS將會在此處動態生成，或靜態預先寫入以供SEO爬網 -->
+                            <!-- (下方預留供SEO抓取，且支援JS動態重新渲染與篩選) -->
+                            <!-- Product 1 -->
+                            <div class="product-item sofa group bg-stone-900/40 border border-white/5 rounded-2xl overflow-hidden transition-all duration-500 hover:border-brand-gold/30" data-id="P001" data-cat="sofa">
+                                <div class="relative overflow-hidden aspect-[4/3]">
+                                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80" alt="AURA 經典拼接沙發" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s]">
+                                </div>
+                                <div class="p-6 space-y-3">
+                                    <span class="text-[10px] tracking-widest uppercase text-brand-gold">義式沙發</span>
+                                    <h3 class="font-serif text-base text-stone-100 font-semibold tracking-wide">AURA 經典拼接沙發</h3>
+                                    <p class="text-xs text-brand-gold font-serif">NT$ 248,000 起</p>
+                                    <div class="pt-4 border-t border-white/5 flex justify-between items-center text-xs">
+                                        <a href="#product-detail?id=P001" class="text-stone-300 hover:text-brand-gold font-medium">配置專屬款式</a>
+                                        <button onclick="triggerQuickView('P001')" class="text-brand-gold hover:underline">快速預覽</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 2 -->
+                            <div class="product-item table group bg-stone-900/40 border border-white/5 rounded-2xl overflow-hidden transition-all duration-500 hover:border-brand-gold/30" data-id="P002" data-cat="table">
+                                <div class="relative overflow-hidden aspect-[4/3]">
+                                    <img src="https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?auto=format&fit=crop&w=800&q=80" alt="ECLIPSE 圓弧餐桌" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s]">
+                                </div>
+                                <div class="p-6 space-y-3">
+                                    <span class="text-[10px] tracking-widest uppercase text-brand-gold">高訂餐桌</span>
+                                    <h3 class="font-serif text-base text-stone-100 font-semibold tracking-wide">ECLIPSE 圓弧餐桌</h3>
+                                    <p class="text-xs text-brand-gold font-serif">NT$ 112,000 起</p>
+                                    <div class="pt-4 border-t border-white/5 flex justify-between items-center text-xs">
+                                        <a href="#product-detail?id=P002" class="text-stone-300 hover:text-brand-gold font-medium">配置專屬款式</a>
+                                        <button onclick="triggerQuickView('P002')" class="text-brand-gold hover:underline">快速預覽</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 3 -->
+                            <div class="product-item table group bg-stone-900/40 border border-white/5 rounded-2xl overflow-hidden transition-all duration-500 hover:border-brand-gold/30" data-id="P003" data-cat="table">
+                                <div class="relative overflow-hidden aspect-[4/3]">
+                                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="CRONOS 義大利岩板茶几" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s]">
+                                </div>
+                                <div class="p-6 space-y-3">
+                                    <span class="text-[10px] tracking-widest uppercase text-brand-gold">高訂餐桌</span>
+                                    <h3 class="font-serif text-base text-stone-100 font-semibold tracking-wide">CRONOS 義大利岩板茶几</h3>
+                                    <p class="text-xs text-brand-gold font-serif">NT$ 46,000 起</p>
+                                    <div class="pt-4 border-t border-white/5 flex justify-between items-center text-xs">
+                                        <a href="#product-detail?id=P003" class="text-stone-300 hover:text-brand-gold font-medium">配置專屬款式</a>
+                                        <button onclick="triggerQuickView('P003')" class="text-brand-gold hover:underline">快速預覽</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 4 -->
+                            <div class="product-item chair group bg-stone-900/40 border border-white/5 rounded-2xl overflow-hidden transition-all duration-500 hover:border-brand-gold/30" data-id="P004" data-cat="chair">
+                                <div class="relative overflow-hidden aspect-[4/3]">
+                                    <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=800&q=80" alt="STELLA 輕奢單椅" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s]">
+                                </div>
+                                <div class="p-6 space-y-3">
+                                    <span class="text-[10px] tracking-widest uppercase text-brand-gold">設計師單椅</span>
+                                    <h3 class="font-serif text-base text-stone-100 font-semibold tracking-wide">STELLA 輕奢單椅</h3>
+                                    <p class="text-xs text-brand-gold font-serif">NT$ 22,000 起</p>
+                                    <div class="pt-4 border-t border-white/5 flex justify-between items-center text-xs">
+                                        <a href="#product-detail?id=P004" class="text-stone-300 hover:text-brand-gold font-medium">配置專屬款式</a>
+                                        <button onclick="triggerQuickView('P004')" class="text-brand-gold hover:underline">快速預覽</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 5 -->
+                            <div class="product-item chair group bg-stone-900/40 border border-white/5 rounded-2xl overflow-hidden transition-all duration-500 hover:border-brand-gold/30" data-id="P005" data-cat="chair">
+                                <div class="relative overflow-hidden aspect-[4/3]">
+                                    <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=800&q=80" alt="DANTE 羊毛極簡單椅" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s]">
+                                </div>
+                                <div class="p-6 space-y-3">
+                                    <span class="text-[10px] tracking-widest uppercase text-brand-gold">設計師單椅</span>
+                                    <h3 class="font-serif text-base text-stone-100 font-semibold tracking-wide">DANTE 羊毛極簡單椅</h3>
+                                    <p class="text-xs text-brand-gold font-serif">NT$ 31,000 起</p>
+                                    <div class="pt-4 border-t border-white/5 flex justify-between items-center text-xs">
+                                        <a href="#product-detail?id=P005" class="text-stone-300 hover:text-brand-gold font-medium">配置專屬款式</a>
+                                        <button onclick="triggerQuickView('P005')" class="text-brand-gold hover:underline">快速預覽</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 6 -->
+                            <div class="product-item cabinet group bg-stone-900/40 border border-white/5 rounded-2xl overflow-hidden transition-all duration-500 hover:border-brand-gold/30" data-id="P006" data-cat="cabinet">
+                                <div class="relative overflow-hidden aspect-[4/3]">
+                                    <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80" alt="SINOPE 胡桃木多功能櫃" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s]">
+                                </div>
+                                <div class="p-6 space-y-3">
+                                    <span class="text-[10px] tracking-widest uppercase text-brand-gold">藝術收納櫃</span>
+                                    <h3 class="font-serif text-base text-stone-100 font-semibold tracking-wide">SINOPE 胡桃木餐櫃</h3>
+                                    <p class="text-xs text-brand-gold font-serif">NT$ 82,000 起</p>
+                                    <div class="pt-4 border-t border-white/5 flex justify-between items-center text-xs">
+                                        <a href="#product-detail?id=P006" class="text-stone-300 hover:text-brand-gold font-medium">配置專屬款式</a>
+                                        <button onclick="triggerQuickView('P006')" class="text-brand-gold hover:underline">快速預覽</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 7 -->
+                            <div class="product-item sofa group bg-stone-900/40 border border-white/5 rounded-2xl overflow-hidden transition-all duration-500 hover:border-brand-gold/30" data-id="P007" data-cat="sofa">
+                                <div class="relative overflow-hidden aspect-[4/3]">
+                                    <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=800&q=80" alt="MILANO 極簡三人沙發" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s]">
+                                </div>
+                                <div class="p-6 space-y-3">
+                                    <span class="text-[10px] tracking-widest uppercase text-brand-gold">義式沙發</span>
+                                    <h3 class="font-serif text-base text-stone-100 font-semibold tracking-wide">MILANO 高背極簡三人沙發</h3>
+                                    <p class="text-xs text-brand-gold font-serif">NT$ 185,000 起</p>
+                                    <div class="pt-4 border-t border-white/5 flex justify-between items-center text-xs">
+                                        <a href="#product-detail?id=P007" class="text-stone-300 hover:text-brand-gold font-medium">配置專屬款式</a>
+                                        <button onclick="triggerQuickView('P007')" class="text-brand-gold hover:underline">快速預覽</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 8 -->
+                            <div class="product-item cabinet group bg-stone-900/40 border border-white/5 rounded-2xl overflow-hidden transition-all duration-500 hover:border-brand-gold/30" data-id="P008" data-cat="cabinet">
+                                <div class="relative overflow-hidden aspect-[4/3]">
+                                    <img src="https://images.unsplash.com/photo-1601887389937-0b02c26b6c3c?auto=format&fit=crop&w=800&q=80" alt="KRONOS 懸浮懸掛電視櫃" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s]">
+                                </div>
+                                <div class="p-6 space-y-3">
+                                    <span class="text-[10px] tracking-widest uppercase text-brand-gold">藝術收納櫃</span>
+                                    <h3 class="font-serif text-base text-stone-100 font-semibold tracking-wide">KRONOS 懸浮金屬電視櫃</h3>
+                                    <p class="text-xs text-brand-gold font-serif">NT$ 64,000 起</p>
+                                    <div class="pt-4 border-t border-white/5 flex justify-between items-center text-xs">
+                                        <a href="#product-detail?id=P008" class="text-stone-300 hover:text-brand-gold font-medium">配置專屬款式</a>
+                                        <button onclick="triggerQuickView('P008')" class="text-brand-gold hover:underline">快速預覽</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==================== (3) 產品詳細頁: #product-detail ==================== -->
+        <section id="view-product-detail" class="page-view hidden animate-enter">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 py-16">
+                
+                <!-- 麵包屑導航 (SEO Breadcrumb List) -->
+                <nav class="flex items-center space-x-3 text-xs tracking-widest text-stone-500 mb-12">
+                    <a href="#index" class="hover:text-brand-gold transition-colors">AURA CASA</a>
+                    <span>/</span>
+                    <a href="#products" class="hover:text-brand-gold transition-colors">高端家具</a>
+                    <span>/</span>
+                    <span class="text-stone-300" id="detail-breadcrumb-active">AURA 經典拼接沙發</span>
+                </nav>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <!-- 左側多角度圖庫與 360 度滑桿互動 -->
+                    <div class="space-y-6">
+                        <div class="relative overflow-hidden rounded-2xl bg-stone-900 border border-white/5 aspect-[4/3] flex items-center justify-center">
+                            <!-- 主要預覽大圖 -->
+                            <img id="detail-main-img" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80" alt="商品主要外觀" class="w-full h-full object-cover transition-opacity duration-300">
+                            
+                            <!-- 互動式「360°視角模擬」假功能（滑動滑桿，透過旋轉/模糊過渡切換立體感） -->
+                            <div id="viewer-360-overlay" class="absolute inset-0 bg-brand-charcoal flex flex-col items-center justify-center p-6 opacity-0 pointer-events-none transition-opacity duration-500">
+                                <p class="text-xs uppercase tracking-widest text-brand-gold mb-8">360° 空間光影與視角動態模擬</p>
+                                <!-- 我們利用一組精心設計的SVG，結合滑桿位移數值動態渲染 3D 質感效果 -->
+                                <div class="w-64 h-64 relative flex items-center justify-center">
+                                    <svg id="svg-360-model" class="w-full h-full text-brand-gold transition-transform duration-300" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                                        <!-- 動態渲染一組高質感沙發線稿，模擬旋轉效果 -->
+                                        <path id="path-360-1" d="M15 65 L45 55 L85 65 M15 65 L15 80 L85 80 L85 65 M45 55 L45 80" stroke-width="1.5" stroke-linecap="round"/>
+                                        <path id="path-360-2" d="M10 45 L50 35 L90 45 M50 35 L50 80" stroke-opacity="0.5" stroke-width="1"/>
+                                        <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-opacity="0.1" stroke-dasharray="4 4"/>
+                                    </svg>
+                                </div>
+                                <div class="w-full max-w-sm mt-8 space-y-2">
+                                    <div class="flex justify-between text-[10px] text-stone-500">
+                                        <span>左側俯瞰</span>
+                                        <span>正前視角</span>
+                                        <span>右側透視</span>
+                                    </div>
+                                    <input type="range" id="slider-360" min="-180" max="180" value="0" class="w-full h-1 bg-stone-800 rounded-lg appearance-none cursor-pointer accent-brand-gold scroller-indicator">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 縮圖列表 / 360切換按鈕 -->
+                        <div class="grid grid-cols-4 gap-4">
+                            <button onclick="switchDetailImg('img1')" class="relative overflow-hidden rounded-xl border border-brand-gold aspect-square">
+                                <img id="detail-thumb-1" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=200&q=80" alt="多視角1" class="w-full h-full object-cover">
+                            </button>
+                            <button onclick="switchDetailImg('img2')" class="relative overflow-hidden rounded-xl border border-transparent aspect-square">
+                                <img id="detail-thumb-2" src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=200&q=80" alt="多視角2" class="w-full h-full object-cover">
+                            </button>
+                            <button onclick="switchDetailImg('img3')" class="relative overflow-hidden rounded-xl border border-transparent aspect-square">
+                                <img id="detail-thumb-3" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=200&q=80" alt="多視角3" class="w-full h-full object-cover">
+                            </button>
+                            <button onclick="toggle360Mode()" class="relative overflow-hidden rounded-xl border border-stone-800 bg-stone-900 aspect-square flex flex-col items-center justify-center hover:border-brand-gold/60 transition-colors">
+                                <svg class="w-6 h-6 text-brand-gold animate-spin-slow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 7.89M9 11l3-3 3 3m-3-3v12"/></svg>
+                                <span class="text-[8px] uppercase tracking-widest text-brand-gold mt-2">360° 互動</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 右側客製化配置器 & 產品說明 -->
+                    <div class="space-y-8">
+                        <div>
+                            <span class="text-xs tracking-[0.3em] uppercase text-brand-gold block mb-2" id="detail-category">義式拼接沙發</span>
+                            <h1 class="font-serif text-3xl md:text-4xl font-light tracking-wide text-stone-100" id="detail-title">AURA 經典拼接沙發</h1>
+                            <p class="font-serif text-2xl text-brand-gold mt-4" id="detail-price">NT$ 248,000</p>
+                        </div>
+
+                        <p class="text-stone-400 font-light text-sm leading-relaxed" id="detail-desc">
+                            當代美學的結晶之作。AURA 沙發採用不對稱拼接幾何設計，提供極致奢華的模組組合可能。全牛皮包覆結構，並在座椅深層填入具備恆溫釋壓的高密度科技棉，賦予最深邃舒適的全身承托。
+                        </p>
+
+                        <!-- 材質/顏色配置器 (互動切換動畫) -->
+                        <div class="space-y-6 border-y border-white/5 py-8">
+                            <!-- 色系選擇器 -->
+                            <div class="space-y-3">
+                                <label class="text-xs uppercase tracking-[0.2em] text-stone-400 block font-medium">1. 選擇皮革色系 (頭層牛皮)</label>
+                                <div class="flex items-center space-x-4">
+                                    <button onclick="selectConfig('color', 'Saddle Brown', this)" class="w-8 h-8 rounded-full bg-[#8B5A2B] border-2 border-brand-gold relative group focus:outline-none" aria-label="鞍褐棕">
+                                        <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-stone-900 text-stone-100 text-[9px] px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">鞍褐棕</span>
+                                    </button>
+                                    <button onclick="selectConfig('color', 'Alabaster White', this)" class="w-8 h-8 rounded-full bg-[#EAE6DF] border-2 border-transparent relative group focus:outline-none" aria-label="燕麥白">
+                                        <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-stone-900 text-stone-100 text-[9px] px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">燕麥白</span>
+                                    </button>
+                                    <button onclick="selectConfig('color', 'Nero Black', this)" class="w-8 h-8 rounded-full bg-[#1A1A1A] border-2 border-transparent relative group focus:outline-none" aria-label="曜石黑">
+                                        <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-stone-900 text-stone-100 text-[9px] px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">曜石黑</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- 實木框架/底腳選擇器 -->
+                            <div class="space-y-3">
+                                <label class="text-xs uppercase tracking-[0.2em] text-stone-400 block font-medium">2. 底腳與實木骨架</label>
+                                <div class="flex items-center space-x-4">
+                                    <button onclick="selectConfig('wood', 'Smoked Walnut', this)" class="px-4 py-2 border border-brand-gold text-brand-gold text-[10px] tracking-wider uppercase rounded-md focus:outline-none bg-brand-gold/5">
+                                        煙燻黑胡桃木
+                                    </button>
+                                    <button onclick="selectConfig('wood', 'Natural Oak', this)" class="px-4 py-2 border border-stone-800 text-stone-400 text-[10px] tracking-wider uppercase rounded-md focus:outline-none hover:border-brand-gold/60">
+                                        北美天然白橡木
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 規格與尺寸提示 -->
+                        <div class="grid grid-cols-2 gap-6 text-xs text-stone-400">
+                            <div>
+                                <span class="block text-[10px] uppercase text-stone-600 mb-1">標準尺寸 (可調整)</span>
+                                <span class="text-stone-300 font-medium">W: 280cm x D: 105cm x H: 75cm</span>
+                            </div>
+                            <div>
+                                <span class="block text-[10px] uppercase text-stone-600 mb-1">原廠保固服務</span>
+                                <span class="text-stone-300 font-medium">結構保固 10 年 / 皮革保養 2 年</span>
+                            </div>
+                        </div>
+
+                        <!-- 預約與加入詢價 CTA -->
+                        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                            <button onclick="addToQuote()" class="flex-1 px-8 py-4 bg-brand-gold text-brand-charcoal text-xs tracking-widest uppercase font-semibold hover:bg-stone-100 transition-colors rounded-full shadow-lg">
+                                專屬規格客訂詢價
+                            </button>
+                            <a href="#contact" class="px-8 py-4 border border-stone-800 text-stone-300 hover:text-brand-gold hover:border-brand-gold text-xs tracking-widest uppercase transition-all rounded-full text-center">
+                                線下展間預約鑑賞
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 材質保養說明 / 配送資訊摺疊選單 (FAQ Accordion Style) -->
+                <div class="mt-24 max-w-4xl mx-auto space-y-4">
+                    <h3 class="font-serif text-2xl text-brand-gold tracking-wide mb-8 text-center">工藝製作與配送細節</h3>
+                    
+                    <div class="border border-white/5 rounded-xl overflow-hidden bg-stone-900/20">
+                        <button onclick="toggleAccordion('detail-acc-1')" class="w-full p-6 flex justify-between items-center text-left focus:outline-none">
+                            <span class="text-sm font-semibold tracking-wider text-stone-200">1. 精選頂奢材質與製作工藝</span>
+                            <span class="text-brand-gold" id="detail-acc-1-icon">+</span>
+                        </button>
+                        <div id="detail-acc-1" class="hidden p-6 border-t border-white/5 text-xs text-stone-400 leading-relaxed space-y-2">
+                            <p>AURA CASA 僅選用源自阿爾卑斯山區牧場的頂級特選牛皮。該區域無鐵絲網柵欄，牛皮無疤痕，經由義大利頂級鞣製工廠以天然植物染劑染透，保留最真實的皮膚毛孔與天然親膚溫潤質感。</p>
+                            <p>內部框架皆由進口雙層樺木夾板搭配落葉松實木補強結構，經由高精準榫接技術組裝，堅固耐用不產生異音。</p>
+                        </div>
+                    </div>
+
+                    <div class="border border-white/5 rounded-xl overflow-hidden bg-stone-900/20">
+                        <button onclick="toggleAccordion('detail-acc-2')" class="w-full p-6 flex justify-between items-center text-left focus:outline-none">
+                            <span class="text-sm font-semibold tracking-wider text-stone-200">2. 原廠皮革保養與維護說明</span>
+                            <span class="text-brand-gold" id="detail-acc-2-icon">+</span>
+                        </button>
+                        <div id="detail-acc-2" class="hidden p-6 border-t border-white/5 text-xs text-stone-400 leading-relaxed space-y-2">
+                            <p>● 每週使用柔軟無塵乾布輕輕擦拭表面灰塵。</p>
+                            <p>● 每半年可使用 AURA CASA 隨貨贈送之原廠頂級皮革保養精華液擦拭，以維持皮革油脂豐潤性，避免乾裂。</p>
+                            <p>● 請勿將沙發放置於陽光直射位置或緊鄰暖氣源，避免高溫褪色乾燥。</p>
+                        </div>
+                    </div>
+
+                    <div class="border border-white/5 rounded-xl overflow-hidden bg-stone-900/20">
+                        <button onclick="toggleAccordion('detail-acc-3')" class="w-full p-6 flex justify-between items-center text-left focus:outline-none">
+                            <span class="text-sm font-semibold tracking-wider text-stone-200">3. 配送與原廠技師到府組裝說明</span>
+                            <span class="text-brand-gold" id="detail-acc-3-icon">+</span>
+                        </button>
+                        <div id="detail-acc-3" class="hidden p-6 border-t border-white/5 text-xs text-stone-400 leading-relaxed space-y-2">
+                            <p>● 我們提供全台灣本島免運費與原廠認證專屬技師到府組裝服務。</p>
+                            <p>● 訂製產品因製作工序繁複，一般需 45 至 60 個工作天完成。現貨庫存商品將於訂單確認後 3 日內進行配送聯繫。</p>
+                            <p>● 配送前一日將由專屬客服與您核對空間動線、大樓電梯尺寸及吊車需求。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==================== (4) 品牌故事: #about ==================== -->
+        <section id="view-about" class="page-view hidden animate-enter">
+            <!-- 沉浸式頂部 Banner -->
+            <div class="relative h-[50vh] flex items-center justify-center overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=1800&q=80" alt="高級家具設計圖工坊" class="absolute inset-0 w-full h-full object-cover opacity-30">
+                <div class="absolute inset-0 bg-brand-charcoal/80"></div>
+                <div class="relative z-10 text-center space-y-4 px-6">
+                    <span class="text-xs tracking-[0.4em] uppercase text-brand-gold block">CRAFTSMANSHIP SINCE 1998</span>
+                    <h1 class="font-serif text-4xl md:text-6xl font-light tracking-wide">非凡美學的起源與沉澱</h1>
+                </div>
+            </div>
+
+            <!-- 品牌發展歷史與永續理念 -->
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 py-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8">
+                        <span class="text-xs tracking-[0.3em] uppercase text-brand-gold">OUR STORY</span>
+                        <h2 class="font-serif text-3xl md:text-5xl font-light tracking-wide">在義大利血液中，注入日式寂靜與奢華</h2>
+                        <p class="text-stone-400 font-light text-sm md:text-base leading-relaxed tracking-wider">
+                            AURA CASA 創辦於 1998 年的義大利米蘭。創立初期是一間專門為歐洲皇室及頂奢酒店提供訂製細木作的家族工坊。為了在當代都市居所中尋求更為純粹、放鬆的心靈港灣，我們於 2012 年進行了品牌轉型。
+                        </p>
+                        <p class="text-stone-400 font-light text-sm md:text-base leading-relaxed tracking-wider">
+                            我們將義大利一絲不苟的裁縫幾何結構，與東方「侘寂（Wabi-Sabi）」的不完美之美揉合。提倡以最低限度的線條釋放出物料與空間最大的對話能量。這也是 AURA CASA 至今堅持「極簡、奢華、極致細節」的根本設計哲學。
+                        </p>
+                    </div>
+                    <div class="relative rounded-2xl overflow-hidden border border-white/5">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80" alt="設計師手工裁剪皮革" class="w-full h-[450px] object-cover">
+                    </div>
+                </div>
+
+                <!-- 品牌核心優勢三大支柱 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-32">
+                    <div class="p-8 bg-stone-900/40 border border-white/5 rounded-2xl text-center space-y-4 hover:border-brand-gold/30 transition-colors">
+                        <div class="w-16 h-16 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold mx-auto mb-4 text-2xl font-serif">I</div>
+                        <h3 class="font-serif text-xl tracking-wide text-stone-100">100% 特選材料源頭</h3>
+                        <p class="text-xs text-stone-400 leading-relaxed font-light">
+                            所有實木物料皆通過 FSC 永續林業認證，僅使用生長大於 80 年之北美特等黑胡桃。皮革只採用歐洲阿爾卑斯山區生皮，不採用低廉重鉻酸鹽鞣製。
+                        </p>
+                    </div>
+
+                    <div class="p-8 bg-stone-900/40 border border-white/5 rounded-2xl text-center space-y-4 hover:border-brand-gold/30 transition-colors">
+                        <div class="w-16 h-16 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold mx-auto mb-4 text-2xl font-serif">II</div>
+                        <h3 class="font-serif text-xl tracking-wide text-stone-100">匠人手感縫製溫感</h3>
+                        <p class="text-xs text-stone-400 leading-relaxed font-light">
+                            家具的收邊與縫線是由擁有 20 年以上皮件縫製經驗的義大利老匠人手工操刀，每英吋針腳均勻保持在完美的 8 針，展現出機械無法取代的溫度。
+                        </p>
+                    </div>
+
+                    <div class="p-8 bg-stone-900/40 border border-white/5 rounded-2xl text-center space-y-4 hover:border-brand-gold/30 transition-colors">
+                        <div class="w-16 h-16 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold mx-auto mb-4 text-2xl font-serif">III</div>
+                        <h3 class="font-serif text-xl tracking-wide text-stone-100">永續低碳製造承諾</h3>
+                        <p class="text-xs text-stone-400 leading-relaxed font-light">
+                            我們落實綠色製造流程，所有木器塗層皆採用符合歐盟最高安全認證之水性環保環保漆與天然天然木蠟油，保護匠人生產過程，也保護您的居家環境健康。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==================== (5) 空間靈感: #inspirations ==================== -->
+        <section id="view-inspirations" class="page-view hidden animate-enter">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 py-16">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <span class="text-xs tracking-[0.3em] uppercase text-brand-gold">SPACE GALLERY & STYLING TIPS</span>
+                    <h1 class="font-serif text-3xl md:text-5xl font-light tracking-wide">空間靈感與軟裝美學</h1>
+                    <p class="text-stone-400 font-light text-sm max-w-2xl mx-auto leading-relaxed">
+                        探索不同居室風格的家具配置邏輯，我們為您整理了頂級軟裝設計師的配置思維，助您建構無瑕的生活儀式感空間。
+                    </p>
+                </div>
+
+                <!-- 雜誌風格排版 & 軟裝設計文章列表 (SEO優化型文章) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Article 1 -->
+                    <article class="group bg-stone-900/20 border border-white/5 rounded-2xl overflow-hidden hover:border-brand-gold/30 transition-colors">
+                        <div class="relative overflow-hidden aspect-[16/10]">
+                            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="侘寂住宅風格家具搭配" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <span class="text-[10px] tracking-widest text-brand-gold uppercase block">設計美學與軟裝配置</span>
+                            <h3 class="font-serif text-xl text-stone-100 font-semibold tracking-wide">
+                                <a href="#contact" class="hover:text-brand-gold">如何用大地色與低限家具營造「日式侘寂住宅」的呼吸感？</a>
+                            </h3>
+                            <p class="text-xs text-stone-400 leading-relaxed font-light">
+                                侘寂美學強調事物的不雕琢與本色之美。我們在客廳軟裝配置中，可以大量運用未經繁複染色的天然北美胡桃實木餐桌，配合低背毛呢亞麻沙發。這樣不僅能夠壓低空間重心，更能釋放出大量空氣對流與光影交織的寫意空間...
+                            </p>
+                            <div class="pt-4 border-t border-white/5 flex justify-between items-center text-[10px] text-stone-500">
+                                <span>發表時間：2026.04.12</span>
+                                <span class="text-brand-gold font-medium">閱讀全文 →</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="group bg-stone-900/20 border border-white/5 rounded-2xl overflow-hidden hover:border-brand-gold/30 transition-colors">
+                        <div class="relative overflow-hidden aspect-[16/10]">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="奢華別墅客廳家具搭配" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <span class="text-[10px] tracking-widest text-brand-gold uppercase block">現代豪宅趨勢</span>
+                            <h3 class="font-serif text-xl text-stone-100 font-semibold tracking-wide">
+                                <a href="#contact" class="hover:text-brand-gold">義式極簡與奢華質感的平衡：別墅客廳大器配置學</a>
+                            </h3>
+                            <p class="text-xs text-stone-400 leading-relaxed font-light">
+                                別墅客廳等大坪數空間往往面臨「空洞」或「擁擠」的兩極化。挑高空間適合搭配模組化沙發，並透過不鏽鋼或銅質五金飾邊、拋光玉石岩板面板來適度折射光源，點綴出精細奢華感而不流於俗套...
+                            </p>
+                            <div class="pt-4 border-t border-white/5 flex justify-between items-center text-[10px] text-stone-500">
+                                <span>發表時間：2026.05.02</span>
+                                <span class="text-brand-gold font-medium">閱讀全文 →</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="group bg-stone-900/20 border border-white/5 rounded-2xl overflow-hidden hover:border-brand-gold/30 transition-colors">
+                        <div class="relative overflow-hidden aspect-[16/10]">
+                            <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80" alt="小坪數公寓家具收納配置" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <span class="text-[10px] tracking-widest text-brand-gold uppercase block">小戶型智慧空間</span>
+                            <h3 class="font-serif text-xl text-stone-100 font-semibold tracking-wide">
+                                <a href="#contact" class="hover:text-brand-gold">精巧公寓的高端家具指南：懸浮與多功能收納的視覺擴大術</a>
+                            </h3>
+                            <p class="text-xs text-stone-400 leading-relaxed font-light">
+                                坪數精簡更應該注重家具質感。選擇帶有不鏽鋼纖細底腳的沙發，能讓視線直達地板底層，從而使客廳視野顯得更為寬敞。搭配懸壁式的懸浮電視櫃、多功能隱形把手收納櫃，可大量減少視覺雜質...
+                            </p>
+                            <div class="pt-4 border-t border-white/5 flex justify-between items-center text-[10px] text-stone-500">
+                                <span>發表時間：2026.06.18</span>
+                                <span class="text-brand-gold font-medium">閱讀全文 →</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==================== (6) 設計案例: #projects ==================== -->
+        <section id="view-projects" class="page-view hidden animate-enter">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 py-16">
+                <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-white/5 pb-10 mb-12">
+                    <div class="space-y-4">
+                        <span class="text-xs tracking-[0.3em] uppercase text-brand-gold">REAL CASE STUDIES</span>
+                        <h1 class="font-serif text-3xl md:text-5xl font-light tracking-wide">高端實景設計案例</h1>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Case 1 -->
+                    <div class="group space-y-6">
+                        <div class="relative overflow-hidden rounded-2xl aspect-[16/10] border border-white/5">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80" alt="陽明山獨棟極簡別墅案" class="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700">
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-[10px] tracking-widest text-brand-gold uppercase block">陽明山 | 獨棟別墅</span>
+                            <h3 class="font-serif text-2xl text-stone-100 font-light group-hover:text-brand-gold transition-colors">「靜謐光影」與自然共生的極簡別墅案</h3>
+                            <p class="text-xs text-stone-400 font-light leading-relaxed">
+                                本案以「自然引光」為設計核心，大面積落地窗引入綠意。全屋採用 AURA 沙發作為公領域中心，搭配北美黑胡桃 ECLIPSE 實木餐桌，讓木質肌理與自然陽光在客餐廳之間寫意流淌。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Case 2 -->
+                    <div class="group space-y-6">
+                        <div class="relative overflow-hidden rounded-2xl aspect-[16/10] border border-white/5">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80" alt="台中七期豪宅複層案" class="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700">
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-[10px] tracking-widest text-brand-gold uppercase block">台中七期 | 頂層公寓</span>
+                            <h3 class="font-serif text-2xl text-stone-100 font-light group-hover:text-brand-gold transition-colors">「大都會奢華」高訂現代都會複層宅</h3>
+                            <p class="text-xs text-stone-400 font-light leading-relaxed">
+                                專為企業二代打造。本案極致展現義式現代奢華。起居空間大膽運用曜石黑皮革 AURA 沙發配以鍍金邊不鏽鋼 STELLA 設計單椅，將都會俐落線條、細緻金屬微光與奢美生活氛圍烘托到最高點。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==================== (7) 最新消息: #news ==================== -->
+        <section id="view-news" class="page-view hidden animate-enter">
+            <div class="max-w-5xl mx-auto px-6 py-16">
+                <div class="text-center mb-16 space-y-4">
+                    <span class="text-xs tracking-[0.3em] uppercase text-brand-gold">BRAND NEWS & MEDIA</span>
+                    <h1 class="font-serif text-3xl md:text-5xl font-light tracking-wide">品牌最新動態與國際參展</h1>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- News Post 1 -->
+                    <div class="p-8 bg-stone-900/40 border border-white/5 rounded-2xl flex flex-col md:flex-row gap-8 items-center hover:border-brand-gold/30 transition-colors">
+                        <div class="w-full md:w-48 h-32 rounded-xl overflow-hidden shrink-0">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=400&q=80" alt="米蘭國際家具展" class="w-full h-full object-cover">
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-[10px] tracking-widest text-brand-gold uppercase">國際特展公告</span>
+                            <h3 class="font-serif text-xl text-stone-150 font-semibold">2026 義大利米蘭國際家具特展（Salone del Mobile）參展直擊</h3>
+                            <p class="text-xs text-stone-400 font-light leading-relaxed">
+                                AURA CASA 本次攜手義大利知名新銳建築設計師 Lorenzo Moretti，於米蘭 5 號展館展出本年度最受矚目的「AURA 模組化沙發」全新升級版系列，完美展演了極簡主義與頂級皮革拼接的無限美學邊界...
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- News Post 2 -->
+                    <div class="p-8 bg-stone-900/40 border border-white/5 rounded-2xl flex flex-col md:flex-row gap-8 items-center hover:border-brand-gold/30 transition-colors">
+                        <div class="w-full md:w-48 h-32 rounded-xl overflow-hidden shrink-0">
+                            <img src="https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?auto=format&fit=crop&w=400&q=80" alt="台中旗艦展示館" class="w-full h-full object-cover">
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-[10px] tracking-widest text-brand-gold uppercase">台灣旗艦展館活動</span>
+                            <h3 class="font-serif text-xl text-stone-150 font-semibold">AURA CASA 台灣「台中歌劇院旁旗艦體驗館」盛大開幕</h3>
+                            <p class="text-xs text-stone-400 font-light leading-relaxed">
+                                為滿足台灣高端別墅及豪宅設計市場。我們耗時一年、斥資千萬打造的極簡侘寂風格台中體驗館即將對外開放。館內將完整展示包含大師單椅、客餐廳配置及提供 1 對 1 預約看展服務與香檳迎賓特調...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==================== (8) 客戶評價: #testimonials ==================== -->
+        <section id="view-testimonials" class="page-view hidden animate-enter">
+            <div class="max-w-5xl mx-auto px-6 py-16">
+                <div class="text-center mb-16 space-y-4">
+                    <span class="text-xs tracking-[0.3em] uppercase text-brand-gold">CLIENT SATISFACTION</span>
+                    <h1 class="font-serif text-3xl md:text-5xl font-light tracking-wide">屋主的滿意之聲</h1>
+                    <p class="text-xs text-stone-400 font-light max-w-xl mx-auto leading-relaxed">
+                        我們珍惜每一次與高端品味家的完美邂逅。在此看見各界菁英、屋主對 AURA CASA 的極致家具製品之真實回饋。
+                    </p>
+                </div>
+
+                <!-- 動態客戶評價發表表單與動態展示 (Dynamic reviews stored in-memory) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start mb-16">
+                    <!-- 寫下新評價表單 -->
+                    <div class="md:col-span-1 p-6 bg-stone-900/60 border border-white/5 rounded-2xl space-y-4">
+                        <h3 class="font-serif text-lg text-brand-gold tracking-wide">分享您的生活美學</h3>
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase text-stone-400 tracking-wider">稱呼 (姓名/職稱)</label>
+                            <input type="text" id="reviewer-name" placeholder="例: 台北林先生" class="w-full px-3 py-2 bg-stone-800 text-xs text-stone-100 rounded-md focus:outline-none focus:border-brand-gold border border-stone-700">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase text-stone-400 tracking-wider">評分 (星級)</label>
+                            <select id="reviewer-rating" class="w-full px-3 py-2 bg-stone-800 text-xs text-stone-100 rounded-md focus:outline-none focus:border-brand-gold border border-stone-700">
+                                <option value="5">★★★★★ 頂奢至極</option>
+                                <option value="4">★★★★ 優良品質</option>
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase text-stone-400 tracking-wider">評價心得</label>
+                            <textarea id="reviewer-text" rows="4" placeholder="請寫下您的配送、組裝、家具觸感等真實鑑賞感受..." class="w-full px-3 py-2 bg-stone-800 text-xs text-stone-100 rounded-md focus:outline-none focus:border-brand-gold border border-stone-700"></textarea>
+                        </div>
+                        <button onclick="submitReview()" class="w-full py-3 bg-brand-gold text-brand-charcoal text-xs tracking-widest uppercase font-semibold hover:bg-stone-100 transition-colors rounded-full">
+                            送出真誠評價
+                        </button>
+                    </div>
+
+                    <!-- 評價動態網格 (記憶體動態渲染，並寫死數條以供SEO) -->
+                    <div class="md:col-span-2 space-y-6" id="dynamic-reviews-container">
+                        <!-- Review Card 1 -->
+                        <div class="p-6 bg-stone-900/40 border border-white/5 rounded-2xl space-y-4">
+                            <div class="flex justify-between items-center">
+                                <div class="flex text-brand-gold space-x-1">
+                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                </div>
+                                <span class="text-[9px] text-stone-500">2026.06.01</span>
+                            </div>
+                            <p class="text-xs text-stone-300 leading-relaxed font-light">
+                                「組裝技師態度極佳，細心穿戴乾淨鞋套並鋪設羊毛保護墊才進行沙發和餐桌組裝。家具本身完全沒有化學異味，只有天然木頭和皮革乾淨香氣，全家人都很安心。」
+                            </p>
+                            <div class="flex items-center space-x-3 text-[10px] text-stone-400">
+                                <span class="font-semibold text-stone-200">林教授 | 台大特聘教授</span>
+                                <span>•</span>
+                                <span>已購入: AURA 拼接沙發系列</span>
+                            </div>
+                        </div>
+
+                        <!-- Review Card 2 -->
+                        <div class="p-6 bg-stone-900/40 border border-white/5 rounded-2xl space-y-4">
+                            <div class="flex justify-between items-center">
+                                <div class="flex text-brand-gold space-x-1">
+                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                </div>
+                                <span class="text-[9px] text-stone-500">2026.06.14</span>
+                            </div>
+                            <p class="text-xs text-stone-300 leading-relaxed font-light">
+                                「餐几送到新家時，大理石與胡桃實木一體成型拼接的密合度堪稱完美。完全體現出高訂工坊的實力，對得起這個價格。下次裝潢新家還是只指名 AURA CASA。」
+                            </p>
+                            <div class="flex items-center space-x-3 text-[10px] text-stone-400">
+                                <span class="font-semibold text-stone-200">何醫師 | 台北醫學中心副院長</span>
+                                <span>•</span>
+                                <span>已購入: ECLIPSE 圓弧岩板餐桌</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==================== (9) 常見問題: #faq ==================== -->
+        <section id="view-faq" class="page-view hidden animate-enter">
+            <div class="max-w-4xl mx-auto px-6 py-16">
+                <div class="text-center mb-16 space-y-4">
+                    <span class="text-xs tracking-[0.3em] uppercase text-brand-gold">CUSTOMER CARE FAQ</span>
+                    <h1 class="font-serif text-3xl md:text-5xl font-light tracking-wide">購物、保固與售後支援常見問題</h1>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="border border-white/5 rounded-2xl overflow-hidden bg-stone-900/20">
+                        <button onclick="toggleAccordion('faq-acc-1')" class="w-full p-6 flex justify-between items-center text-left focus:outline-none">
+                            <span class="text-sm font-semibold tracking-wider text-stone-200">Q1. 請問 AURA CASA 的家具是否支援完全客製化尺寸或材質？</span>
+                            <span class="text-brand-gold" id="faq-acc-1-icon">+</span>
+                        </button>
+                        <div id="faq-acc-1" class="hidden p-6 border-t border-white/5 text-xs text-stone-400 leading-relaxed space-y-2">
+                            <p>是的。我們的沙發和收納櫃等大型家具，皆提供客製化模組調整。您可以自由選擇 12 種義大利進口頂頭層皮色與 5 款比利時手工織品亞麻料。若有特殊長寬高客製需求，本公司提供專業軟裝規劃師到府測量並協助繪製 3D 模擬排版圖檔。</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="border border-white/5 rounded-2xl overflow-hidden bg-stone-900/20">
+                        <button onclick="toggleAccordion('faq-acc-2')" class="w-full p-6 flex justify-between items-center text-left focus:outline-none">
+                            <span class="text-sm font-semibold tracking-wider text-stone-200">Q2. 訂製家具需要等待多久？現貨需要多少配送時間？</span>
+                            <span class="text-brand-gold" id="faq-acc-2-icon">+</span>
+                        </button>
+                        <div id="faq-acc-2" class="hidden p-6 border-t border-white/5 text-xs text-stone-400 leading-relaxed space-y-2">
+                            <p>● **常規現貨款**（如大師單椅 Stella 等熱銷現貨），在完成訂款付款後 3 個工作天內，即可由專屬車隊配送至府上組裝。</p>
+                            <p>● **高級訂製款**（涉及特殊沙發模組拼接、特別進口皮革染色者），生產與海運報關總計一般需要 45 到 60 個工作天，我們提供全線生產進度主動通知與預估到貨日。</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="border border-white/5 rounded-2xl overflow-hidden bg-stone-900/20">
+                        <button onclick="toggleAccordion('faq-acc-3')" class="w-full p-6 flex justify-between items-center text-left focus:outline-none">
+                            <span class="text-sm font-semibold tracking-wider text-stone-200">Q3. AURA CASA 的售後保固條件與流程為何？</span>
+                            <span class="text-brand-gold" id="faq-acc-3-icon">+</span>
+                        </button>
+                        <div id="faq-acc-3" class="hidden p-6 border-t border-white/5 text-xs text-stone-400 leading-relaxed space-y-2">
+                            <p>本品牌提供業界最高水準售後保障：</p>
+                            <p>● **主體結構保固 10 年**（包含樺木實木內置框架、榫接點、高拉力不鏽鋼彈簧等）。</p>
+                            <p>● **面料與面漆 2 年保固**（在正常非人為硬物破壞與腐蝕化學洗劑塗擦下，保固起水泡或龜裂老化）。</p>
+                            <p>售後僅需致電原廠或透過官方 LINE 傳送產品序號，即有專屬技師到府進行免費檢修與皮革保養。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==================== (10) 聯絡我們: #contact ==================== -->
+        <section id="view-contact" class="page-view hidden animate-enter">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 py-16">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <span class="text-xs tracking-[0.3em] uppercase text-brand-gold">PRIVATE VISIT & INQUIRIES</span>
+                    <h1 class="font-serif text-3xl md:text-5xl font-light tracking-wide">預約專屬私人展間體驗</h1>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <!-- 左側預約表單 -->
+                    <div class="glass-panel p-8 rounded-2xl space-y-6">
+                        <h2 class="font-serif text-xl text-brand-gold tracking-wide">Showroom 專屬看展預約登記</h2>
+                        <p class="text-xs text-stone-400 font-light">為了維持最高私密尊榮的參觀品質，所有展館皆採完全一對一預約制。請留下您的基礎看展意向，我們的軟裝小秘書將於 12 小時內去電與您確認時間。</p>
+                        
+                        <form id="appointment-form" onsubmit="submitAppointment(event)" class="space-y-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="space-y-1">
+                                    <label class="text-[10px] uppercase text-stone-400 tracking-wider">貴賓姓名 *</label>
+                                    <input type="text" required id="contact-name" class="w-full px-3 py-2 bg-stone-800 text-xs text-stone-100 rounded-md focus:outline-none focus:border-brand-gold border border-stone-700">
+                                </div>
+                                <div class="space-y-1">
+                                    <label class="text-[10px] uppercase text-stone-400 tracking-wider">聯絡電話 *</label>
+                                    <input type="tel" required id="contact-phone" class="w-full px-3 py-2 bg-stone-800 text-xs text-stone-100 rounded-md focus:outline-none focus:border-brand-gold border border-stone-700">
+                                </div>
+                            </div>
+
+                            <div class="space-y-1">
+                                <label class="text-[10px] uppercase text-stone-400 tracking-wider">預約觀賞展館 *</label>
+                                <select required id="contact-branch" class="w-full px-3 py-2 bg-stone-800 text-xs text-stone-100 rounded-md focus:outline-none focus:border-brand-gold border border-stone-700">
+                                    <option value="Taipei">台北大安私家旗艦展館</option>
+                                    <option value="Taichung">台中歌劇院旁高訂概念館</option>
+                                </select>
+                            </div>
+
+                            <div class="space-y-1">
+                                <label class="text-[10px] uppercase text-stone-400 tracking-wider">感興趣的家具品類</label>
+                                <select id="contact-interest" class="w-full px-3 py-2 bg-stone-800 text-xs text-stone-100 rounded-md focus:outline-none focus:border-brand-gold border border-stone-700">
+                                    <option value="living">全屋軟裝訂製 (客廳 + 餐廳 + 臥室)</option>
+                                    <option value="sofa">高訂奢華沙發系列</option>
+                                    <option value="dining">實木或大理石餐桌几案</option>
+                                </select>
+                            </div>
+
+                            <div class="space-y-1">
+                                <label class="text-[10px] uppercase text-stone-400 tracking-wider">特別備註 (如預計交屋日、設計師名稱、需要嬰兒推車動線等)</label>
+                                <textarea id="contact-memo" rows="3" class="w-full px-3 py-2 bg-stone-800 text-xs text-stone-100 rounded-md focus:outline-none focus:border-brand-gold border border-stone-700"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 bg-brand-gold text-brand-charcoal text-xs tracking-widest uppercase font-semibold hover:bg-stone-100 transition-colors rounded-full shadow-lg shadow-brand-gold/15">
+                                送出專屬看展預約
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- 右側門市資訊與 Google Map 假定位 -->
+                    <div class="space-y-8">
+                        <!-- 門市 1 -->
+                        <div class="p-6 bg-stone-900/40 border border-white/5 rounded-2xl space-y-4">
+                            <span class="text-xs uppercase tracking-[0.2em] text-brand-gold font-bold block">TAIPEI SHOWROOM | 台北旗艦館</span>
+                            <h3 class="font-serif text-lg text-stone-100">台北大安私家奢選藝廊</h3>
+                            <div class="text-xs text-stone-400 space-y-1 leading-relaxed">
+                                <p>● 門市地址：台北市大安區敦化南路一段 000 號 2 樓 (大安捷運站步行 3 分鐘)</p>
+                                <p>● 服務電話：(02) 2755-0000</p>
+                                <p>● 營業時間：11:00 AM - 09:00 PM (預約制，每週二休館維護)</p>
+                            </div>
+                        </div>
+
+                        <!-- 門市 2 -->
+                        <div class="p-6 bg-stone-900/40 border border-white/5 rounded-2xl space-y-4">
+                            <span class="text-xs uppercase tracking-[0.2em] text-brand-gold font-bold block">TAICHUNG SHOWROOM | 台中展示館</span>
+                            <h3 class="font-serif text-lg text-stone-100">台中歌劇院旁高訂概念館</h3>
+                            <div class="text-xs text-stone-400 space-y-1 leading-relaxed">
+                                <p>● 門市地址：台中市西屯區市政北一路 000 號 1 樓 (歌劇院第一排)</p>
+                                <p>● 服務電話：(04) 2255-0000</p>
+                                <p>● 營業時間：11:00 AM - 09:00 PM (預約制，全年無休)</p>
+                            </div>
+                        </div>
+
+                        <!-- Google Map 奢華風格假定位區塊 -->
+                        <div class="relative overflow-hidden rounded-2xl h-56 bg-stone-900 border border-white/5 flex items-center justify-center">
+                            <!-- 假地圖：黑金色調高質感向量感線圖 -->
+                            <svg class="absolute inset-0 w-full h-full opacity-30 text-stone-700" viewBox="0 0 400 200" fill="none" stroke="currentColor">
+                                <path d="M0 50 H400 M0 150 H400 M100 0 V200 M300 0 V200 M50 0 L350 200" stroke-width="0.5"/>
+                                <circle cx="180" cy="90" r="8" fill="#c5a880"/>
+                                <circle cx="180" cy="90" r="18" stroke="#c5a880" stroke-opacity="0.3" class="animate-ping"/>
+                            </svg>
+                            <div class="relative z-10 text-center space-y-2">
+                                <p class="text-xs tracking-widest text-brand-gold uppercase font-semibold">AURA CASA 官方展館定位</p>
+                                <p class="text-[10px] text-stone-400">台北敦化 & 台中市政北一 奢華展館</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 6. 訂製進度/詢價購物車清單 (Floating Action Panel & In-memory Cart) -->
+    <div id="quote-basket-modal" class="fixed right-6 bottom-24 z-50 glass-panel p-5 rounded-2xl shadow-xl w-72 text-left translate-y-2 opacity-0 pointer-events-none transition-all duration-300">
+        <div class="flex justify-between items-center border-b border-white/5 pb-2 mb-3">
+            <h4 class="text-xs font-semibold text-brand-gold tracking-widest uppercase">專屬詢價清單</h4>
+            <button onclick="toggleQuoteBasket()" class="text-stone-400 hover:text-stone-200">×</button>
+        </div>
+        <div id="quote-items-container" class="space-y-2 max-h-40 overflow-y-auto text-xs text-stone-300">
+            <!-- Items dynamically added here -->
+            <p class="text-stone-500 text-center py-4">目前無選配產品</p>
+        </div>
+        <div class="border-t border-white/5 pt-3 mt-3 flex justify-between items-center">
+            <span class="text-[10px] text-stone-500 uppercase">預估品項計：<span id="quote-count" class="text-brand-gold">0</span> 件</span>
+            <a href="#contact" onclick="toggleQuoteBasket()" class="px-3 py-1.5 bg-brand-gold text-brand-charcoal text-[9px] uppercase tracking-widest font-bold rounded-full">
+                提交詢價預約展間
+            </a>
+        </div>
+    </div>
+
+    <!-- 7. 輕巧浮動通知 Toast -->
+    <div id="toast" class="fixed top-8 left-1/2 -translate-x-1/2 z-[9999] bg-stone-900 border border-brand-gold/40 text-brand-gold text-xs tracking-widest px-6 py-3.5 rounded-full shadow-2xl opacity-0 pointer-events-none transition-all duration-500">
+        已成功配置商品至專屬詢價單
+    </div>
+
+    <!-- 8. 全域大師商品快速預覽彈窗 (Quick View Lightbox Modal) -->
+    <div id="quickview-modal" class="fixed inset-0 z-[110] bg-brand-charcoal/95 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-500 flex items-center justify-center p-4">
+        <div class="glass-panel w-full max-w-4xl rounded-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2 relative">
+            <button onclick="closeQuickView()" class="absolute top-4 right-4 text-stone-400 hover:text-brand-gold z-20 focus:outline-none" aria-label="關閉預覽">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+            <div class="h-64 md:h-full overflow-hidden">
+                <img id="qv-img" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80" alt="預覽圖" class="w-full h-full object-cover">
+            </div>
+            <div class="p-8 space-y-6 flex flex-col justify-center">
+                <div>
+                    <span id="qv-cat" class="text-[10px] tracking-widest text-brand-gold uppercase block mb-1">義式沙發</span>
+                    <h3 id="qv-title" class="font-serif text-2xl text-stone-100 tracking-wide">AURA 經典拼接沙發</h3>
+                    <p id="qv-price" class="font-serif text-xl text-brand-gold mt-2">NT$ 248,000</p>
+                </div>
+                <p id="qv-desc" class="text-xs text-stone-400 leading-relaxed font-light">
+                    選用義大利頂層粒面苯染皮，配以羽絨與記憶棉複合結構填充，尊享雲端坐感。
+                </p>
+                <div class="space-y-2 text-xs text-stone-300">
+                    <p>● 結構保固 10 年，免運送府組裝</p>
+                    <p>● 多種皮革色系與底腳可個性化配置</p>
+                </div>
+                <div class="pt-4 flex gap-4">
+                    <a id="qv-detail-link" href="#product-detail" onclick="closeQuickView()" class="flex-1 text-center py-3 bg-brand-gold text-brand-charcoal text-xs tracking-widest uppercase font-semibold hover:bg-stone-100 transition-colors rounded-full">
+                        客訂配置規格
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9. 浮動聯絡按鈕組 (Floating Actions) -->
+    <div class="fixed right-6 bottom-6 z-40 flex flex-col space-y-3">
+        <!-- 詢價單購物籃浮標 -->
+        <button onclick="toggleQuoteBasket()" class="p-4 bg-stone-900 border border-brand-gold/30 text-brand-gold rounded-full shadow-lg hover:scale-105 transition-all focus:outline-none relative" aria-label="查看詢價清單">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            <span id="floating-quote-count" class="absolute -top-1 -right-1 bg-brand-gold text-brand-charcoal text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+        </button>
+        <!-- 一鍵回到頂端按鈕 (Smooth Back to top) -->
+        <button onclick="scrollToTop()" id="back-to-top-btn" class="p-4 bg-stone-900/80 border border-white/5 text-stone-400 rounded-full shadow-lg hover:text-brand-gold transition-all translate-y-12 opacity-0 focus:outline-none" aria-label="回到最上方">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+        </button>
+    </div>
+
+    <!-- 10. 高奢語意化頁尾 (Footer Parallax Visual Depth & SEO links) -->
+    <footer class="bg-brand-charcoal border-t border-white/5 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-20">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-white/5 pb-16">
+                <!-- 品牌簡介 -->
+                <div class="space-y-6">
+                    <span class="font-serif text-2xl tracking-[0.3em] uppercase text-stone-100">AURA CASA</span>
+                    <p class="text-xs text-stone-400 leading-relaxed font-light">
+                        AURA CASA 將當代極簡建築美學注入家居容器。我們堅持嚴控特選原材、傳承極致意式工藝，為全球高端品味豪邸提供完全個人高訂化的軟裝全案家具。
+                    </p>
+                    <div class="flex space-x-4 text-stone-400">
+                        <!-- Facebook Icon -->
+                        <a href="https://facebook.com/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors" aria-label="Facebook">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                        </a>
+                        <!-- Instagram Icon -->
+                        <a href="https://instagram.com/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors" aria-label="Instagram">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 精品系列快速連結 -->
+                <div class="space-y-4">
+                    <h4 class="text-xs uppercase tracking-[0.2em] text-brand-gold font-semibold">館藏分類</h4>
+                    <ul class="text-xs text-stone-400 space-y-2.5 font-light">
+                        <li><a href="#products?cat=sofa" class="hover:text-brand-gold transition-colors">義式極簡拼接沙發</a></li>
+                        <li><a href="#products?cat=table" class="hover:text-brand-gold transition-colors">進口手工大理石餐桌</a></li>
+                        <li><a href="#products?cat=chair" class="hover:text-brand-gold transition-colors">設計大師工匠單椅</a></li>
+                        <li><a href="#products?cat=cabinet" class="hover:text-brand-gold transition-colors">胡桃實木藝術收納櫃</a></li>
+                    </ul>
+                </div>
+
+                <!-- 品牌服務與支援 -->
+                <div class="space-y-4">
+                    <h4 class="text-xs uppercase tracking-[0.2em] text-brand-gold font-semibold">客戶支援與諮詢</h4>
+                    <ul class="text-xs text-stone-400 space-y-2.5 font-light">
+                        <li><a href="#about" class="hover:text-brand-gold transition-colors">品牌設計師團隊</a></li>
+                        <li><a href="#faq" class="hover:text-brand-gold transition-colors">產品保固與維護條款</a></li>
+                        <li><a href="#contact" class="hover:text-brand-gold transition-colors">私人旗艦展館預約</a></li>
+                        <li><a href="#testimonials" class="hover:text-brand-gold transition-colors">屋主美學實景見證</a></li>
+                    </ul>
+                </div>
+
+                <!-- 電子報奢華訂閱 (High-end Newsletter Capture) -->
+                <div class="space-y-4">
+                    <h4 class="text-xs uppercase tracking-[0.2em] text-brand-gold font-semibold">私享新品與特展型錄</h4>
+                    <p class="text-[10px] text-stone-400 font-light leading-relaxed">訂閱 AURA CASA 季度電子期刊，搶先獲得米蘭國際家具參展新品型錄及高端軟裝美學私享靈感。</p>
+                    <div class="flex border-b border-stone-700 py-1.5 focus-within:border-brand-gold transition-colors">
+                        <input type="email" id="newsletter-email" placeholder="輸入您的貴賓 Email" class="w-full bg-transparent text-xs text-stone-100 focus:outline-none placeholder:text-stone-600">
+                        <button onclick="subscribeNewsletter()" class="text-brand-gold text-[10px] uppercase tracking-wider font-semibold hover:scale-105 transition-transform" aria-label="訂閱">
+                            訂閱
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 底部版權 & SEO 宣告 -->
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 py-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-stone-500 tracking-wider space-y-4 md:space-y-0">
+                <p>© 2026 AURA CASA. All Rights Reserved. 奧拉家居股份有限公司版權所有。</p>
+                <div class="flex space-x-6">
+                    <a href="#faq" class="hover:text-brand-gold transition-colors">服務條款</a>
+                    <a href="#faq" class="hover:text-brand-gold transition-colors">隱私權政策</a>
+                    <a href="#index" class="hover:text-brand-gold transition-colors">官方網站地圖</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 11. 全域核心前端路由與交互核心 JavaScript (Vanilla JS & Intersection Observer) -->
+    <script>
+        // --- (1) 家具產品大數據數據庫 ---
+        const PRODUCTS_DB = {
+            'P001': {
+                id: 'P001',
+                title: 'AURA 經典拼接沙發',
+                category: '義式沙發',
+                categoryKey: 'sofa',
+                price: 'NT$ 248,000',
+                desc: '當代美學的結晶之作。AURA 沙發採用不對稱拼接幾何設計，提供極致奢華的模組組合可能。全牛皮包覆結構，並在座椅深層填入具備恆溫釋壓的高密度科技棉，賦予最深邃舒適的全身承托。',
+                img1: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80',
+                img2: 'https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=1200&q=80',
+                img3: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80'
+            },
+            'P002': {
+                id: 'P002',
+                title: 'ECLIPSE 圓弧餐桌',
+                category: '高訂餐桌',
+                categoryKey: 'table',
+                price: 'NT$ 112,000',
+                desc: '本餐桌由北美高海拔山區的百年黑胡桃實木桌腳製成，經過精密手工車削與多道古法上蠟塗裝，搭配頂級天然奢石圓弧桌面，帶來極致沉穩大器的餐廳視野。',
+                img1: 'https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?auto=format&fit=crop&w=1200&q=80',
+                img2: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80',
+                img3: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=1200&q=80'
+            },
+            'P003': {
+                id: 'P003',
+                title: 'CRONOS 義大利岩板茶几',
+                category: '高訂餐桌',
+                categoryKey: 'table',
+                price: 'NT$ 46,000',
+                desc: '一體成形抗撞、耐高溫、零吸水率的進口奢華大理石岩板茶几。輕薄俐落的視覺切角，完美平衡大塊沙發的體量。',
+                img1: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80',
+                img2: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80',
+                img3: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80'
+            },
+            'P004': {
+                id: 'P004',
+                title: 'STELLA 輕奢單椅',
+                category: '設計師單椅',
+                categoryKey: 'chair',
+                price: 'NT$ 22,000',
+                desc: '輕奢主義的典範。黃銅鍍鈦不鏽鋼極致纖細線條椅腳，完美支撐進口高密度小羊毛絨編織座墊，是客廳及玄關最精緻的藝術亮點。',
+                img1: 'https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1200&q=80',
+                img2: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=1200&q=80',
+                img3: 'https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?auto=format&fit=crop&w=1200&q=80'
+            },
+            'P005': {
+                id: 'P005',
+                title: 'DANTE 羊毛極簡單椅',
+                category: '設計師單椅',
+                categoryKey: 'chair',
+                price: 'NT$ 31,000',
+                desc: '全圓弧人體工學包裹，羊駝呢毛絨表面具有極佳的親膚性，坐墊採用獨立筒高彈力彈簧與乳膠複合填充，完美緩解臀部疲累。',
+                img1: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=1200&q=80',
+                img2: 'https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1200&q=80',
+                img3: 'https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?auto=format&fit=crop&w=1200&q=80'
+            },
+            'P006': {
+                id: 'P006',
+                title: 'SINOPE 胡桃木餐櫃',
+                category: '藝術收納櫃',
+                categoryKey: 'cabinet',
+                price: 'NT$ 82,000',
+                desc: '手工拉絲不鏽鋼把手，搭配北美黑胡桃實木拼花木皮，大容量儲物空間並備有防撞緩衝門片滑軌，讓每一次開關都優雅無聲。',
+                img1: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=1200&q=80',
+                img2: 'https://images.unsplash.com/photo-1601887389937-0b02c26b6c3c?auto=format&fit=crop&w=1200&q=80',
+                img3: 'https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?auto=format&fit=crop&w=1200&q=80'
+            }
+        };
+
+        // 模擬訂製儲存
+        let quoteBasket = [];
+
+        // --- (2) 多頁式 SPA 路由管理器 (動態更新頁面內容 & SEO Metas & JSON-LD) ---
+        function router() {
+            const hash = window.location.hash || '#index';
+            const pageId = hash.split('?')[0];
+            
+            // 隱藏所有頁面，顯示對應頁面
+            document.querySelectorAll('.page-view').forEach(view => {
+                view.classList.add('hidden');
+                view.classList.remove('page-enter-active');
+            });
+
+            // 關閉行動端選單遮罩
+            const mobileOverlay = document.getElementById('mobile-menu-overlay');
+            if (mobileOverlay) mobileOverlay.classList.add('translate-x-full');
+
+            // 路由匹配切換
+            let activeView = document.getElementById('view-' + pageId.replace('#', ''));
+            if (!activeView) {
+                // 回退到首頁
+                activeView = document.getElementById('view-index');
+            }
+
+            if (activeView) {
+                activeView.classList.remove('hidden');
+                // 動態微幅延遲觸發流暢漸顯動畫
+                setTimeout(() => {
+                    activeView.classList.add('page-enter-active');
+                }, 50);
+            }
+
+            // 平滑滾動回頁面頂端
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // 執行 SEO meta 與 schema 更新
+            updatePageSEO(pageId, hash);
+            updateActiveNavLinks(pageId);
+        }
+
+        // 點擊網頁中的內部連結導航
+        document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // RWD選單復原
+                document.getElementById('mobile-menu-btn').classList.remove('active');
+            });
+        });
+
+        // --- (3) SEO 動態元數據與 JSON-LD Schema 生成器 ---
+        function updatePageSEO(pageId, fullHash) {
+            let title = 'AURA CASA | 義式奢華極簡美學家具 - 頂級空間美學的總和';
+            let desc = 'AURA CASA 致力於將義大利極簡美學與侘寂工藝注入當代居家空間。精選頂級牛皮、進口實木與高訂工藝。';
+            let keywords = '精品家具, 義式家具, 極簡沙發, 設計師家具';
+            let schemaData = {};
+
+            switch (pageId) {
+                case '#index':
+                    title = 'AURA CASA | 義式奢華極簡美學家具 - 頂級空間美學的總和';
+                    desc = 'AURA CASA 將當代極簡建築美學注入家居容器。我們堅持嚴控特選原材、傳承極致意式工藝，為全球高端品味豪邸提供完全個人高訂化的軟裝全案家具。';
+                    keywords = '精品家具, AURA CASA, 奢華裝潢, 軟裝設計';
+                    // Organization & FurnitureStore Schema
+                    schemaData = {
+                        "@context": "https://schema.org",
+                        "@type": "FurnitureStore",
+                        "name": "AURA CASA",
+                        "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
+                        "priceRange": "$$$$",
+                        "telephone": "+886-2-2755-0000",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": "敦化南路一段 000 號 2 樓",
+                            "addressLocality": "台北市大安區",
+                            "addressCountry": "TW"
+                        }
+                    };
+                    break;
+                case '#products':
+                    title = '高端家具全系列 | 義式沙發、實木餐桌、單椅高訂 - AURA CASA';
+                    desc = '探索 AURA CASA 義式極簡模組化沙發、北美黑胡桃實木餐桌、大理石岩板茶几與大師設計單椅。';
+                    keywords = '極簡沙發, 北美黑胡桃餐桌, 設計單椅';
+                    schemaData = {
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [{
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "AURA CASA",
+                            "item": "https://www.auracasa.com/"
+                        }, {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "高端家具全系列",
+                            "item": "https://www.auracasa.com/#products"
+                        }]
+                    };
+                    break;
+                case '#product-detail':
+                    // 解析 ID
+                    const urlParams = new URLSearchParams(fullHash.split('?')[1] || '');
+                    const prodId = urlParams.get('id') || 'P001';
+                    const prod = PRODUCTS_DB[prodId] || PRODUCTS_DB['P001'];
+                    
+                    title = `${prod.title} | ${prod.category} - 頂級奢華家具高訂 - AURA CASA`;
+                    desc = prod.desc;
+                    keywords = `${prod.title}, ${prod.category}, 高規家具客製`;
+                    
+                    // 動態渲染產品詳細頁面的 DOM 內容
+                    document.getElementById('detail-title').innerText = prod.title;
+                    document.getElementById('detail-category').innerText = prod.category;
+                    document.getElementById('detail-price').innerText = prod.price;
+                    document.getElementById('detail-desc').innerText = prod.desc;
+                    document.getElementById('detail-breadcrumb-active').innerText = prod.title;
+                    
+                    document.getElementById('detail-main-img').src = prod.img1;
+                    document.getElementById('detail-thumb-1').src = prod.img1;
+                    document.getElementById('detail-thumb-2').src = prod.img2;
+                    document.getElementById('detail-thumb-3').src = prod.img3;
+
+                    // Product & Offer Schema
+                    schemaData = {
+                        "@context": "https://schema.org",
+                        "@type": "Product",
+                        "name": prod.title,
+                        "image": prod.img1,
+                        "description": prod.desc,
+                        "offers": {
+                            "@type": "Offer",
+                            "priceCurrency": "TWD",
+                            "price": prod.price.replace(/[^\d]/g, ''),
+                            "availability": "https://schema.org/InStock",
+                            "seller": {
+                                "@type": "Organization",
+                                "name": "AURA CASA"
+                            }
+                        }
+                    };
+                    break;
+                case '#about':
+                    title = '品牌故事與永續材料堅持 | AURA CASA - 20年極致工藝沈澱';
+                    desc = 'AURA CASA 繼承了義大利北部 Brianza 家具製造重鎮的極致工藝，並融入日式侘寂與現代北歐的洗練。';
+                    keywords = '家具製造工藝, 義大利設計, 北美黑胡桃實木';
+                    break;
+                case '#inspirations':
+                    title = '空間搭配靈感與軟裝美學文章 | AURA CASA';
+                    desc = '精選頂級軟裝設計師的配置思維，為您整理侘寂別墅、現代都會豪宅小坪數高雅住宅的家具配色與收邊邏輯。';
+                    keywords = '軟裝設計 tips, 侘寂客廳, 豪宅客廳家具';
+                    break;
+                case '#faq':
+                    title = '常見問題 (購物須知、10年結構保固、免運配送) | AURA CASA';
+                    desc = '為您解答關於 AURA CASA 頂級客製化沙發流程、到府安裝服務與大師家具保固政策等疑慮。';
+                    // FAQPage Schema
+                    schemaData = {
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": [{
+                            "@type": "Question",
+                            "name": "請問 AURA CASA 的家具是否支援完全客製化尺寸或材質？",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "是的。我們的沙發和收納櫃等大型家具，皆提供客製化模組調整。您可以自由選擇 12 種義大利進口頂頭層皮色與 5 款比利時手工織品亞麻料。"
+                            }
+                        }]
+                    };
+                    break;
+                case '#contact':
+                    title = '預約參觀私享展館與一對一軟裝諮詢 | AURA CASA';
+                    desc = '預約 AURA CASA 台北大安、台中歌劇院旁旗艦體驗館。享受一對一專人香檳導覽與高訂家具軟裝配置。';
+                    break;
+            }
+
+            // 更新 Meta 標籤
+            document.title = title;
+            document.querySelector('meta[name="description"]').setAttribute('content', desc);
+            document.querySelector('meta[name="keywords"]').setAttribute('content', keywords);
+            document.querySelector('meta[property="og:title"]').setAttribute('content', title);
+            document.querySelector('meta[property="og:description"]').setAttribute('content', desc);
+            document.querySelector('link[rel="canonical"]').setAttribute('href', 'https://www.auracasa.com/' + pageId);
+
+            // 動態更新 JSON-LD Script
+            document.getElementById('json-ld-schema').textContent = JSON.stringify(schemaData, null, 2);
+        }
+
+        // 動態高亮當前導航列連結
+        function updateActiveNavLinks(pageId) {
+            document.querySelectorAll('nav a').forEach(link => {
+                const linkHash = link.getAttribute('href');
+                if (linkHash === pageId) {
+                    link.classList.add('text-brand-gold', 'border-brand-gold/40');
+                    link.classList.remove('text-stone-300');
+                } else {
+                    link.classList.remove('text-brand-gold', 'border-brand-gold/40');
+                    link.classList.add('text-stone-300');
+                }
+            });
+        }
+
+        // 監聽雜湊改變
+        window.addEventListener('hashchange', router);
+        // 初始化載入
+        window.addEventListener('DOMContentLoaded', () => {
+            // 延遲隱藏 Loading Screen
+            setTimeout(() => {
+                const loader = document.getElementById('loading-screen');
+                loader.classList.add('opacity-0', 'pointer-events-none');
+                router();
+            }, 1200);
+        });
+
+        // --- (4) 導航列滾動變色 (Glassmorphism Navbar Transform) ---
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('sticky-header');
+            const btn = document.getElementById('back-to-top-btn');
+            if (window.scrollY > 80) {
+                header.classList.add('bg-brand-charcoal/80', 'backdrop-blur-md', 'py-4', 'border-b', 'border-white/10');
+                header.classList.remove('bg-transparent', 'py-0');
+                // 回到最上層按鈕
+                btn.classList.add('translate-y-0', 'opacity-100');
+                btn.classList.remove('translate-y-12', 'opacity-0');
+            } else {
+                header.classList.remove('bg-brand-charcoal/80', 'backdrop-blur-md', 'py-4', 'border-b', 'border-white/10');
+                header.classList.add('bg-transparent', 'py-0');
+                btn.classList.remove('translate-y-0', 'opacity-100');
+                btn.classList.add('translate-y-12', 'opacity-0');
+            }
+        });
+
+        // --- (5) 行動端漢堡選單滑動邏輯 ---
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileOverlay = document.getElementById('mobile-menu-overlay');
+        mobileBtn.addEventListener('click', () => {
+            if (mobileOverlay.classList.contains('translate-x-full')) {
+                mobileOverlay.classList.remove('translate-x-full');
+            } else {
+                mobileOverlay.classList.add('translate-x-full');
+            }
+        });
+
+        // --- (6) 進階 3D 傾斜效果 (3D Tilt Element for Desktop) ---
+        document.querySelectorAll('.tilt-container').forEach(elem => {
+            const card = elem.querySelector('.tilt-card');
+            elem.addEventListener('mousemove', (e) => {
+                const rect = elem.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width/2;
+                const y = e.clientY - rect.top - rect.height/2;
+                // 傾斜幅度控制在 8 度內
+                card.style.transform = `rotateY(${x / 20}deg) rotateX(${-y / 20}deg)`;
+            });
+            elem.addEventListener('mouseleave', () => {
+                card.style.transform = 'rotateY(0deg) rotateX(0deg)';
+            });
+        });
+
+        // --- (7) 搜尋遮罩彈窗開關 ---
+        function toggleSearch() {
+            const searchModal = document.getElementById('search-modal');
+            if (searchModal.classList.contains('opacity-0')) {
+                searchModal.classList.remove('opacity-0', 'pointer-events-none');
+                document.getElementById('search-input').focus();
+            } else {
+                searchModal.classList.add('opacity-0', 'pointer-events-none');
+            }
+        }
+        function executeSearch() {
+            const query = document.getElementById('search-input').value;
+            if (query.trim() !== "") {
+                toggleSearch();
+                // 攜帶 query 跳轉至商品頁
+                window.location.hash = `#products`;
+                showToast(`正在為您搜尋含有「${query}」的大師原創館藏...`);
+            }
+        }
+
+        // --- (8) 產品分類篩選管理器 (產品系列頁面專屬) ---
+        function filterProducts(cat) {
+            // 切換 active button 樣式
+            const list = document.getElementById('category-filter-list');
+            list.querySelectorAll('button').forEach(btn => {
+                btn.classList.remove('text-brand-gold', 'font-semibold', 'border-brand-gold');
+                btn.classList.add('border-transparent');
+            });
+            event.target.classList.add('text-brand-gold', 'font-semibold', 'border-brand-gold');
+            event.target.classList.remove('border-transparent');
+
+            // 執行篩選
+            let visibleCount = 0;
+            document.querySelectorAll('.product-item').forEach(item => {
+                if (cat === 'all' || item.getAttribute('data-cat') === cat) {
+                    item.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+
+            document.getElementById('product-count-display').innerText = `呈現 ${visibleCount} 件大師級原創家具`;
+        }
+
+        // --- (9) 商品詳細頁面: 視角大圖切換與 360 度互動 ---
+        function switchDetailImg(key) {
+            const prodId = new URLSearchParams(window.location.hash.split('?')[1] || '').get('id') || 'P001';
+            const prod = PRODUCTS_DB[prodId];
+            if (!prod) return;
+
+            const mainImg = document.getElementById('detail-main-img');
+            mainImg.style.opacity = 0;
+
+            // 移除其他縮圖的黃金外框
+            document.querySelectorAll('#view-product-detail button').forEach(btn => btn.classList.remove('border-brand-gold'));
+            event.currentTarget.classList.add('border-brand-gold');
+
+            setTimeout(() => {
+                mainImg.src = prod[key];
+                mainImg.style.opacity = 1;
+                // 確保 360 覆蓋層關閉
+                document.getElementById('viewer-360-overlay').classList.add('opacity-0', 'pointer-events-none');
+            }, 250);
+        }
+
+        function toggle360Mode() {
+            const overlay = document.getElementById('viewer-360-overlay');
+            if (overlay.classList.contains('opacity-0')) {
+                overlay.classList.remove('opacity-0', 'pointer-events-none');
+                showToast("360° 空間光影與視角動態模擬已啟動，請滑動下方拉桿。");
+            } else {
+                overlay.classList.add('opacity-0', 'pointer-events-none');
+            }
+        }
+
+        // 360 度滑桿拖曳時，微幅變動 SVG 視角線條 (模擬立體感)
+        document.getElementById('slider-360').addEventListener('input', function(e) {
+            const deg = e.target.value;
+            // 透過 CSS Rotate 結合橫向縮放，實現極具互動感的向量 3D 視覺轉換
+            const path1 = document.getElementById('path-360-1');
+            const path2 = document.getElementById('path-360-2');
+            
+            path1.setAttribute('d', `M${15 + parseFloat(deg)/15} 65 L${45 + parseFloat(deg)/25} 55 L${85 - parseFloat(deg)/15} 65 M15 65 L15 80 L85 80 L85 65`);
+            path2.setAttribute('stroke-opacity', `${0.3 + Math.abs(deg)/300}`);
+        });
+
+        // --- (10) 產品詳細頁面: 色系與實木配置器觸發 ---
+        let currentConfig = { color: 'Saddle Brown', wood: 'Smoked Walnut' };
+        function selectConfig(type, value, element) {
+            currentConfig[type] = value;
+            
+            // 指示器變更
+            element.parentElement.querySelectorAll('button').forEach(btn => {
+                btn.classList.remove('border-brand-gold', 'bg-brand-gold/5');
+                btn.classList.add('border-stone-800');
+            });
+            if (type === 'color') {
+                element.classList.add('border-brand-gold');
+            } else {
+                element.classList.add('border-brand-gold', 'bg-brand-gold/5');
+            }
+            showToast(`已更新當前選配：${type === 'color' ? '外飾面料' : '實木骨架'} ➡ ${value}`);
+        }
+
+        // --- (11) 商品快速預覽 Lightbox 控制器 ---
+        function triggerQuickView(id) {
+            const prod = PRODUCTS_DB[id];
+            if (!prod) return;
+
+            document.getElementById('qv-title').innerText = prod.title;
+            document.getElementById('qv-cat').innerText = prod.category;
+            document.getElementById('qv-price').innerText = prod.price;
+            document.getElementById('qv-desc').innerText = prod.desc;
+            document.getElementById('qv-img').src = prod.img1;
+            document.getElementById('qv-detail-link').href = `#product-detail?id=${id}`;
+
+            const qv = document.getElementById('quickview-modal');
+            qv.classList.remove('opacity-0', 'pointer-events-none');
+        }
+        function closeQuickView() {
+            document.getElementById('quickview-modal').classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        // --- (12) 折疊選單 (Accordion) 共用切換器 ---
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById(id + '-icon');
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.innerText = '-';
+            } else {
+                content.classList.add('hidden');
+                icon.innerText = '+';
+            }
+        }
+
+        // --- (13) 專屬高訂詢價籃 & Dynamic Notification (In-memory Shopping Cart) ---
+        function addToQuote() {
+            const urlParams = new URLSearchParams(window.location.hash.split('?')[1] || '');
+            const prodId = urlParams.get('id') || 'P001';
+            const prod = PRODUCTS_DB[prodId];
+            if (!prod) return;
+
+            // 寫入
+            quoteBasket.push({
+                ...prod,
+                configColor: currentConfig.color,
+                configWood: currentConfig.wood
+            });
+
+            updateQuoteBasketUI();
+            showToast(`已將 ${prod.title} (配皮:${currentConfig.color}) 成功配置至專屬詢價單。`);
+        }
+
+        function updateQuoteBasketUI() {
+            const countDisplay = document.getElementById('quote-count');
+            const floatingCount = document.getElementById('floating-quote-count');
+            const container = document.getElementById('quote-items-container');
+
+            countDisplay.innerText = quoteBasket.length;
+            floatingCount.innerText = quoteBasket.length;
+
+            if (quoteBasket.length === 0) {
+                container.innerHTML = `<p class="text-stone-500 text-center py-4">目前無選配產品</p>`;
+                return;
+            }
+
+            container.innerHTML = quoteBasket.map((item, idx) => `
+                <div class="flex justify-between items-center bg-stone-950 p-2.5 rounded-lg border border-white/5">
+                    <div>
+                        <p class="font-semibold text-stone-200">${item.title}</p>
+                        <p class="text-[9px] text-brand-gold">${item.configColor} / ${item.configWood}</p>
+                    </div>
+                    <button onclick="removeFromQuote(${idx})" class="text-stone-500 hover:text-red-400 text-sm">×</button>
+                </div>
+            `).join('');
+        }
+
+        function removeFromQuote(idx) {
+            quoteBasket.splice(idx, 1);
+            updateQuoteBasketUI();
+            showToast("已從詢價單中移除該家具配置。");
+        }
+
+        function toggleQuoteBasket() {
+            const modal = document.getElementById('quote-basket-modal');
+            if (modal.classList.contains('opacity-0')) {
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+            } else {
+                modal.classList.add('opacity-0', 'pointer-events-none');
+            }
+        }
+
+        // --- (14) 其他輔助功能 (表單送出模擬、Toast、電子報、回到最上層) ---
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.innerText = msg;
+            toast.classList.remove('opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'pointer-events-none');
+            }, 3000);
+        }
+
+        function submitAppointment(event) {
+            event.preventDefault();
+            const name = document.getElementById('contact-name').value;
+            const phone = document.getElementById('contact-phone').value;
+            const branch = document.getElementById('contact-branch').value;
+
+            // 成功提示
+            showToast(`感謝您，${name} 貴賓。我們已為您備妥 ${branch === 'Taipei' ? '台北大安館' : '台中市政館'} 預約，專屬軟裝師將於今日去電：${phone} 聯絡您。`);
+            document.getElementById('appointment-form').reset();
+        }
+
+        function submitReview() {
+            const name = document.getElementById('reviewer-name').value;
+            const rating = document.getElementById('reviewer-rating').value;
+            const text = document.getElementById('reviewer-text').value;
+
+            if (name.trim() === "" || text.trim() === "") {
+                showToast("請完整填寫稱呼與鑑賞心得，感謝您。");
+                return;
+            }
+
+            // 動態新增評論至 list
+            const container = document.getElementById('dynamic-reviews-container');
+            const card = document.createElement('div');
+            card.className = "p-6 bg-stone-900/40 border border-brand-gold/20 rounded-2xl space-y-4 animate-pulse";
+            
+            let stars = "";
+            for (let i = 0; i < parseInt(rating); i++) stars += "★";
+
+            card.innerHTML = `
+                <div class="flex justify-between items-center">
+                    <div class="flex text-brand-gold space-x-1">${stars}</div>
+                    <span class="text-[9px] text-stone-500">2026.07.07</span>
+                </div>
+                <p class="text-xs text-stone-300 leading-relaxed font-light">${text}</p>
+                <div class="flex items-center space-x-3 text-[10px] text-stone-400">
+                    <span class="font-semibold text-stone-200">${name}</span>
+                    <span>•</span>
+                    <span>通過官方認證屋主</span>
+                </div>
+            `;
+            container.prepend(card);
+            
+            // 重置表單
+            document.getElementById('reviewer-name').value = "";
+            document.getElementById('reviewer-text').value = "";
+            showToast("感謝您的真誠回饋！您的美學生活見證已即時更新於官網中。");
+        }
+
+        function subscribeNewsletter() {
+            const email = document.getElementById('newsletter-email').value;
+            if (email.trim() === "" || !email.includes('@')) {
+                showToast("請輸入有效的貴賓電子郵件地址。");
+                return;
+            }
+            showToast("感謝您的訂閱！我們將會不定期為您遞送 AURA CASA 頂級米蘭家具特展特報。");
+            document.getElementById('newsletter-email').value = "";
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

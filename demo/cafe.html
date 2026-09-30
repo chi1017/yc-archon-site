@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 預設 SEO 資訊 (動態路由將在運行時進行更新) -->
+    <title>Komorebi Cafe 木漏れ日珈琲 | 台北精品手沖與日式手作甜點</title>
+    <meta name="description" content="Komorebi Cafe 木漏れ日珈琲，融合日系木質與北歐極簡。我們提供頂級自家烘焙單品咖啡、手沖、日式職人甜點與溫馨寧靜的空間。立即線上訂位，享受陽光灑落的午後時光。">
+    <meta name="keywords" content="精品咖啡, 手沖咖啡, 台北咖啡廳, 職人甜點, 抹茶千層, Komorebi Cafe, 日式咖啡廳, 線上訂位">
+    <link rel="canonical" href="https://example.com/komorebi-cafe">
+    
+    <!-- Open Graph (Facebook / LINE) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Komorebi Cafe 木漏れ日珈琲 | 精品手沖與溫潤空間">
+    <meta property="og:description" content="走進 Komorebi，尋找城市中如林蔭間灑落的光影。自家烘焙豆配上職人手作甜點，給您最溫度的咖啡體驗。">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&h=630&q=80">
+    <meta property="og:url" content="https://example.com/komorebi-cafe">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Komorebi Cafe 木漏れ日珈琲">
+    <meta name="twitter:description" content="融合日系木質與北歐極簡的精品咖啡廳，線上預約極致美味。">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&h=630&q=80">
+
+    <!-- CSS CDN - Tailwind CSS & Google Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#c5a880',
+                            goldlight: '#dfcfb7',
+                            wood: '#2c2520',
+                            forest: '#2d4236',
+                            sand: '#fcfbfa',
+                            warmgrey: '#f5f2eb'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* 頁面載入/轉場過渡動畫 */
+        .page-transition {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+            display: none;
+        }
+        .page-transition.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* 自訂細節：磨砂玻璃、漸變與滾動條 */
+        .glass-header {
+            background-color: rgba(252, 251, 250, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(44, 37, 32, 0.05);
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fcfbfa;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c5a880;
+            border-radius: 3px;
+        }
+        
+        /* 自訂動畫 */
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 0.35; transform: scale(1.05); }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 8s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-brand-sand text-brand-wood font-sans antialiased overflow-x-hidden">
+
+    <!-- 頂部全局導航 (Header) -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-header transition-all duration-300" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- 品牌 Logo -->
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-full border-2 border-brand-gold flex items-center justify-center transition-all duration-300 group-hover:bg-brand-gold">
+                        <!-- SVG 咖啡杯 icon -->
+                        <svg class="w-5 h-5 text-brand-wood transition-colors duration-300 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="font-serif text-xl tracking-widest font-bold block leading-none">KOMOREBI</span>
+                        <span class="text-[10px] tracking-widest text-brand-gold font-light block mt-1">木漏れ日珈琲</span>
+                    </div>
+                </a>
+
+                <!-- 桌上型選單 -->
+                <nav class="hidden md:flex space-x-8 text-sm font-medium tracking-wider">
+                    <a href="#home" class="nav-link text-brand-wood hover:text-brand-gold transition duration-200" data-page="home">首頁</a>
+                    <a href="#menu" class="nav-link text-brand-wood hover:text-brand-gold transition duration-200" data-page="menu">美味菜單</a>
+                    <a href="#about" class="nav-link text-brand-wood hover:text-brand-gold transition duration-200" data-page="about">關於我們</a>
+                    <a href="#news" class="nav-link text-brand-wood hover:text-brand-gold transition duration-200" data-page="news">最新消息</a>
+                    <a href="#faq" class="nav-link text-brand-wood hover:text-brand-gold transition duration-200" data-page="faq">常見問題</a>
+                    <a href="#contact" class="nav-link text-brand-wood hover:text-brand-gold transition duration-200" data-page="contact">聯絡與訂位</a>
+                </nav>
+
+                <!-- 右側 CTA -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#contact" class="px-5 py-2.5 text-xs tracking-widest uppercase bg-brand-forest hover:bg-brand-wood text-white font-medium rounded-sm shadow-sm transition-all duration-300 hover:shadow-md">
+                        線上預約
+                    </a>
+                </div>
+
+                <!-- 移動端漢堡選單按鈕 -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobileMenuBtn" aria-label="切換選單" class="text-brand-wood hover:text-brand-gold focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path id="hamburgerIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 移動端滑出導航 -->
+        <div id="mobileMenu" class="hidden md:hidden bg-brand-sand border-b border-brand-warmgrey absolute top-20 left-0 w-full transition-all duration-300 shadow-lg z-40">
+            <div class="px-4 pt-3 pb-6 space-y-3 sm:px-6">
+                <a href="#home" class="mobile-nav-link block px-3 py-2 text-base font-medium rounded-md hover:bg-brand-warmgrey hover:text-brand-gold transition" data-page="home">首頁</a>
+                <a href="#menu" class="mobile-nav-link block px-3 py-2 text-base font-medium rounded-md hover:bg-brand-warmgrey hover:text-brand-gold transition" data-page="menu">美味菜單</a>
+                <a href="#about" class="mobile-nav-link block px-3 py-2 text-base font-medium rounded-md hover:bg-brand-warmgrey hover:text-brand-gold transition" data-page="about">關於我們</a>
+                <a href="#news" class="mobile-nav-link block px-3 py-2 text-base font-medium rounded-md hover:bg-brand-warmgrey hover:text-brand-gold transition" data-page="news">最新消息</a>
+                <a href="#faq" class="mobile-nav-link block px-3 py-2 text-base font-medium rounded-md hover:bg-brand-warmgrey hover:text-brand-gold transition" data-page="faq">常見問題</a>
+                <a href="#contact" class="mobile-nav-link block px-3 py-2 text-base font-medium rounded-md hover:bg-brand-warmgrey hover:text-brand-gold transition" data-page="contact">聯絡與訂位</a>
+                <div class="pt-4 px-3">
+                    <a href="#contact" class="block w-full text-center px-4 py-3 bg-brand-forest text-white rounded-sm text-sm tracking-wider uppercase font-medium shadow-md">
+                        線上預約
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 骨架容器：透過 JS 動態切換顯示內容 -->
+    <main class="pt-20 min-h-[calc(100vh-80px)]">
+        
+        <!-- ======================= 1. 首頁 (Home) ======================= -->
+        <section id="page-home" class="page-transition">
+            <!-- Hero 區塊 -->
+            <div class="relative h-[85vh] flex items-center justify-center bg-black overflow-hidden">
+                <div class="absolute inset-0 z-0 opacity-60">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1920&q=80" alt="Komorebi Cafe 店內氛圍與拉花" class="w-full h-full object-cover transition-transform duration-1000 scale-105 hover:scale-100">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-wood via-transparent to-transparent opacity-75 z-10"></div>
+                
+                <div class="relative z-20 text-center px-4 max-w-4xl mx-auto text-white">
+                    <p class="text-xs sm:text-sm font-serif tracking-[0.25em] text-brand-goldlight uppercase mb-4 animate-fade-in">森林中陽光穿透葉縫的和煦溫度</p>
+                    <h1 class="text-3xl sm:text-5xl md:text-6xl font-serif font-bold tracking-widest leading-tight mb-6">
+                        木漏れ日珈琲
+                    </h1>
+                    <p class="text-sm sm:text-lg font-light tracking-wide max-w-2xl mx-auto mb-10 text-gray-200 leading-relaxed">
+                        在喧囂的城市角落中，尋覓一處充滿陽光、咖啡香氣與檜木香的避風港。每一杯精品咖啡，皆代表著職人對於溫度的極致追求。
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                        <a href="#menu" class="w-full sm:w-auto px-8 py-4 bg-brand-gold hover:bg-brand-goldlight text-brand-wood font-medium tracking-widest rounded-sm text-xs transition duration-300">
+                            查看美味菜單
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto px-8 py-4 border border-white hover:bg-white hover:text-brand-wood text-white font-medium tracking-widest rounded-sm text-xs transition duration-300">
+                            立即線上訂位
+                        </a>
+                    </div>
+                </div>
+                <!-- 往下滾動引導 -->
+                <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center">
+                    <span class="text-[9px] tracking-widest text-white uppercase opacity-60 mb-2">SCROLL DOWN</span>
+                    <div class="w-px h-12 bg-white/30 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1/2 bg-brand-gold animate-bounce"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 品牌三大堅持 (Features) -->
+            <div class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="text-center p-6 group">
+                        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-brand-warmgrey text-brand-forest group-hover:bg-brand-forest group-hover:text-white transition duration-500">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-serif font-bold tracking-widest mb-3">自家烘焙 頂級單品</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed font-light">嚴選衣索比亞、哥倫比亞等莊園微批次生豆，在店內進行慢速精細烘焙，保留豆子最乾淨的水果酸甜感與花香。</p>
+                    </div>
+                    <div class="text-center p-6 group">
+                        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-brand-warmgrey text-brand-forest group-hover:bg-brand-forest group-hover:text-white transition duration-500">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg>
+                        </div>
+                        <h3 class="text-lg font-serif font-bold tracking-widest mb-3">職人手作 溫暖甜品</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed font-light">每日清晨手工現做甜點，招牌靜岡抹茶千層與焦糖布丁，甜度恰到好處，與精品手沖咖啡形成完美的風味共鳴。</p>
+                    </div>
+                    <div class="text-center p-6 group">
+                        <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-brand-warmgrey text-brand-forest group-hover:bg-brand-forest group-hover:text-white transition duration-500">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                        </div>
+                        <h3 class="text-lg font-serif font-bold tracking-widest mb-3">Japandi 檜木暖色空間</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed font-light">結合北歐極簡線條與日系原木建材，搭配由天井自然灑落的陽光「木漏れ日」，給您最舒適愜意的工作與閱讀體驗。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 精選招牌與推薦產品 (Signatures Overlay Grid) -->
+            <div class="bg-brand-warmgrey py-20">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-xl mx-auto mb-16">
+                        <p class="text-xs font-serif tracking-[0.25em] text-brand-gold uppercase mb-2">職人真心推薦</p>
+                        <h2 class="text-2xl sm:text-3xl font-serif font-bold tracking-widest mb-4">
+                            店內必嚐招牌與甜品
+                        </h2>
+                        <div class="w-12 h-0.5 bg-brand-gold mx-auto"></div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="home-featured-products">
+                        <!-- 由 JavaScript 自動填充精選產品 -->
+                    </div>
+                    
+                    <div class="text-center mt-12">
+                        <a href="#menu" class="inline-flex items-center space-x-2 text-sm font-semibold tracking-widest uppercase text-brand-forest hover:text-brand-gold transition duration-300">
+                            <span>探索完整菜單</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 品牌氛圍微影片/大圖故事 -->
+            <div class="relative py-32 bg-brand-forest text-white overflow-hidden">
+                <!-- 底部氛圍水藍/光影波動 -->
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-brand-gold/25 via-transparent to-transparent"></div>
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <span class="text-xs font-serif tracking-[0.25em] text-brand-goldlight uppercase block mb-3">Komorebi Philosophy</span>
+                            <h2 class="text-2xl sm:text-4xl font-serif font-bold tracking-widest mb-6 leading-tight">
+                                追求極致乾淨與層次<br>只為了一杯完美的晨光咖啡
+                            </h2>
+                            <p class="text-gray-300 leading-relaxed font-light text-sm sm:text-base mb-8">
+                                「在日文中，木漏れ日意指從樹葉縫隙間漏下來的光影。我們希望每一杯手沖咖啡也是如此——在繁雜沉重的工作日常裡，給您帶來那一抹和煦的暖陽。」
+                                <br><br>
+                                我們的烘豆師每天親自杯測。透過高精密度的 Loring S35 專利熱風烘豆機，能完美降低焦苦感，呈現細緻如烏龍茶般的回甘，以及茉莉花般悠長的芳香。
+                            </p>
+                            <div class="flex items-center space-x-8">
+                                <div>
+                                    <span class="block text-3xl font-serif font-bold text-brand-gold">100%</span>
+                                    <span class="text-[10px] tracking-wider text-gray-300 uppercase mt-1">SCAA精品豆</span>
+                                </div>
+                                <div class="w-px h-8 bg-white/20"></div>
+                                <div>
+                                    <span class="block text-3xl font-serif font-bold text-brand-gold">Loring</span>
+                                    <span class="text-[10px] tracking-wider text-gray-300 uppercase mt-1">環保熱風烘培</span>
+                                </div>
+                                <div class="w-px h-8 bg-white/20"></div>
+                                <div>
+                                    <span class="block text-3xl font-serif font-bold text-brand-gold">30+</span>
+                                    <span class="text-[10px] tracking-wider text-gray-300 uppercase mt-1">職人手工配方</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative group">
+                            <div class="absolute -inset-1 rounded-sm bg-gradient-to-r from-brand-gold to-brand-forest opacity-30 blur-lg group-hover:opacity-50 transition duration-1000"></div>
+                            <div class="relative overflow-hidden rounded-sm shadow-2xl">
+                                <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1000&q=80" alt="烘豆室與精品咖啡豆" class="w-full h-[350px] sm:h-[450px] object-cover transition-transform duration-700 hover:scale-105">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 顧客真實評價 (Testimonials) -->
+            <div class="py-20 bg-brand-sand">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-xl mx-auto mb-16">
+                        <p class="text-xs font-serif tracking-[0.25em] text-brand-gold uppercase mb-2">顧客真實回饋</p>
+                        <h2 class="text-2xl sm:text-3xl font-serif font-bold tracking-widest mb-4">
+                            聆聽他們的暖心時刻
+                        </h2>
+                        <div class="w-12 h-0.5 bg-brand-gold mx-auto"></div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-white p-8 rounded-sm shadow-sm hover:shadow-md transition duration-300 relative">
+                            <!-- 雙引號裝飾 -->
+                            <span class="absolute top-6 right-8 text-5xl font-serif text-brand-warmgrey select-none">“</span>
+                            <div class="flex items-center space-x-1 text-brand-gold mb-4">
+                                <span class="text-lg">★</span><span class="text-lg">★</span><span class="text-lg">★</span><span class="text-lg">★</span><span class="text-lg">★</span>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-relaxed font-light mb-6">
+                                「手沖藝妓的乾淨度真的超乎想像，帶著很舒服的佛手柑與水蜜桃果香。店內的採光極佳，真的很像在森林中喝咖啡，已經成為我每週末必讀書的基地。」
+                            </p>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-full bg-brand-warmgrey flex items-center justify-center font-bold text-brand-forest">E</div>
+                                <div>
+                                    <h4 class="text-xs font-bold tracking-wider">Emily Chen</h4>
+                                    <span class="text-[10px] text-gray-400">Google 在地導引 5 星評論</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-8 rounded-sm shadow-sm hover:shadow-md transition duration-300 relative">
+                            <span class="absolute top-6 right-8 text-5xl font-serif text-brand-warmgrey select-none">“</span>
+                            <div class="flex items-center space-x-1 text-brand-gold mb-4">
+                                <span class="text-lg">★</span><span class="text-lg">★</span><span class="text-lg">★</span><span class="text-lg">★</span><span class="text-lg">★</span>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-relaxed font-light mb-6">
+                                「招牌靜岡抹茶千層簡直是一絕！甜度控制得很高級，抹茶微微的苦澀與乳霜甜度完美融合。一定要搭配他們家的中焙肯亞，下午茶首選。」
+                            </p>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-full bg-brand-warmgrey flex items-center justify-center font-bold text-brand-forest">M</div>
+                                <div>
+                                    <h4 class="text-xs font-bold tracking-wider">Marcus Wang</h4>
+                                    <span class="text-[10px] text-gray-400">美食部落客與攝影師</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-8 rounded-sm shadow-sm hover:shadow-md transition duration-300 relative">
+                            <span class="absolute top-6 right-8 text-5xl font-serif text-brand-warmgrey select-none">“</span>
+                            <div class="flex items-center space-x-1 text-brand-gold mb-4">
+                                <span class="text-lg">★</span><span class="text-lg">★</span><span class="text-lg">★</span><span class="text-lg">★</span><span class="text-lg">★</span>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-relaxed font-light mb-6">
+                                「線上訂位流程非常的直覺且快速。帶外國商務客戶來這裡聊事，客戶對於店內的檜木香與頂級設備讚不絕口。非常推薦給需要高質感空間的人。」
+                            </p>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-full bg-brand-warmgrey flex items-center justify-center font-bold text-brand-forest">J</div>
+                                <div>
+                                    <h4 class="text-xs font-bold tracking-wider">Jasper Hsu</h4>
+                                    <span class="text-[10px] text-gray-400">新創科技共同創辦人</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 下方訂位導流 CTA Banner -->
+            <div class="bg-brand-wood text-white py-16 relative overflow-hidden">
+                <div class="absolute inset-0 bg-brand-forest/20 animate-pulse-slow"></div>
+                <div class="max-w-4xl mx-auto text-center px-4 relative z-10">
+                    <h2 class="text-2xl sm:text-3xl font-serif font-bold tracking-widest mb-6">
+                        為您的週末，預訂一席陽光
+                    </h2>
+                    <p class="text-sm text-gray-300 font-light max-w-xl mx-auto leading-relaxed mb-8">
+                        Komorebi 提供舒適的沙發區、工作高腳椅區與陽光落地窗座。熱門週末時光建議提前線上預約。
+                    </p>
+                    <a href="#contact" class="inline-block px-10 py-4 bg-brand-gold hover:bg-brand-goldlight text-brand-wood font-medium tracking-widest rounded-sm text-xs transition duration-300">
+                        立即線上訂位與指引
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= 2. 菜單介紹 (Menu List) ======================= -->
+        <section id="page-menu" class="page-transition">
+            <!-- 菜單頂部視覺 -->
+            <div class="bg-brand-warmgrey py-12 border-b border-brand-warmgrey/50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <p class="text-xs font-serif tracking-[0.25em] text-brand-gold uppercase mb-2">Taste of Sunbeams</p>
+                    <h1 class="text-3xl sm:text-4xl font-serif font-bold tracking-widest mb-4">KOMOREBI 精選菜單</h1>
+                    <p class="text-sm text-gray-600 font-light max-w-lg mx-auto">我們嚴選最高等級莊園豆與時令在地食材，不含化學人工添加，呈現最純粹的食物本質與自然風味。</p>
+                </div>
+            </div>
+
+            <!-- 分類切換 & 搜尋過濾器 -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-12">
+                    <!-- 分類 Tabs -->
+                    <div class="flex flex-wrap gap-2 justify-center" id="menu-categories">
+                        <button class="menu-tab-btn active px-4 py-2 text-xs font-semibold tracking-widest uppercase border border-brand-wood bg-brand-wood text-white transition duration-300" data-category="all">全部品項</button>
+                        <button class="menu-tab-btn px-4 py-2 text-xs font-semibold tracking-widest uppercase border border-gray-200 text-gray-600 hover:border-brand-wood transition duration-300" data-category="pour-over">精品手沖</button>
+                        <button class="menu-tab-btn px-4 py-2 text-xs font-semibold tracking-widest uppercase border border-gray-200 text-gray-600 hover:border-brand-wood transition duration-300" data-category="espresso">經典義式</button>
+                        <button class="menu-tab-btn px-4 py-2 text-xs font-semibold tracking-widest uppercase border border-gray-200 text-gray-600 hover:border-brand-wood transition duration-300" data-category="tea">特調茶飲</button>
+                        <button class="menu-tab-btn px-4 py-2 text-xs font-semibold tracking-widest uppercase border border-gray-200 text-gray-600 hover:border-brand-wood transition duration-300" data-category="dessert">手作甜品</button>
+                        <button class="menu-tab-btn px-4 py-2 text-xs font-semibold tracking-widest uppercase border border-gray-200 text-gray-600 hover:border-brand-wood transition duration-300" data-category="brunch">輕食早午餐</button>
+                    </div>
+                    <!-- 搜尋框 -->
+                    <div class="relative w-full md:w-72">
+                        <input type="text" id="menuSearchInput" placeholder="搜尋菜單關鍵字..." class="w-full px-4 py-2 text-sm bg-white border border-gray-200 rounded-sm focus:outline-none focus:border-brand-gold text-brand-wood">
+                        <svg class="w-4 h-4 text-gray-400 absolute right-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    </div>
+                </div>
+
+                <!-- 菜單產品列表 Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="menu-grid">
+                    <!-- 由 JS 動態填充 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= 3. 商品詳情 (Menu Detail) ======================= -->
+        <section id="page-menu-detail" class="page-transition">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <!-- 返回按鈕 -->
+                <a href="#menu" class="inline-flex items-center space-x-2 text-xs font-semibold tracking-widest uppercase text-brand-wood hover:text-brand-gold transition duration-300 mb-10">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                    <span>返回菜單列表</span>
+                </a>
+
+                <div id="detail-container">
+                    <!-- 由 JavaScript 動態填充載入特定產品詳細資訊 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= 4. 品牌故事 (About Us) ======================= -->
+        <section id="page-about" class="page-transition">
+            <!-- 品牌視覺封面 -->
+            <div class="relative py-28 bg-brand-wood text-white text-center">
+                <div class="absolute inset-0 opacity-40">
+                    <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1920&q=80" alt="頂級手沖咖啡沖泡" class="w-full h-full object-cover">
+                </div>
+                <div class="relative z-10 max-w-3xl mx-auto px-4">
+                    <p class="text-xs font-serif tracking-[0.25em] text-brand-goldlight uppercase mb-2">Our Story</p>
+                    <h1 class="text-3xl sm:text-5xl font-serif font-bold tracking-widest">關於 Komorebi 珈琲</h1>
+                    <div class="w-12 h-0.5 bg-brand-gold mx-auto mt-6"></div>
+                </div>
+            </div>
+
+            <!-- 品牌故事雙欄 layout -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+                    <div>
+                        <span class="text-xs font-serif tracking-[0.25em] text-brand-gold uppercase block mb-3">Origins</span>
+                        <h2 class="text-2xl sm:text-3xl font-serif font-bold tracking-widest mb-6">源於大自然最美的自然光影</h2>
+                        <p class="text-gray-600 font-light leading-relaxed mb-6">
+                            2022 年的春天，Komorebi 的創辦人兼首席烘豆師在京都郊區漫步時，偶然被林木空隙灑落的和煦陽光所感動。那份和煦、溫柔與安詳，正是他一直在咖啡世界中找尋的「純粹與溫度」。
+                        </p>
+                        <p class="text-gray-600 font-light leading-relaxed">
+                            我們決定將這份日本傳統美學（Miyabi 和）與北歐極簡注重自然和質感的靈魂（Hygge 愜意）結合。不追求過度張揚與浮誇，只追求極度細膩、乾淨且香氣滿溢的精品咖啡體驗。
+                        </p>
+                    </div>
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1000&q=80" alt="手沖精品咖啡" class="rounded-sm shadow-xl w-full h-[400px] object-cover">
+                    </div>
+                </div>
+
+                <!-- 核心團隊與烘豆師 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="order-2 lg:order-1 relative">
+                        <img src="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=1000&q=80" alt="烘豆師專業杯測" class="rounded-sm shadow-xl w-full h-[400px] object-cover">
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <span class="text-xs font-serif tracking-[0.25em] text-brand-gold uppercase block mb-3">Craftsmanship</span>
+                        <h2 class="text-2xl sm:text-3xl font-serif font-bold tracking-widest mb-6">首席烘豆師・高橋 健</h2>
+                        <p class="text-gray-600 font-light leading-relaxed mb-6">
+                            擁有多年的精品咖啡杯測與國際烘豆大賽獎項，高橋健對生豆極其苛求。他認為生豆是咖啡的大自然基因，而烘豆師的工作正是透過高精準度的氣流操控，將這個基因最完美的表現力釋放出來。
+                        </p>
+                        <p class="text-gray-600 font-light leading-relaxed">
+                            「烘焙不是烤熟它，而是在不留煙焦味的極致界限，將原本鎖在細胞中的果酸、糖分焦糖化與花香完美昇華。」
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= 5. 最新消息 (News List) ======================= -->
+        <section id="page-news" class="page-transition">
+            <!-- 頂部標題 -->
+            <div class="bg-brand-warmgrey py-12 border-b border-brand-warmgrey/50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <p class="text-xs font-serif tracking-[0.25em] text-brand-gold uppercase mb-2">Latest Events</p>
+                    <h1 class="text-3xl sm:text-4xl font-serif font-bold tracking-widest mb-4">最新消息與活動</h1>
+                    <p class="text-sm text-gray-600 font-light max-w-lg mx-auto">第一時間了解 Komorebi 的限定新品、烘焙工坊與限時優惠資訊。</p>
+                </div>
+            </div>
+
+            <!-- 最新消息網格 -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="news-grid-container">
+                    <!-- 由 JS 動態填充最新消息 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= 6. 常見問題 (FAQ) ======================= -->
+        <section id="page-faq" class="page-transition">
+            <div class="bg-brand-warmgrey py-12 border-b border-brand-warmgrey/50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <p class="text-xs font-serif tracking-[0.25em] text-brand-gold uppercase mb-2">Help & Guidelines</p>
+                    <h1 class="text-3xl sm:text-4xl font-serif font-bold tracking-widest mb-4">常見問題</h1>
+                    <p class="text-sm text-gray-600 font-light max-w-lg mx-auto">希望您能在此找到所需的解答，若有其他疑問，歡迎聯絡我們。</p>
+                </div>
+            </div>
+
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 py-16">
+                <div class="space-y-4" id="faq-accordion">
+                    <!-- FAQ 1 -->
+                    <div class="border-b border-gray-200 py-4">
+                        <button class="faq-trigger flex justify-between items-center w-full text-left py-2 font-medium hover:text-brand-gold transition duration-200">
+                            <span class="text-base sm:text-lg">Komorebi 接受提前多久的線上預約？</span>
+                            <span class="faq-icon text-brand-gold text-xl">+</span>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <p class="text-sm text-gray-600 font-light pt-2 leading-relaxed">
+                                我們接受當天起算 30 天內的線上座位預約。為了維護用餐品質，我們每天保留一部份座位給線上預約客戶，部分座位提供現場候位。
+                            </p>
+                        </div>
+                    </div>
+                    <!-- FAQ 2 -->
+                    <div class="border-b border-gray-200 py-4">
+                        <button class="faq-trigger flex justify-between items-center w-full text-left py-2 font-medium hover:text-brand-gold transition duration-200">
+                            <span class="text-base sm:text-lg">店內有最低消費限制與用餐時間限制嗎？</span>
+                            <span class="faq-icon text-brand-gold text-xl">+</span>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <p class="text-sm text-gray-600 font-light pt-2 leading-relaxed">
+                                店內每人最低消費為一杯飲品。在非繁忙客滿時段，我們完全不限制用餐時間，歡迎您攜帶電腦來此工作或享受書籍；若遇到週末客滿，用餐時間則調整為 120 分鐘。
+                            </p>
+                        </div>
+                    </div>
+                    <!-- FAQ 3 -->
+                    <div class="border-b border-gray-200 py-4">
+                        <button class="faq-trigger flex justify-between items-center w-full text-left py-2 font-medium hover:text-brand-gold transition duration-200">
+                            <span class="text-base sm:text-lg">是否提供插座、免費 Wi-Fi 服務？</span>
+                            <span class="faq-icon text-brand-gold text-xl">+</span>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <p class="text-sm text-gray-600 font-light pt-2 leading-relaxed">
+                                有的，我們全店提供高速、免費的 5G 無線網路。此外，在窗邊高腳椅座位區以及中央長木桌區，我們貼心配置了大量的多功能插座，方便您充電與辦公。
+                            </p>
+                        </div>
+                    </div>
+                    <!-- FAQ 4 -->
+                    <div class="border-b border-gray-200 py-4">
+                        <button class="faq-trigger flex justify-between items-center w-full text-left py-2 font-medium hover:text-brand-gold transition duration-200">
+                            <span class="text-base sm:text-lg">有提供無麩質或素食、無咖啡因選項嗎？</span>
+                            <span class="faq-icon text-brand-gold text-xl">+</span>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <p class="text-sm text-gray-600 font-light pt-2 leading-relaxed">
+                                我們對素食與無麩質飲食非常友善！菜單中有全素的燕麥奶替換服務，以及專門的無麩質甜點與減糖低卡甜品。對於不飲用咖啡的朋友，我們也提供來自靜岡、南非等精品無咖啡因茶飲。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= 7. 聯絡與訂位 (Contact & Reservation) ======================= -->
+        <section id="page-contact" class="page-transition">
+            <div class="bg-brand-warmgrey py-12 border-b border-brand-warmgrey/50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <p class="text-xs font-serif tracking-[0.25em] text-brand-gold uppercase mb-2">Book a Table</p>
+                    <h1 class="text-3xl sm:text-4xl font-serif font-bold tracking-widest mb-4">聯絡與線上訂位</h1>
+                    <p class="text-sm text-gray-600 font-light max-w-lg mx-auto">期待在和煦陽光中與您相遇。請填寫下方預約，我們將為您保留專屬席次。</p>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <!-- 左欄：訂位與聯絡資料 -->
+                    <div>
+                        <h2 class="text-2xl font-serif font-bold tracking-widest mb-6">營業與交通資訊</h2>
+                        
+                        <div class="space-y-6 text-sm">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 rounded-full bg-brand-warmgrey flex items-center justify-center text-brand-forest mt-0.5">
+                                    <!-- 時鐘 icon -->
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold tracking-wider mb-1">營業時間</h4>
+                                    <p class="text-gray-600 font-light">週一至週五 08:30 – 18:30</p>
+                                    <p class="text-gray-600 font-light">週六與週日 09:00 – 21:00 (週三公休)</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 rounded-full bg-brand-warmgrey flex items-center justify-center text-brand-forest mt-0.5">
+                                    <!-- 地標 icon -->
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold tracking-wider mb-1">門市地址</h4>
+                                    <p class="text-gray-600 font-light">台北市大安區青田街 108 號 (捷運東門站 5 號出口步行約 8 分鐘)</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 rounded-full bg-brand-warmgrey flex items-center justify-center text-brand-forest mt-0.5">
+                                    <!-- 電話 icon -->
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold tracking-wider mb-1">聯繫熱線 & 信箱</h4>
+                                    <p class="text-gray-600 font-light">電話：(02) 2345-6789</p>
+                                    <p class="text-gray-600 font-light">電子郵件：hello@komorebi.cafe</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 模擬優雅地圖 (純 SVG 地圖，極具設計感，保證不加載出錯) -->
+                        <div class="mt-8 relative bg-brand-warmgrey h-64 rounded-sm border border-gray-200 overflow-hidden shadow-inner flex flex-col justify-center items-center p-6 text-center">
+                            <div class="absolute inset-0 bg-opacity-20 flex items-center justify-center pointer-events-none">
+                                <!-- 水印地圖感裝飾 -->
+                                <svg class="w-full h-full text-brand-gold/10" viewBox="0 0 200 100" fill="none" stroke="currentColor">
+                                    <path d="M10 20 L190 20 M10 50 L190 50 M10 80 L190 80 M50 10 L50 90 M100 10 L100 90 M150 10 L150 90 M30 30 Q 70 70 120 40 T 180 80" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                            <div class="relative z-10">
+                                <div class="w-12 h-12 bg-brand-forest text-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                </div>
+                                <h4 class="font-serif font-bold text-sm tracking-wider">KOMOREBI CAFE MAP</h4>
+                                <p class="text-xs text-gray-500 mt-1 max-w-sm">我們位於充滿文青綠意與老宅靈魂的青田街，鄰近捷運東門站與古亭站。</p>
+                                <span class="inline-block mt-4 text-[10px] tracking-widest text-brand-gold font-bold">點擊查看 Google Maps 指引 (外部連結樣式)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 右欄：高級訂位表單 (不使用 JavaScript alert, 改用在線彈出狀態) -->
+                    <div class="bg-white p-8 rounded-sm shadow-md border border-gray-100">
+                        <h3 class="text-xl font-serif font-bold tracking-widest mb-6 text-center">開始線上預訂席位</h3>
+                        
+                        <form id="reservationForm" class="space-y-5">
+                            <div>
+                                <label for="resName" class="block text-xs font-bold tracking-wider text-gray-600 mb-1">姓名 (全名) <span class="text-red-500">*</span></label>
+                                <input type="text" id="resName" required class="w-full px-4 py-3 bg-brand-sand border border-gray-200 text-sm rounded-sm focus:outline-none focus:border-brand-gold text-brand-wood">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="resPhone" class="block text-xs font-bold tracking-wider text-gray-600 mb-1">手機號碼 <span class="text-red-500">*</span></label>
+                                    <input type="tel" id="resPhone" placeholder="0912-345-678" required class="w-full px-4 py-3 bg-brand-sand border border-gray-200 text-sm rounded-sm focus:outline-none focus:border-brand-gold text-brand-wood">
+                                </div>
+                                <div>
+                                    <label for="resGuests" class="block text-xs font-bold tracking-wider text-gray-600 mb-1">用餐人數 <span class="text-red-500">*</span></label>
+                                    <select id="resGuests" required class="w-full px-4 py-3 bg-brand-sand border border-gray-200 text-sm rounded-sm focus:outline-none focus:border-brand-gold text-brand-wood">
+                                        <option value="1">1 位</option>
+                                        <option value="2" selected>2 位 (推薦)</option>
+                                        <option value="3">3 位</option>
+                                        <option value="4">4 位</option>
+                                        <option value="5">5 位以上 (將安排沙發區)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="resDate" class="block text-xs font-bold tracking-wider text-gray-600 mb-1">預約日期 <span class="text-red-500">*</span></label>
+                                    <input type="date" id="resDate" required class="w-full px-4 py-3 bg-brand-sand border border-gray-200 text-sm rounded-sm focus:outline-none focus:border-brand-gold text-brand-wood">
+                                </div>
+                                <div>
+                                    <label for="resTime" class="block text-xs font-bold tracking-wider text-gray-600 mb-1">預約時段 <span class="text-red-500">*</span></label>
+                                    <select id="resTime" required class="w-full px-4 py-3 bg-brand-sand border border-gray-200 text-sm rounded-sm focus:outline-none focus:border-brand-gold text-brand-wood">
+                                        <option value="09:00">09:00 (晨光咖啡)</option>
+                                        <option value="10:30">10:30</option>
+                                        <option value="13:00">13:00 (午後光影)</option>
+                                        <option value="14:30">14:30 (招牌茶點)</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="18:30">18:30 (週末晚茶)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="resNotes" class="block text-xs font-bold tracking-wider text-gray-600 mb-1">備註要求 (例如：需要兒童椅、靠窗座位等)</label>
+                                <textarea id="resNotes" rows="3" class="w-full px-4 py-3 bg-brand-sand border border-gray-200 text-sm rounded-sm focus:outline-none focus:border-brand-gold text-brand-wood"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 bg-brand-forest hover:bg-brand-wood text-white font-medium tracking-widest text-xs uppercase rounded-sm shadow-md transition duration-300">
+                                確認送出預約
+                            </button>
+                        </form>
+
+                        <!-- 表單成功提交後的客製美化 Modal/提示狀態 (不使用 alert) -->
+                        <div id="bookingSuccessBox" class="hidden mt-6 bg-green-50 border border-green-200 p-5 rounded-sm text-center">
+                            <svg class="w-12 h-12 text-green-500 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <h4 class="font-bold text-green-800 text-base mb-1">預約申請已成功送出！</h4>
+                            <p class="text-xs text-green-700 leading-relaxed">
+                                我們已向您的手機與電子信箱發送了預訂確認函。如有任何變更，請於用餐前 24 小時撥打門市電話告知。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 頁尾 (Footer) -->
+    <footer class="bg-brand-wood text-white pt-16 pb-8 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- 第一欄：關於與品牌標誌 -->
+                <div class="md:col-span-2 space-y-4">
+                    <a href="#home" class="inline-flex items-center space-x-3 group">
+                        <div class="w-9 h-9 rounded-full border border-brand-gold flex items-center justify-center">
+                            <span class="text-brand-gold text-sm font-serif">K</span>
+                        </div>
+                        <div>
+                            <span class="font-serif text-lg tracking-widest font-bold block leading-none">KOMOREBI</span>
+                            <span class="text-[9px] tracking-widest text-brand-gold block mt-1">木漏れ日珈琲</span>
+                        </div>
+                    </a>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed max-w-sm pt-2">
+                        在光影搖曳的城市角落，我們用心沖泡每一杯精品莊園豆。這不只是一杯咖啡，更是一次探索自我、感受生活的和煦體驗。
+                    </p>
+                    <!-- 社群圖標 (純優雅 SVG) -->
+                    <div class="flex space-x-4 pt-3">
+                        <a href="#home" aria-label="Facebook" class="w-8 h-8 rounded-full bg-white/5 hover:bg-brand-gold text-white flex items-center justify-center transition duration-300">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
+                        </a>
+                        <a href="#home" aria-label="Instagram" class="w-8 h-8 rounded-full bg-white/5 hover:bg-brand-gold text-white flex items-center justify-center transition duration-300">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="#home" aria-label="Twitter" class="w-8 h-8 rounded-full bg-white/5 hover:bg-brand-gold text-white flex items-center justify-center transition duration-300">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 第二欄：快速連結 -->
+                <div class="space-y-4">
+                    <h4 class="font-serif text-sm tracking-widest font-bold text-brand-gold">探索導航</h4>
+                    <ul class="space-y-2 text-sm text-gray-400 font-light">
+                        <li><a href="#home" class="hover:text-brand-gold transition duration-200">首頁介紹</a></li>
+                        <li><a href="#menu" class="hover:text-brand-gold transition duration-200">美味菜單</a></li>
+                        <li><a href="#about" class="hover:text-brand-gold transition duration-200">關於品牌</a></li>
+                        <li><a href="#news" class="hover:text-brand-gold transition duration-200">活動情報</a></li>
+                        <li><a href="#faq" class="hover:text-brand-gold transition duration-200">常見問題</a></li>
+                        <li><a href="#contact" class="hover:text-brand-gold transition duration-200">聯絡訂位</a></li>
+                    </ul>
+                </div>
+
+                <!-- 第三欄：最新動態預訂 -->
+                <div class="space-y-4">
+                    <h4 class="font-serif text-sm tracking-widest font-bold text-brand-gold">門市與聯絡</h4>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">
+                        台北市大安區青田街 108 號<br>
+                        TEL: (02) 2345-6789<br>
+                        Email: info@komorebi.cafe
+                    </p>
+                    <p class="text-xs text-brand-gold font-bold">自烘咖啡豆、原木烘焙、職人手作甜品</p>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 pt-8 text-center text-xs text-gray-500 font-light flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 Komorebi Cafe (木漏れ日珈琲). All Rights Reserved. 專業前端精品咖啡版權所有。</p>
+                <div class="flex space-x-6">
+                    <a href="#faq" class="hover:text-brand-gold transition">服務條款</a>
+                    <a href="#faq" class="hover:text-brand-gold transition">隱私權政策</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 回到頂端 (Back To Top) 按鈕 -->
+    <button id="backToTopBtn" aria-label="回到頂端" class="fixed bottom-6 right-6 z-40 bg-brand-forest hover:bg-brand-gold text-white p-3 rounded-full shadow-lg transition-all duration-300 opacity-0 pointer-events-none transform translate-y-2 hover:scale-105">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+    </button>
+
+    <!-- ======================= JavaScript ======================= -->
+    <script>
+        /* ================= 1. 靜態數據庫 (Products, News, FAQ) ================= */
+        const productsDb = [
+            {
+                id: 1,
+                name: "木漏れ日單品手沖 (衣索比亞 藝妓)",
+                enName: "Komorebi Single Origin Hand Drip (Ethiopia Geisha)",
+                category: "pour-over",
+                price: 240,
+                featured: true,
+                badge: "首席推薦",
+                img: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80",
+                desc: "採用微批次水洗處理法。細緻柔和的酸度，入口滿是佛手柑與成熟白桃的甜美花香，尾韻悠長回甘如頂級高山烏龍茶。",
+                roast: "淺烘焙 (Light Roast)",
+                notes: "柑橘、茉莉花、水蜜桃、白茶",
+                pairings: "極力推薦搭配「手作經典焦糖布丁」，兩者的焦糖與水果酸度能交織出絕妙旋律。"
+            },
+            {
+                id: 2,
+                name: "經典手作靜岡抹茶千層",
+                enName: "Handcrafted Shizuoka Matcha Mille Crêpe",
+                category: "dessert",
+                price: 180,
+                featured: true,
+                badge: "人氣熱銷",
+                img: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=600&q=80",
+                desc: "嚴選日本靜岡小柳津丸七製茶的 100% 宇治御抹茶粉。純手工細火攤製 24 層超薄軟透餅皮，搭配細膩低糖抹茶乳酪餡，入口即化，濃厚茶香在舌尖迴盪。",
+                roast: "N/A",
+                notes: "宇治抹茶、純手工薄皮、北海道鮮奶油",
+                pairings: "與「木漏れ日單品手沖」完美搭配，微苦與花香酸甜完美平衡。"
+            },
+            {
+                id: 3,
+                name: "經典小農拿鐵 (Komorebi 配方)",
+                enName: "Komorebi Blend Cafe Latte",
+                category: "espresso",
+                price: 160,
+                featured: true,
+                badge: "經典招牌",
+                img: "https://images.unsplash.com/photo-1570968915860-54d5c301fc9f?auto=format&fit=crop&w=600&q=80",
+                desc: "使用我們獨家配方的中焙肯亞與哥倫比亞豆，完美保留堅果與可可風味，與鮮奶界的極致「小農鮮乳」交融，滑順香醇，帶有麥芽黑糖香氣。",
+                roast: "中烘焙 (Medium Roast)",
+                notes: "可可、榛果、麥芽、黑糖尾韻",
+                pairings: "搭配「靜岡抹茶千層」，奶香與抹香在口中完美融合。"
+            },
+            {
+                id: 4,
+                name: "冷萃冰滴咖啡 (時令單品)",
+                enName: "Cold Brew / Ice Drip Coffee",
+                category: "pour-over",
+                price: 180,
+                featured: false,
+                badge: "季節限定",
+                img: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=80",
+                desc: "歷時 12 小時低溫冰滴萃取，並經過 24 小時恆溫發酵。呈現如威士忌般的熟成酒香與乾淨的黑巧克力甜感。",
+                roast: "中淺焙",
+                notes: "藍莓、蘭姆酒、可可、發酵果香",
+                pairings: "非常適合在炎熱的午後，單獨享用或搭配輕食起司堡。"
+            },
+            {
+                id: 5,
+                name: "日式昭和焦糖布丁",
+                enName: "Showa Style Caramel Custard Pudding",
+                category: "dessert",
+                price: 130,
+                featured: false,
+                badge: "主廚私房",
+                img: "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80",
+                desc: "嚴選無毒放牧大武山雞蛋與頂級馬達加斯加香草莢，手工慢火蒸烤。質地綿密扎實，苦甜焦糖液在舌間擴散，極具大人味的懷舊情調。",
+                roast: "N/A",
+                notes: "放牧雞蛋、大溪地香草、純手工熬煮焦糖",
+                pairings: "搭配一杯冰單品咖啡，完美的甜苦對比療癒一整個下午。"
+            },
+            {
+                id: 6,
+                name: "酪梨煙燻鮭魚酸種麵包 (Brunch)",
+                enName: "Avocado & Smoked Salmon Sourdough",
+                category: "brunch",
+                price: 260,
+                featured: false,
+                badge: "人氣早午餐",
+                img: "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&w=600&q=80",
+                desc: "自家烘烤發酵酸種麵包為基底，鋪上滿滿的現壓新鮮酪梨泥、頂級煙燻挪威鮭魚，佐以水波蛋與新鮮蒔蘿。口感層次豐富，健康無負擔。",
+                roast: "N/A",
+                notes: "天然酵母酸種麵包、挪威鮭魚、新鮮酪梨、初榨橄欖油",
+                pairings: "適合搭配「經典燕麥奶熱拿鐵」，給您活力充沛的早晨。"
+            }
+        ];
+
+        const newsDb = [
+            {
+                id: 1,
+                title: "秋季限定「栗子海鹽焦糖拿鐵」全新上市",
+                date: "2026-10-15",
+                tag: "季節新品",
+                img: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80",
+                excerpt: "Komorebi 本季為大家帶來秋意濃濃的法式栗子泥特調。海鹽的鹹甜與莊園義式咖啡的堅果可可香氣完美烘托，溫潤撫慰人心..."
+            },
+            {
+                id: 2,
+                title: "精品咖啡手沖基礎工坊・11月份報名開啟",
+                date: "2026-10-02",
+                tag: "品牌活動",
+                img: "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=600&q=80",
+                excerpt: "想在家中也沖出一杯如林間陽光般乾淨芬芳的咖啡嗎？首席烘豆師將親自講授水溫、研磨度、注水力道對風味的關鍵影響..."
+            },
+            {
+                id: 3,
+                title: "Komorebi 青田街本舖榮獲年度優良咖啡館推薦",
+                date: "2026-09-20",
+                tag: "榮譽喜訊",
+                img: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80",
+                excerpt: "非常感謝美食評鑑與眾多顧客對我們的熱烈支持！我們會繼續專注於每一杯豆子與空間品質，將溫度傳遞給每一位來訪的靈魂..."
+            }
+        ];
+
+        /* ================= 2. 動態路由與 SEO/JSON-LD 核心邏輯 ================= */
+        const pages = ['home', 'menu', 'menu-detail', 'about', 'news', 'faq', 'contact'];
+        
+        function getRoute() {
+            const hash = window.location.hash || '#home';
+            const parts = hash.split('?');
+            const page = parts[0].substring(1);
+            
+            // 處理 Query params (例如 id=1)
+            const query = {};
+            if (parts[1]) {
+                parts[1].split('&').forEach(param => {
+                    const [key, val] = param.split('=');
+                    query[key] = decodeURIComponent(val);
+                });
+            }
+            return { page: pages.includes(page) ? page : 'home', query };
+        }
+
+        // 動態注入/更新 SEO & JSON-LD Scheme
+        function updatePageSEO(page, queryData = {}) {
+            let title = "Komorebi Cafe 木漏れ日珈琲";
+            let desc = "Komorebi Cafe 帶給您如同森林縫隙中灑落之光芒。我們提供精品手沖、自家烘焙咖啡豆、手工甜品與預約制溫馨空間。";
+            let jsonLd = {};
+
+            if (page === 'home') {
+                title = "Komorebi Cafe 木漏れ日珈琲 | 台北手沖與極簡日式空間";
+                desc = "Komorebi 融合日系原木與北歐極簡。我們提供自家烘焙精品單品、手沖、職人手作甜品。立即線上訂位，享受放鬆治癒的午後。";
+                jsonLd = {
+                    "@context": "https://schema.org",
+                    "@type": "CafeOrCoffeeShop",
+                    "name": "Komorebi Cafe 木漏れ日珈琲",
+                    "image": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&h=630&q=80",
+                    "@id": "https://example.com/komorebi-cafe",
+                    "url": "https://example.com/komorebi-cafe",
+                    "telephone": "+886-2-2345-6789",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "青田街108號",
+                        "addressLocality": "台北市大安區",
+                        "postalCode": "106",
+                        "addressCountry": "TW"
+                    },
+                    "openingHoursSpecification": [
+                        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Thursday", "Friday"], "opens": "08:30", "closes": "18:30" },
+                        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday", "Sunday"], "opens": "09:00", "closes": "21:00" }
+                    ]
+                };
+            } else if (page === 'menu') {
+                title = "職人特製菜單 | Komorebi Cafe 頂級手沖與日式手作千層";
+                desc = "探索 Komorebi 精選菜單：包含頂級衣索比亞水洗藝妓手沖、小農拿鐵、靜岡抹茶千層蛋糕與昭和焦糖布丁。嚴選天然食材，溫暖療癒。";
+                jsonLd = {
+                    "@context": "https://schema.org",
+                    "@type": "Menu",
+                    "name": "Komorebi Cafe 美味菜單",
+                    "mainEntityOfPage": "https://example.com/komorebi-cafe#menu",
+                    "hasMenuItem": productsDb.map(p => ({
+                        "@type": "MenuItem",
+                        "name": p.name,
+                        "description": p.desc,
+                        "offers": {
+                            "@type": "Offer",
+                            "price": p.price,
+                            "priceCurrency": "TWD"
+                        }
+                    }))
+                };
+            } else if (page === 'menu-detail') {
+                const productId = parseInt(queryData.id) || 1;
+                const product = productsDb.find(p => p.id === productId) || productsDb[0];
+                title = `${product.name} | Komorebi 精品推薦`;
+                desc = `${product.name} - 風味特徵：${product.notes}。${product.desc}。立即查看詳情與職人推薦搭配。`;
+                jsonLd = {
+                    "@context": "https://schema.org",
+                    "@type": "Product",
+                    "name": product.name,
+                    "image": product.img,
+                    "description": product.desc,
+                    "offers": {
+                        "@type": "Offer",
+                        "price": product.price,
+                        "priceCurrency": "TWD",
+                        "availability": "https://schema.org/InStock"
+                    }
+                };
+            } else if (page === 'about') {
+                title = "我們的故事與理念 | Komorebi Cafe 自家烘焙職人精神";
+                desc = "深入了解 Komorebi 珈琲。融合日式美學與北歐 Hygge 靈魂，首席烘豆師高橋健每日親自烘焙杯測，只為將完美咖啡溫度帶給您。";
+            } else if (page === 'news') {
+                title = "最新消息與季節限定 | Komorebi Cafe 最新情報";
+                desc = "緊貼 Komorebi 最新動態！探索秋季限定栗子焦糖拿鐵、手沖咖啡工坊報名資訊與咖啡館推薦喜訊。";
+            } else if (page === 'faq') {
+                title = "常見問題解答 | Komorebi Cafe 青田街本舖指南";
+                desc = "為您解答 Komorebi Cafe 預約限制、最低消費、插座 Wi-Fi 提供以及無麩質/素食選項等常見問題。";
+            } else if (page === 'contact') {
+                title = "線上訂位與聯絡我們 | Komorebi Cafe 捷運東門站";
+                desc = "立即填寫表單完成 Komorebi Cafe 線上訂位！我們提供營業時間、詳細門市地圖與大眾運輸交通指引。";
+            }
+
+            // 更新 document attributes
+            document.title = title;
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) metaDesc.setAttribute('content', desc);
+            
+            // 更新 Open Graph
+            const ogTitle = document.querySelector('meta[property="og:title"]');
+            if (ogTitle) ogTitle.setAttribute('content', title);
+            const ogDesc = document.querySelector('meta[property="og:description"]');
+            if (ogDesc) ogDesc.setAttribute('content', desc);
+
+            // 更新 Canonical
+            const canonicalLink = document.querySelector('link[rel="canonical"]');
+            if (canonicalLink) canonicalLink.setAttribute('href', `https://example.com/komorebi-cafe#${page}`);
+
+            // 動態注入 JSON-LD Script
+            let schemaScript = document.getElementById('jsonld-schema');
+            if (schemaScript) {
+                schemaScript.remove();
+            }
+            schemaScript = document.createElement('script');
+            schemaScript.id = 'jsonld-schema';
+            schemaScript.type = 'application/ld+json';
+            schemaScript.innerHTML = JSON.stringify(jsonLd);
+            document.head.appendChild(schemaScript);
+        }
+
+        // 頁面渲染與導航切換
+        function renderRoute() {
+            const { page, query } = getRoute();
+            
+            // 隱藏所有頁面，顯示目標頁面並觸發動畫
+            pages.forEach(p => {
+                const el = document.getElementById(`page-${p}`);
+                if (el) {
+                    el.classList.remove('active');
+                }
+            });
+
+            // 如果是商品詳情頁，動態渲染
+            if (page === 'menu-detail') {
+                renderMenuDetail(parseInt(query.id) || 1);
+            }
+
+            const targetEl = document.getElementById(`page-${page}`);
+            if (targetEl) {
+                targetEl.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'instant' });
+            }
+
+            // 更新選單 Active 狀態
+            document.querySelectorAll('.nav-link').forEach(link => {
+                const p = link.getAttribute('data-page');
+                if (p === page) {
+                    link.classList.add('text-brand-gold', 'border-b-2', 'border-brand-gold', 'pb-1');
+                    link.classList.remove('text-brand-wood');
+                } else {
+                    link.classList.remove('text-brand-gold', 'border-b-2', 'border-brand-gold', 'pb-1');
+                    link.classList.add('text-brand-wood');
+                }
+            });
+
+            // 更新 SEO
+            updatePageSEO(page, query);
+        }
+
+        /* ================= 3. 動態渲染組件 (Products, Detail, News) ================= */
+        
+        // 渲染首頁特色推薦 (3款)
+        function renderHomeFeatured() {
+            const container = document.getElementById('home-featured-products');
+            if (!container) return;
+
+            const featuredItems = productsDb.filter(p => p.featured);
+            container.innerHTML = featuredItems.map(p => `
+                <div class="bg-white rounded-sm overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500 group flex flex-col h-full border border-gray-100">
+                    <div class="relative overflow-hidden h-64 bg-gray-100">
+                        <img src="${p.img}" alt="${p.name}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                        <span class="absolute top-4 left-4 bg-brand-forest text-white text-[10px] tracking-widest uppercase font-bold px-3 py-1.5 rounded-sm">
+                            ${p.badge}
+                        </span>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="font-serif font-bold text-lg text-brand-wood mb-2 group-hover:text-brand-gold transition-colors duration-300">
+                            ${p.name}
+                        </h3>
+                        <p class="text-xs text-gray-400 font-light mb-4">${p.enName}</p>
+                        <p class="text-sm text-gray-600 font-light leading-relaxed mb-6 flex-grow">
+                            ${p.desc.substring(0, 60)}...
+                        </p>
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                            <span class="text-lg font-serif font-bold text-brand-wood">NT$ ${p.price}</span>
+                            <a href="#menu-detail?id=${p.id}" class="text-xs font-bold tracking-widest uppercase text-brand-forest hover:text-brand-gold transition duration-300">
+                                探索細節 &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 渲染完整菜單與過濾器
+        function renderMenuList(category = 'all', searchQuery = '') {
+            const container = document.getElementById('menu-grid');
+            if (!container) return;
+
+            // 根據分類與搜尋過濾
+            let items = productsDb;
+            if (category !== 'all') {
+                items = items.filter(p => p.category === category);
+            }
+            if (searchQuery.trim() !== '') {
+                const query = searchQuery.toLowerCase();
+                items = items.filter(p => p.name.toLowerCase().includes(query) || p.enName.toLowerCase().includes(query) || p.desc.toLowerCase().includes(query));
+            }
+
+            if (items.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-full py-16 text-center">
+                        <svg class="w-12 h-12 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <p class="text-gray-500 font-light">找不到符合關鍵字的美味品項，請嘗試搜尋其他咖啡或甜點。</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = items.map(p => `
+                <div class="bg-white rounded-sm overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500 group flex flex-col h-full border border-gray-100">
+                    <div class="relative overflow-hidden h-56 bg-gray-100">
+                        <img src="${p.img}" alt="${p.name}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                        ${p.badge !== 'N/A' && p.badge ? `
+                        <span class="absolute top-4 left-4 bg-brand-forest text-white text-[9px] tracking-widest uppercase font-bold px-2.5 py-1 rounded-sm">
+                            ${p.badge}
+                        </span>` : ''}
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-serif font-bold text-base text-brand-wood mb-1 group-hover:text-brand-gold transition-colors duration-300">
+                            ${p.name}
+                        </h3>
+                        <p class="text-[11px] text-gray-400 font-light mb-3">${p.enName}</p>
+                        <p class="text-xs text-gray-500 font-light leading-relaxed mb-4 flex-grow">
+                            ${p.desc.substring(0, 50)}...
+                        </p>
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                            <span class="text-base font-serif font-bold text-brand-wood">NT$ ${p.price}</span>
+                            <a href="#menu-detail?id=${p.id}" class="text-xs font-bold tracking-widest uppercase text-brand-forest hover:text-brand-gold transition duration-300">
+                                詳情 &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 渲染商品詳情頁 (Menu Detail)
+        function renderMenuDetail(id) {
+            const container = document.getElementById('detail-container');
+            if (!container) return;
+
+            const product = productsDb.find(p => p.id === id) || productsDb[0];
+            
+            // 是否為咖啡品項 (顯示烘焙與風味)
+            const isCoffee = product.category === 'pour-over' || product.category === 'espresso';
+
+            container.innerHTML = `
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    <!-- 左側：精美產品主圖 -->
+                    <div class="relative group">
+                        <div class="absolute -inset-1 rounded-sm bg-gradient-to-r from-brand-gold to-brand-forest opacity-10 blur-md"></div>
+                        <div class="relative overflow-hidden rounded-sm shadow-xl bg-gray-100">
+                            <img src="${product.img}" alt="${product.name}" class="w-full h-[350px] sm:h-[500px] object-cover transition-transform duration-700 group-hover:scale-102">
+                        </div>
+                    </div>
+
+                    <!-- 右側：產品資料與特色 -->
+                    <div class="space-y-6">
+                        <div>
+                            ${product.badge && product.badge !== 'N/A' ? `
+                            <span class="inline-block px-3 py-1 bg-brand-warmgrey text-brand-gold text-[10px] tracking-widest uppercase font-bold rounded-sm mb-3">
+                                ${product.badge}
+                            </span>` : ''}
+                            <h1 class="text-2xl sm:text-3xl font-serif font-bold tracking-wider text-brand-wood mb-2">
+                                ${product.name}
+                            </h1>
+                            <p class="text-sm text-gray-400 font-light mb-4">${product.enName}</p>
+                            <span class="text-2xl font-serif font-bold text-brand-wood">NT$ ${product.price}</span>
+                        </div>
+
+                        <div class="w-full h-px bg-gray-200"></div>
+
+                        <!-- 產品描述 -->
+                        <div class="space-y-4">
+                            <h3 class="text-sm font-bold tracking-wider uppercase text-brand-wood">風味特色 & 故事</h3>
+                            <p class="text-sm text-gray-600 font-light leading-relaxed">
+                                ${product.desc}
+                            </p>
+                        </div>
+
+                        <!-- 咖啡獨特屬性指標 -->
+                        ${isCoffee ? `
+                        <div class="bg-brand-warmgrey p-6 rounded-sm space-y-4">
+                            <h4 class="text-xs font-bold tracking-widest text-brand-forest uppercase">職人杯測風味分析</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between text-xs">
+                                    <span class="text-gray-500">烘焙度</span>
+                                    <span class="font-bold text-brand-wood">${product.roast}</span>
+                                </div>
+                                <div class="flex justify-between text-xs">
+                                    <span class="text-gray-500">主要風味調性</span>
+                                    <span class="font-bold text-brand-wood">${product.notes}</span>
+                                </div>
+                            </div>
+                        </div>
+                        ` : `
+                        <div class="bg-brand-warmgrey p-6 rounded-sm space-y-4">
+                            <h4 class="text-xs font-bold tracking-widest text-brand-forest uppercase">嚴選食材履歷</h4>
+                            <div class="text-xs space-y-2">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-500">核心食材</span>
+                                    <span class="font-bold text-brand-wood">${product.notes}</span>
+                                </div>
+                            </div>
+                        </div>
+                        `}
+
+                        <!-- 職人搭配指南 -->
+                        <div class="border-l-2 border-brand-gold pl-4 py-1">
+                            <h4 class="text-xs font-bold tracking-widest text-brand-wood uppercase mb-1">💡 職人推薦搭配</h4>
+                            <p class="text-xs text-gray-600 font-light leading-relaxed">
+                                ${product.pairings}
+                            </p>
+                        </div>
+
+                        <!-- 預約席位導引 CTA -->
+                        <div class="pt-4">
+                            <a href="#contact" class="inline-block px-8 py-3.5 bg-brand-forest hover:bg-brand-wood text-white text-xs tracking-widest font-medium uppercase rounded-sm transition duration-300">
+                                立即預約席次
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // 渲染最新消息
+        function renderNewsGrid() {
+            const container = document.getElementById('news-grid-container');
+            if (!container) return;
+
+            container.innerHTML = newsDb.map(n => `
+                <article class="bg-white rounded-sm overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group border border-gray-100 flex flex-col h-full">
+                    <div class="relative overflow-hidden h-48 bg-gray-100">
+                        <img src="${n.img}" alt="${n.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                        <span class="absolute top-4 left-4 bg-brand-gold text-brand-wood text-[9px] tracking-widest uppercase font-bold px-2.5 py-1 rounded-sm">
+                            ${n.tag}
+                        </span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-[10px] text-gray-400 font-mono mb-2 block">${n.date}</span>
+                        <h3 class="font-serif font-bold text-base text-brand-wood mb-3 group-hover:text-brand-gold transition-colors duration-300">
+                            ${n.title}
+                        </h3>
+                        <p class="text-xs text-gray-500 font-light leading-relaxed flex-grow">
+                            ${n.excerpt}
+                        </p>
+                        <div class="pt-4 mt-4 border-t border-gray-100">
+                            <span class="text-xs font-bold text-brand-forest group-hover:text-brand-gold transition duration-200">
+                                閱讀更多內容 &rarr;
+                            </span>
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        /* ================= 4. 全局交互與事件監聽 ================= */
+        document.addEventListener('DOMContentLoaded', () => {
+            // 初始化動態渲染
+            renderHomeFeatured();
+            renderMenuList();
+            renderNewsGrid();
+            renderRoute(); // 初始渲染對應的 hash 頁面
+
+            // 監聽 Hash 變化實現 SPA
+            window.addEventListener('hashchange', renderRoute);
+
+            // 移動端導航選單切換
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const hamburgerIcon = document.getElementById('hamburgerIcon');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                const isOpen = !mobileMenu.classList.contains('hidden');
+                if (isOpen) {
+                    mobileMenu.classList.add('hidden');
+                    hamburgerIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+                } else {
+                    mobileMenu.classList.remove('hidden');
+                    hamburgerIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+                }
+            });
+
+            // 點擊移動端選單內項目，自動關閉選單
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    hamburgerIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+                });
+            });
+
+            // 滾動效果：導航列毛玻璃背景深化、回到頂端按鈕
+            const header = document.getElementById('mainHeader');
+            const backToTopBtn = document.getElementById('backToTopBtn');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('py-2', 'shadow-md');
+                    header.classList.remove('py-4');
+                } else {
+                    header.classList.remove('py-2', 'shadow-md');
+                    header.classList.add('py-4');
+                }
+
+                if (window.scrollY > 400) {
+                    backToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+                    backToTopBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                } else {
+                    backToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+                    backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                }
+            });
+
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // 菜單分類篩選 Tabs
+            const filterButtons = document.querySelectorAll('.menu-tab-btn');
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // 移除其他按鈕的 active 樣式
+                    filterButtons.forEach(b => {
+                        b.classList.remove('active', 'bg-brand-wood', 'text-white');
+                        b.classList.add('border-gray-200', 'text-gray-600');
+                    });
+                    // 套用新樣式
+                    btn.classList.add('active', 'bg-brand-wood', 'text-white');
+                    btn.classList.remove('border-gray-200', 'text-gray-600');
+
+                    const category = btn.getAttribute('data-category');
+                    const searchVal = document.getElementById('menuSearchInput').value;
+                    renderMenuList(category, searchVal);
+                });
+            });
+
+            // 菜單關鍵字即時搜尋
+            const menuSearchInput = document.getElementById('menuSearchInput');
+            if (menuSearchInput) {
+                menuSearchInput.addEventListener('input', (e) => {
+                    const activeTab = document.querySelector('.menu-tab-btn.active');
+                    const category = activeTab ? activeTab.getAttribute('data-category') : 'all';
+                    renderMenuList(category, e.target.value);
+                });
+            }
+
+            // FAQ 折疊手風琴
+            const faqTriggers = document.querySelectorAll('.faq-trigger');
+            faqTriggers.forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    const content = trigger.nextElementSibling;
+                    const icon = trigger.querySelector('.faq-icon');
+                    
+                    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                        content.style.maxHeight = '0px';
+                        icon.textContent = '+';
+                        icon.classList.remove('text-brand-wood');
+                    } else {
+                        // 關閉其他 FAQ 展開項目
+                        document.querySelectorAll('.faq-content').forEach(c => c.style.maxHeight = '0px');
+                        document.querySelectorAll('.faq-icon').forEach(i => i.textContent = '+');
+
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.textContent = '-';
+                        icon.classList.add('text-brand-wood');
+                    }
+                });
+            });
+
+            // 高級訂位表單送出邏輯
+            const resForm = document.getElementById('reservationForm');
+            const bookingSuccessBox = document.getElementById('bookingSuccessBox');
+            if (resForm) {
+                resForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    // 模擬送出中與成功
+                    const submitBtn = resForm.querySelector('button[type="submit"]');
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = "處理預約中...";
+
+                    setTimeout(() => {
+                        submitBtn.classList.add('hidden');
+                        bookingSuccessBox.classList.remove('hidden');
+                        resForm.reset();
+                    }, 1200);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

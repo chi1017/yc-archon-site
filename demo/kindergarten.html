@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO 基礎標記 -->
+    <title id="page-title">心萌幼兒園 | 專業啟蒙教育與安心托育環境 - 台北市優質幼教品牌</title>
+    <meta name="description" content="心萌幼兒園專注於 2-6 歲幼兒全人發展，提供蒙特梭利啟發課程與安全美感校園。專業師資團隊領航，陪伴孩子在愛與尊重中茁壯成長。">
+    <meta name="keywords" content="幼兒園, 托育機構, 幼兒教育, 蒙特梭利, 台北幼兒園推薦, 預約參觀, 啟蒙課程">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --brand-primary: #EE8D94;    /* 優雅粉紅 */
+            --brand-secondary: #F8D3B6;  /* 晨曦橘 */
+            --brand-accent: #A8D8C9;     /* 嫩葉綠 */
+            --brand-soft: #D4DAF0;       /* 靜謐藍 */
+            --text-dark: #2D3436;
+            --text-gray: #636E72;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            color: var(--text-dark);
+            background-color: #FFFFFF;
+            scroll-behavior: smooth;
+        }
+
+        .font-eng { font-family: 'Montserrat', sans-serif; }
+
+        /* 動畫效果 */
+        .fade-up { animation: fadeUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 導航連結樣式 */
+        .nav-link {
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--brand-primary);
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .nav-link.active { color: var(--brand-primary); font-weight: 700; }
+
+        /* 精緻卡片效果 */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(238, 141, 148, 0.1);
+            transition: all 0.4s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            border-color: var(--brand-primary);
+        }
+
+        /* 按鈕樣式 */
+        .btn-brand {
+            background-color: var(--brand-primary);
+            color: white;
+            padding: 0.85rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .btn-brand:hover {
+            background-color: #E27B83;
+            box-shadow: 0 10px 20px rgba(238, 141, 148, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* 幾何裝飾圖案 */
+        .bg-pattern {
+            background-image: radial-gradient(var(--brand-secondary) 1px, transparent 1px);
+            background-size: 30px 30px;
+            opacity: 0.3;
+        }
+
+        #mobile-menu {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(100%);
+        }
+        #mobile-menu.active { transform: translateX(0); }
+    </style>
+</head>
+<body>
+
+    <!-- JSON-LD 結構化資料 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "心萌幼兒園",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "教育路 123 號",
+        "addressLocality": "台北市",
+        "addressCountry": "TW"
+      },
+      "telephone": "+886-2-1234-5678",
+      "description": "提供高品質幼兒教育與啟蒙課程"
+    }
+    </script>
+
+    <!-- 頁頭導覽 -->
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="javascript:void(0)" onclick="navigateTo('home')" class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-[#EE8D94] rounded-xl flex items-center justify-center text-white shadow-sm">
+                    <i data-lucide="shapes" class="w-6 h-6"></i>
+                </div>
+                <div class="flex flex-col leading-none">
+                    <span class="text-xl font-bold text-gray-800 tracking-wider">心萌幼兒園</span>
+                    <span class="text-[10px] font-eng text-gray-400 tracking-[0.2em] uppercase mt-1">Xin Meng Academy</span>
+                </div>
+            </a>
+
+            <!-- 桌面選單 -->
+            <ul class="hidden md:flex items-center gap-10 text-sm font-medium text-gray-600">
+                <li><a href="javascript:void(0)" onclick="navigateTo('home')" class="nav-link" id="nav-home">首頁</a></li>
+                <li><a href="javascript:void(0)" onclick="navigateTo('about')" class="nav-link" id="nav-about">教育理念</a></li>
+                <li><a href="javascript:void(0)" onclick="navigateTo('programs')" class="nav-link" id="nav-programs">課程體系</a></li>
+                <li><a href="javascript:void(0)" onclick="navigateTo('environment')" class="nav-link" id="nav-environment">校園環境</a></li>
+                <li><a href="javascript:void(0)" onclick="navigateTo('teachers')" class="nav-link" id="nav-teachers">師資團隊</a></li>
+                <li><a href="javascript:void(0)" onclick="navigateTo('contact')" class="btn-brand">預約參觀</a></li>
+            </ul>
+
+            <!-- 手機選單開關 -->
+            <button class="md:hidden p-2" onclick="toggleMobileMenu()">
+                <i data-lucide="menu" class="w-6 h-6 text-gray-600"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- 手機選單 -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] flex flex-col p-10 md:hidden">
+        <div class="flex justify-end">
+            <button onclick="toggleMobileMenu()" class="p-2"><i data-lucide="x" class="w-8 h-8"></i></button>
+        </div>
+        <ul class="flex flex-col gap-8 text-3xl font-bold mt-12">
+            <li><a href="javascript:void(0)" onclick="navigateTo('home')">首頁</a></li>
+            <li><a href="javascript:void(0)" onclick="navigateTo('about')">教育理念</a></li>
+            <li><a href="javascript:void(0)" onclick="navigateTo('programs')">課程體系</a></li>
+            <li><a href="javascript:void(0)" onclick="navigateTo('environment')">校園環境</a></li>
+            <li><a href="javascript:void(0)" onclick="navigateTo('teachers')">師資團隊</a></li>
+            <li><a href="javascript:void(0)" onclick="navigateTo('contact')" class="text-[#EE8D94]">預約參觀</a></li>
+        </ul>
+    </div>
+
+    <!-- 主要內容區 -->
+    <main id="view-container" class="pt-20">
+        <!-- JS 動態內容 -->
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="bg-[#2D3436] text-gray-400 py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i data-lucide="shapes" class="text-[#EE8D94] w-6 h-6"></i>
+                        <span class="text-xl font-bold text-white tracking-widest">心萌幼兒園</span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6">
+                        致力於提供具國際視野與人文關懷的學前教育。我們在安全且富美感的空間中，啟發孩子的好奇心，培養解決問題的能力。
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-widest">探索連結</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="javascript:void(0)" onclick="navigateTo('programs')" class="hover:text-[#EE8D94] transition-colors">分段課程</a></li>
+                        <li><a href="javascript:void(0)" onclick="navigateTo('environment')" class="hover:text-[#EE8D94] transition-colors">硬體設施</a></li>
+                        <li><a href="javascript:void(0)" onclick="navigateTo('teachers')" class="hover:text-[#EE8D94] transition-colors">師資介紹</a></li>
+                        <li><a href="javascript:void(0)" onclick="navigateTo('contact')" class="hover:text-[#EE8D94] transition-colors">報名流程</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-widest">聯絡中心</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-[#EE8D94]"></i> 台北市教育路 123 號</li>
+                        <li class="flex gap-3"><i data-lucide="phone" class="w-4 h-4 text-[#EE8D94]"></i> 02-1234-5678</li>
+                        <li class="flex gap-3"><i data-lucide="mail" class="w-4 h-4 text-[#EE8D94]"></i> contact@xinmeng.edu.tw</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-widest">關注動態</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#EE8D94] transition-colors"><i data-lucide="facebook" class="w-5 h-5 text-white"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#EE8D94] transition-colors"><i data-lucide="instagram" class="w-5 h-5 text-white"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 flex justify-between items-center text-xs">
+                <p>© 2024 Xin Meng Academy. All rights reserved.</p>
+                <p>隱私政策 | 使用條款</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 側邊浮動諮詢 -->
+    <div class="fixed right-6 bottom-6 z-40 flex flex-col gap-4">
+        <a href="https://line.me" target="_blank" class="w-14 h-14 bg-[#06C755] text-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform">
+            <i data-lucide="message-square"></i>
+        </a>
+        <a href="tel:0212345678" class="w-14 h-14 bg-[#EE8D94] text-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform">
+            <i data-lucide="phone-call"></i>
+        </a>
+    </div>
+
+    <script>
+        // 初始化圖示
+        lucide.createIcons();
+
+        // 頁面數據模型
+        const views = {
+            home: `
+                <section class="relative py-24 overflow-hidden">
+                    <div class="absolute inset-0 bg-pattern -z-10"></div>
+                    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+                        <div class="fade-up">
+                            <span class="text-[#EE8D94] font-eng font-bold tracking-[0.3em] uppercase text-sm mb-4 block">Inspiring Future Leaders</span>
+                            <h1 class="text-5xl md:text-7xl font-bold text-gray-900 leading-tight mb-8">
+                                專注於孩子的<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#EE8D94] to-[#F8D3B6]">全人發展</span>
+                            </h1>
+                            <p class="text-lg text-gray-600 mb-10 max-w-lg leading-relaxed">
+                                在心萌，我們打造一處溫暖且專業的啟蒙空間。結合蒙特梭利精神與自主探索課程，陪伴孩子踏出認識世界的第一步。
+                            </p>
+                            <div class="flex flex-wrap gap-6">
+                                <a href="javascript:void(0)" onclick="navigateTo('contact')" class="btn-brand">預約參觀導覽</a>
+                                <a href="javascript:void(0)" onclick="navigateTo('programs')" class="flex items-center gap-2 font-bold text-gray-800 hover:text-[#EE8D94] transition-colors">
+                                    查看完整課程 <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="relative fade-up" style="animation-delay: 0.2s">
+                            <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
+                                <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=1000&q=80" alt="孩子在幼兒園進行互動學習" class="w-full object-cover aspect-[4/3]">
+                            </div>
+                            <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-[#F8D3B6] rounded-full -z-10 blur-3xl opacity-50"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="py-24 bg-gray-50">
+                    <div class="container mx-auto px-6">
+                        <div class="text-center mb-16">
+                            <h2 class="text-3xl font-bold text-gray-900 mb-4 tracking-widest">心萌核心特色</h2>
+                            <p class="text-gray-500">我們如何與家長共同守護孩子的成長</p>
+                        </div>
+                        <div class="grid md:grid-cols-3 gap-10">
+                            <div class="glass-card p-10 rounded-3xl">
+                                <div class="w-14 h-14 bg-[#EE8D94] rounded-2xl flex items-center justify-center text-white mb-8">
+                                    <i data-lucide="shield-check" class="w-7 h-7"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4">全面安全防護</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">引進醫療級空氣淨化設備、全室軟質防撞建材，並設置嚴密數位門禁與環境監控系統。</p>
+                            </div>
+                            <div class="glass-card p-10 rounded-3xl">
+                                <div class="w-14 h-14 bg-[#A8D8C9] rounded-2xl flex items-center justify-center text-white mb-8">
+                                    <i data-lucide="book-open" class="w-7 h-7"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4">跨領域啟蒙教育</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">整合感官訓練、數學邏輯、語文溝通與藝術美感，建立孩子多元發展的堅實基礎。</p>
+                            </div>
+                            <div class="glass-card p-10 rounded-3xl">
+                                <div class="w-14 h-14 bg-[#D4DAF0] rounded-2xl flex items-center justify-center text-white mb-8">
+                                    <i data-lucide="users" class="text-white w-7 h-7"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4">親師信任社群</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">透明化的每日紀錄、定期的親職講座，與家長保持緊密溝通，形成穩固的育兒夥伴關係。</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            `,
+            about: `
+                <section class="py-24">
+                    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+                        <div class="fade-up">
+                            <h2 class="text-4xl font-bold text-gray-900 mb-8 tracking-widest">教育的核心是「尊重」</h2>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                心萌創辦於 2015 年，我們的核心理念源自蒙特梭利的精神：尊重孩子內在的導師。我們相信，當環境準備就緒，孩子將自然地綻放潛能。
+                            </p>
+                            <p class="text-gray-600 mb-8 leading-relaxed">
+                                我們不填鴨知識，而是點燃好奇心。我們在日常生活中融入美學教育，從用餐禮儀到物品歸位，讓教育在細節中自然發生。
+                            </p>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-4">
+                                    <i data-lucide="target" class="text-[#EE8D94] w-5 h-5 mt-1"></i>
+                                    <span>建立自信心：從成功的自理經驗中建立自我價值。</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <i data-lucide="smile" class="text-[#A8D8C9] w-5 h-5 mt-1"></i>
+                                    <span>正向情緒引導：陪伴孩子辨識並表達情緒。</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=600&q=80" class="rounded-2xl shadow-lg mt-12" alt="教育環境">
+                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80" class="rounded-2xl shadow-lg" alt="互動教學">
+                        </div>
+                    </div>
+                </section>
+            `,
+            programs: `
+                <section class="py-24 bg-gray-50">
+                    <div class="container mx-auto px-6 text-center mb-16">
+                        <h2 class="text-4xl font-bold tracking-widest mb-4">學齡適性課程</h2>
+                        <p class="text-gray-500">針對不同年齡層發展階段量身設計</p>
+                    </div>
+                    <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12">
+                        <div class="bg-white p-10 rounded-[40px] shadow-sm hover:shadow-xl transition-all">
+                            <div class="text-[#EE8D94] mb-6 font-eng font-bold">2.0 - 3.0 YEARS</div>
+                            <h3 class="text-2xl font-bold mb-6">幼幼啟蒙班</h3>
+                            <p class="text-gray-500 mb-8 text-sm leading-relaxed">專注於生活自理、語言爆發期引導與小肌肉鍛鍊。提供充滿安全感的依附環境。</p>
+                            <div class="space-y-3 pt-6 border-t border-gray-100">
+                                <div class="flex items-center gap-2 text-sm text-gray-600"><i data-lucide="check" class="w-4 h-4 text-[#A8D8C9]"></i> 生活常規建立</div>
+                                <div class="flex items-center gap-2 text-sm text-gray-600"><i data-lucide="check" class="w-4 h-4 text-[#A8D8C9]"></i> 感官教具探索</div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-10 rounded-[40px] shadow-sm hover:shadow-xl transition-all border-2 border-[#EE8D94] relative overflow-hidden">
+                            <div class="absolute top-0 right-0 bg-[#EE8D94] text-white px-6 py-2 text-xs font-bold">熱門課程</div>
+                            <div class="text-[#EE8D94] mb-6 font-eng font-bold">3.0 - 5.0 YEARS</div>
+                            <h3 class="text-2xl font-bold mb-6">中小混齡探索班</h3>
+                            <p class="text-gray-500 mb-8 text-sm leading-relaxed">透過主題教學與混齡互動，培養社交能力、解決衝突能力及跨領域知識學習。</p>
+                            <div class="space-y-3 pt-6 border-t border-gray-100">
+                                <div class="flex items-center gap-2 text-sm text-gray-600"><i data-lucide="check" class="w-4 h-4 text-[#A8D8C9]"></i> 多元主題探究</div>
+                                <div class="flex items-center gap-2 text-sm text-gray-600"><i data-lucide="check" class="w-4 h-4 text-[#A8D8C9]"></i> 邏輯數學基礎</div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-10 rounded-[40px] shadow-sm hover:shadow-xl transition-all">
+                            <div class="text-[#EE8D94] mb-6 font-eng font-bold">5.0 - 6.0 YEARS</div>
+                            <h3 class="text-2xl font-bold mb-6">大班銜接班</h3>
+                            <p class="text-gray-500 mb-8 text-sm leading-relaxed">接軌國小先修。著重閱讀素養、邏輯運算、自然科學與高階專注力訓練。</p>
+                            <div class="space-y-3 pt-6 border-t border-gray-100">
+                                <div class="flex items-center gap-2 text-sm text-gray-600"><i data-lucide="check" class="w-4 h-4 text-[#A8D8C9]"></i> 幼小生活銜接</div>
+                                <div class="flex items-center gap-2 text-sm text-gray-600"><i data-lucide="check" class="w-4 h-4 text-[#A8D8C9]"></i> 專案報告發表</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            `,
+            environment: `
+                <section class="py-24">
+                    <div class="container mx-auto px-6">
+                        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                            <div class="max-w-2xl">
+                                <h2 class="text-4xl font-bold mb-4 tracking-widest">以孩子視野設計的空間</h2>
+                                <p class="text-gray-500">所有的教具與設施皆在孩子可觸及的高度，鼓勵獨立探索。</p>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="flex items-center gap-2 text-sm"><i data-lucide="wind" class="text-[#A8D8C9]"></i> 全室換氣</div>
+                                <div class="flex items-center gap-2 text-sm"><i data-lucide="sun" class="text-[#F8D3B6]"></i> 自然採光</div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                            <div class="col-span-2 row-span-2 rounded-3xl overflow-hidden group relative">
+                                <img src="https://images.unsplash.com/photo-1560448204-61dc36dc98c8?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="室內教室">
+                                <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span class="text-white font-bold border border-white px-6 py-2 rounded-full">探索教室</span>
+                                </div>
+                            </div>
+                            <div class="rounded-3xl overflow-hidden group relative">
+                                <img src="https://images.unsplash.com/photo-1566954979172-eaba308acdf0?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="建構區">
+                            </div>
+                            <div class="rounded-3xl overflow-hidden group relative">
+                                <img src="https://images.unsplash.com/photo-1545624447-0824b1ed6084?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="圖書角">
+                            </div>
+                            <div class="col-span-2 rounded-3xl overflow-hidden group relative h-64">
+                                <img src="https://images.unsplash.com/photo-1587582423116-ec07293f0395?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="大肌肉遊戲室">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            `,
+            teachers: `
+                <section class="py-24 bg-gray-50">
+                    <div class="container mx-auto px-6">
+                        <h2 class="text-4xl font-bold text-center tracking-widest mb-16">專業且熱忱的引路人</h2>
+                        <div class="grid md:grid-cols-4 gap-12">
+                            <div class="text-center group">
+                                <div class="w-40 h-40 mx-auto rounded-full overflow-hidden mb-6 border-4 border-white shadow-md group-hover:border-[#EE8D94] transition-colors">
+                                    <img src="https://i.pravatar.cc/300?u=101" alt="園長" class="w-full h-full object-cover">
+                                </div>
+                                <h4 class="text-lg font-bold">林雅婷 園長</h4>
+                                <p class="text-xs text-[#EE8D94] font-bold uppercase tracking-tighter mb-4 font-eng">Principal / M.Ed</p>
+                                <p class="text-gray-500 text-xs px-4">具有 15 年幼兒教育心理學背景，深信每個孩子都有其獨特的成長節奏。</p>
+                            </div>
+                            <div class="text-center group">
+                                <div class="w-40 h-40 mx-auto rounded-full overflow-hidden mb-6 border-4 border-white shadow-md group-hover:border-[#A8D8C9] transition-colors">
+                                    <img src="https://i.pravatar.cc/300?u=102" alt="教師" class="w-full h-full object-cover">
+                                </div>
+                                <h4 class="text-lg font-bold">李佳純 老師</h4>
+                                <p class="text-xs text-[#A8D8C9] font-bold uppercase tracking-tighter mb-4 font-eng">Senior Educator</p>
+                                <p class="text-gray-500 text-xs px-4">蒙特梭利 AMI 認證教師，擅長以平和的方式引導孩子自我管理。</p>
+                            </div>
+                            <div class="text-center group">
+                                <div class="w-40 h-40 mx-auto rounded-full overflow-hidden mb-6 border-4 border-white shadow-md group-hover:border-[#D4DAF0] transition-colors">
+                                    <img src="https://i.pravatar.cc/300?u=103" alt="教師" class="w-full h-full object-cover">
+                                </div>
+                                <h4 class="text-lg font-bold">陳宏亮 老師</h4>
+                                <p class="text-xs text-[#D4DAF0] font-bold uppercase tracking-tighter mb-4 font-eng">Physical Education</p>
+                                <p class="text-gray-500 text-xs px-4">體能與感統發展專員，致力於從動作協調中建立孩子的自信。</p>
+                            </div>
+                            <div class="text-center group">
+                                <div class="w-40 h-40 mx-auto rounded-full overflow-hidden mb-6 border-4 border-white shadow-md group-hover:border-[#F8D3B6] transition-colors">
+                                    <img src="https://i.pravatar.cc/300?u=104" alt="教師" class="w-full h-full object-cover">
+                                </div>
+                                <h4 class="text-lg font-bold">王曉莉 老師</h4>
+                                <p class="text-xs text-[#F8D3B6] font-bold uppercase tracking-tighter mb-4 font-eng">Art & Music</p>
+                                <p class="text-gray-500 text-xs px-4">藝術治療背景，引領孩子透過色彩與音符表達豐富的內心世界。</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            `,
+            contact: `
+                <section class="py-24">
+                    <div class="container mx-auto px-6">
+                        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-20">
+                            <div>
+                                <h2 class="text-4xl font-bold mb-8 tracking-widest">開啟一段成長對話</h2>
+                                <p class="text-gray-500 mb-10 leading-relaxed">
+                                    選擇幼兒園是家庭的重要決定。我們誠摯邀請您來到現場，實際感受校園的氛圍。請填寫下方表單，我們將於 24 小時內安排專員聯繫。
+                                </p>
+                                <div class="space-y-8">
+                                    <div class="flex gap-4">
+                                        <div class="w-12 h-12 bg-gray-50 rounded-2xl flex items-center justify-center text-[#EE8D94]"><i data-lucide="clipboard-list"></i></div>
+                                        <div><h5 class="font-bold">預約流程</h5><p class="text-sm text-gray-500">線上申請 > 電話確認 > 實地參觀 > 入學評估</p></div>
+                                    </div>
+                                    <div class="flex gap-4">
+                                        <div class="w-12 h-12 bg-gray-50 rounded-2xl flex items-center justify-center text-[#A8D8C9]"><i data-lucide="map"></i></div>
+                                        <div><h5 class="font-bold">交通指引</h5><p class="text-sm text-gray-500">近捷運教育站 2 號出口，附設短停家長接送區。</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white p-10 rounded-[40px] shadow-2xl border border-gray-50">
+                                <form onsubmit="event.preventDefault(); alert('訊息已傳送！我們將儘速與您聯絡。');">
+                                    <div class="mb-6">
+                                        <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">家長全名</label>
+                                        <input type="text" class="w-full bg-gray-50 px-6 py-4 rounded-2xl border-none focus:ring-2 focus:ring-[#EE8D94]" placeholder="請輸入姓名" required>
+                                    </div>
+                                    <div class="mb-6">
+                                        <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">聯絡電話</label>
+                                        <input type="tel" class="w-full bg-gray-50 px-6 py-4 rounded-2xl border-none focus:ring-2 focus:ring-[#EE8D94]" placeholder="請輸入手機號碼" required>
+                                    </div>
+                                    <div class="mb-6">
+                                        <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">欲諮詢班級</label>
+                                        <select class="w-full bg-gray-50 px-6 py-4 rounded-2xl border-none focus:ring-2 focus:ring-[#EE8D94]">
+                                            <option>幼幼班</option>
+                                            <option>中小班</option>
+                                            <option>大班銜接</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-8">
+                                        <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">備註需求</label>
+                                        <textarea class="w-full bg-gray-50 px-6 py-4 rounded-2xl border-none focus:ring-2 focus:ring-[#EE8D94] h-32" placeholder="是否有特殊教育需求或希望了解的重點？"></textarea>
+                                    </div>
+                                    <button type="submit" class="w-full btn-brand justify-center text-lg shadow-lg">提交申請預約</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            `
+        };
+
+        // 路由邏輯
+        function navigateTo(viewId) {
+            const container = document.getElementById('view-container');
+            
+            // 加入淡出效果
+            container.style.opacity = '0';
+            container.style.transform = 'translateY(10px)';
+            container.style.transition = 'all 0.4s ease';
+
+            setTimeout(() => {
+                // 更新內容
+                container.innerHTML = views[viewId] || views.home;
+                
+                // 更新導航狀態
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                const activeLink = document.getElementById(`nav-${viewId}`);
+                if(activeLink) activeLink.classList.add('active');
+
+                // 更新頁面標題
+                const titles = {
+                    home: '心萌幼兒園 | 專業啟蒙教育',
+                    about: '教育理念 | 心萌幼兒園',
+                    programs: '課程體系 | 幼教專業引導',
+                    environment: '校園環境 | 安全美感空間',
+                    teachers: '師資團隊 | 專業熱忱引路人',
+                    contact: '預約參觀 | 聯絡心萌'
+                };
+                document.title = titles[viewId] || '心萌幼兒園';
+
+                // 重新渲染圖示
+                lucide.createIcons();
+                
+                // 淡入
+                container.style.opacity = '1';
+                container.style.transform = 'translateY(0)';
+                window.scrollTo(0, 0);
+            }, 400);
+
+            // 關閉手機選單
+            document.getElementById('mobile-menu').classList.remove('active');
+        }
+
+        // 手機選單切換
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('active');
+        }
+
+        // 初始載入
+        window.onload = () => navigateTo('home');
+    </script>
+</body>
+</html>
