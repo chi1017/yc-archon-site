@@ -801,15 +801,14 @@
         .seo-tool-iframe-wrap iframe { width: 100%; height: 100%; border: none; }
         @media (max-width: 768px) { .seo-tool-header { padding: 32px 20px 24px; } }
     
-        /* Typographic Logo Mark (replaces AI-generated glossy image) */
+        /* Monogram Logo Mark — geometric Y nested in an open ring, echoes the hero ring motif */
         .logo-mark {
             width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
-            font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif; font-weight: 800;
-            color: var(--accent); letter-spacing: -0.02em;
-            background: linear-gradient(155deg, rgba(95,163,150,0.12), rgba(95,163,150,0) 65%);
+            background: radial-gradient(circle at 50% 45%, rgba(95,163,150,0.16), rgba(95,163,150,0) 70%);
         }
-        .logo-mark--hero { font-size: 64px; }
-        .logo-mark--nav { font-size: 15px; }
+        .logo-mark svg { display: block; }
+        .logo-mark--hero svg { width: 60%; height: 60%; }
+        .logo-mark--nav svg { width: 72%; height: 72%; }
 
         /* Home Core Services Preview */
         .home-services-grid {
@@ -842,7 +841,7 @@
     <div class="nav-inner">
         <a href="#" onclick="showPage('home'); return false;" class="nav-logo magnetic" aria-label="YC AXIOM 首頁">
             <div class="nav-logo-img">
-                <div class="logo-mark logo-mark--nav" aria-label="YC AXIOM Logo">YC</div>
+                <div class="logo-mark logo-mark--nav" aria-label="YC AXIOM Logo"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M54.1,16.5 A27,27 0 1 0 54.1,47.5" stroke="var(--text-bright)" stroke-width="2" stroke-opacity="0.7" stroke-linecap="round"/><path d="M18,14 L32,30 M46,14 L32,30 M32,30 L32,50" stroke="var(--accent)" stroke-width="4" stroke-linecap="round"/></svg></div>
             </div>
             <div class="nav-logo-text">
                 <div class="nav-logo-name">YC AXIOM</div>
@@ -892,7 +891,7 @@
             <div class="hero-logo-ring"></div>
             <div class="hero-logo-ring-2"></div>
             <div class="hero-logo-frame">
-                <div class="logo-mark logo-mark--hero" aria-label="YC AXIOM Logo">YC</div>
+                <div class="logo-mark logo-mark--hero" aria-label="YC AXIOM Logo"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M54.1,16.5 A27,27 0 1 0 54.1,47.5" stroke="var(--text-bright)" stroke-width="2" stroke-opacity="0.7" stroke-linecap="round"/><path d="M18,14 L32,30 M46,14 L32,30 M32,30 L32,50" stroke="var(--accent)" stroke-width="4" stroke-linecap="round"/></svg></div>
             </div>
         </div>
 
